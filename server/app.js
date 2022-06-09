@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 const db = require('./configs/db.config');
 
+var cookieParser = require('cookie-parser')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
