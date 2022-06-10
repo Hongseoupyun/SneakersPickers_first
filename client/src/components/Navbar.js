@@ -11,7 +11,7 @@ function Navbar() {
         <Link to="/profile">Profile</Link>
       </li>
       <li>
-        <Link to="/onetab"><button variant="outlined">Onetab</button></Link>
+        <Link to="/onetab">Onetab</Link>
       </li>
     </ul>
   );

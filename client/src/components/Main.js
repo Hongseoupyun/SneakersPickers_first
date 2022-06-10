@@ -8,9 +8,9 @@ import Profile from "./Profile"
 const Main = () => {
   return (
     <Routes>
-      <Route path='/' element={Logform}></Route>
-      <Route path='/profile' element={Profile}></Route>
-      <Route path='/onetab' element={Onetab}></Route>
+      <Route path='/' element={<Logform/>}></Route>
+      <Route path='/profile' element={<Profile/>}></Route>
+      <Route path='/onetab' element={<Onetab/>}></Route>
     </Routes>
   );
 }
