@@ -1,11 +1,18 @@
 import './App.css';
 import {Route, Link} from 'react-router-dom';
-import MyAccount from './MyAccount';
+import React, { Fragment }from "react";
+
+import NavBar from "./components/Navbar"
+import Main from './components/Main'
+
 function App() {
   return (
+    <Fragment>
     <div className="App">
-      <Route path="myaccount" element={<MyAccount/>}/>
+      <NavBar />
     </div>
+      <Main />
+    </Fragment>
   );
 }
 
