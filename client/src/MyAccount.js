@@ -1,8 +1,10 @@
 import React from 'react'
 
 export default function MyAccount (){
-  returun(
-
+  return(
+    <div>
+      MyAccount
+    </div>
   )
 }
 

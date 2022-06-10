@@ -4,7 +4,7 @@ import MyAccount from './MyAccount';
 function App() {
   return (
     <div className="App">
-      <Router to ="/MyAccount" component={MyAccount}/>
+      <Route path="myaccount" element={<MyAccount/>}/>
     </div>
   );
 }
