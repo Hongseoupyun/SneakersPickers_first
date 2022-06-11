@@ -15,8 +15,8 @@ function NavBar() {
 
         <Nav className="ms-auto align-text-bottom mt-5">
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="#scroll-about-us">About us</Nav.Link>
-          <Nav.Link href="#scroll-contact-us">Contact</Nav.Link>
+          <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
+          <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
           <Nav.Link href="browse">Browse</Nav.Link>
           <NavDropdown title="My Account">
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
