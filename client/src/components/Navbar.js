@@ -13,6 +13,9 @@ function Navbar() {
       <li>
         <Link to="/onetab">Onetab</Link>
       </li>
+      <li>
+        <Link to="/myaccount">My Account</Link>
+      </li>
     </ul>
   );
 }

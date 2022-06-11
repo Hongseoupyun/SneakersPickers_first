@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS notes CASCADE;
+DROP TABLE IF EXISTS projects CASCADE;
+DROP TABLE IF EXISTS contacts CASCADE;
+DROP TABLE IF EXISTS todos CASCADE;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL 
+);
+
+CREATE TABLE listings (
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  image_url VARCHAR(255),
+  description VARCHAR(255),
+  name VARCHAR(255),
+  brand VARCHAR(255),
+  size VARCHAR(255),
+  preference VARCHAR(255)
+
+);
+
+CREATE TABLE offers (
+  id SERIAL PRIMARY KEY NOT NULL,
+  listing_offer_made_to_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
+  listing_being_offered_id INTEGER REFERENCES listings(id) ON DELETE CASCADE
+);
+

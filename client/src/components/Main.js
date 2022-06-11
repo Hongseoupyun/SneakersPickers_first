@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Logform from "./Logform"
 import Onetab from "./Onetab"
 import Profile from "./Profile"
-import MyAccount from './MyAccount/MyAccount';
+import MyAccount from './MyAccount';
 
 const Main = () => {
   return (
