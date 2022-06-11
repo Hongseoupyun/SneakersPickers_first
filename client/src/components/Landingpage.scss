@@ -89,11 +89,11 @@ main {
 }
 
 .about-image {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .scroll-contact {
-  min-height: 90px;
+  min-height: 85px;
   background-color: transparent;
 
 }
@@ -107,13 +107,17 @@ main {
 }
 
 .contact-us-description {
-  background: rgb(255, 255, 255);
+  background: rgb(33, 37, 41);
   color: rgb(71, 69, 80);
   width: 100%;
   flex-direction: row;
+  justify-content: space-between;
   display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px;
 }
 
 .card {
-  width: 33%;
+  width: 25%;
 }

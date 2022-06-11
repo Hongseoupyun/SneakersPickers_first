@@ -1,8 +1,14 @@
 import React from "react";
-import logo from "./images/shoes.png";
+import nhan from "./images/nhan.jpg";
+import hong from "./images/hong.jpg";
+import hars from "./images/hars.jpg";
+import gitlogo from "./images/gitlogo.png";
+import email from "./images/email.png";
 import "./Landingpage.scss";
 import landingbackground from "./images/landingbackground.mp4";
 import tradingaboutus from "./images/tradingaboutus.png";
+import {Button} from "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Landingpage() {
   return (
@@ -15,6 +21,11 @@ function Landingpage() {
         <h1>
           Tired of your old sneakers?
           <span>Trade them for a new pair today!</span>
+          <div className="mb-2 pt-5">
+            <Button variant="secondary" size="lg" href='/register'>
+              Sign up today!
+            </Button>{' '}
+          </div>
         </h1>
       </header>
 
@@ -37,27 +48,36 @@ function Landingpage() {
           <span className="contact-us">Contact Us</span>
           <div className="contact-us-description">
             <div class="card">
-              <img src={logo} class="card-img-top" alt="..." />
+              <img src={nhan} class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Nhan Tran</h5>
+                <p class="card-text">Full-stack developer. CEO of this website.</p>
+                <a href="https://github.com/nktrancs">
+                <img src={gitlogo} alt="..." height="50x" width="50px" href="https://github.com/bhinder97" target="_blank"/>
+                </a>
+                <img src={email} alt="..." height="120x" width="120px"/>
               </div>
             </div>
             <div class="card">
-              <img src={logo} class="card-img-top" alt="..." />
+              <img src={hong} class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Hongseoup Yun</h5>
+                <p class="card-text">Full-stack developer. CEO of this website.</p>
+                <a href="https://github.com/Hongseoupyun">
+                <img src={gitlogo} alt="..." height="50x" width="50px" href="https://github.com/bhinder97" target="_blank"/>
+                </a>
+                <img src={email} alt="..." height="120x" width="120px"/>
               </div>
             </div>
             <div class="card">
-              <img src={logo} class="card-img-top" alt="..." />
+              <img src={hars} class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Harsimranjeet Bhinder</h5>
+                <p class="card-text">Full-stack developer. CEO of this website.</p>
+                <a href="https://github.com/bhinder97">
+                <img src={gitlogo} alt="..." height="50x" width="50px" href="https://github.com/bhinder97" target="_blank"/>
+                </a>
+                <img src={email} alt="..." height="120x" width="120px"/>
               </div>
             </div>
           </div>
