@@ -50,7 +50,41 @@ main {
   }
 }
 
-.aboutus {
-  font-size: 100px;
+.about-us {
+  background: rgb(33, 37, 41);
+  font-size: 80px;
   font-weight: 600;
+  justify-content: center;
+  display: flex;
+}
+
+.about-us-description {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  justify-content: space-around;
+  table-layout: fixed ;
+  width: 100% ;
+}
+
+.about-us-text {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 50% ;
+
+
+  h2 {
+    font-size: 80px;
+    font-weight: 600;
+  }
+}
+
+.contact-us {
+  background: rgb(33, 37, 41);
+  font-size: 80px;
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
 }
