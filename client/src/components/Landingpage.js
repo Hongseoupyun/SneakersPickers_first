@@ -18,9 +18,9 @@ function Landingpage() {
         </h1>
       </header>
 
+      <div className="scroll-us" id="scroll-about-us" ></div>
       <main>
         <article>
-          <div className="scroll-us" id="scroll-about-us" ></div>
           <span className="about-us">About Us</span>
           <div className="about-us-description ">
             <div className="about-us-text">
@@ -36,7 +36,30 @@ function Landingpage() {
           <div className="scroll-contact" id="scroll-contact-us" ></div>
           <span className="contact-us">Contact Us</span>
           <div className="contact-us-description">
-          Generating random paragraphs can be an excellent way for writers to get their creative flow going at the beginning of the day. The writer has no idea what topic the random paragraph will be about when it appears. This forces the writer to use creativity to complete one of three common writing challenges. The writer can use the paragraph as the first one of a short story and build upon it. A second option is to use the random paragraph somewhere in a short story they create. The third option is to have the random paragraph be the ending paragraph in a short story. No matter which of these challenges is undertaken, the writer is forced to use creativity to incorporate the paragraph into their writing.
+            <div class="card">
+              <img src={logo} class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src={logo} class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src={logo} class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
           </div>
         </article>
       </main>
