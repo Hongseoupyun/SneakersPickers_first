@@ -79,6 +79,11 @@ main {
     font-size: 80px;
     font-weight: 600;
   }
+  
+}
+
+.about-image {
+  margin-top: 100px;
 }
 
 .contact-us {
@@ -87,4 +92,9 @@ main {
   font-weight: 600;
   justify-content: center;
   display: flex;
+}
+
+.contact-us-description {
+  background: rgb(245, 245, 245);
+  color: rgb(71, 69, 80);
 }
