@@ -7,6 +7,8 @@ import email from "./images/email.png";
 import "./Landingpage.scss";
 import landingbackground from "./images/landingbackground.mp4";
 import tradingaboutus from "./images/tradingaboutus.png";
+import {Button} from "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Landingpage() {
   return (
@@ -19,6 +21,11 @@ function Landingpage() {
         <h1>
           Tired of your old sneakers?
           <span>Trade them for a new pair today!</span>
+          <div className="mb-2 pt-5">
+            <Button variant="secondary" size="lg" href='/register'>
+              Sign up today!
+            </Button>{' '}
+          </div>
         </h1>
       </header>
 
