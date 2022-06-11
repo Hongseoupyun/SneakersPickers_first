@@ -7,14 +7,14 @@ import './Navbar.css'
 
 function NavBar() {
   return (
-    <div className="NavBar">
       <Navbar bg="dark blue" variant="dark" sticky="top" expand="lg" >
         <Navbar.Brand className="logoname" href="/">
-          <img src={logo} width="100px" height="100x"/> {' '}
-          <br></br>SneakersPickers
+          <img src={logo} width="100px" height="80x"/> {' '}
+          SneakersPickers
         </Navbar.Brand>
 
-        <Nav className="barlink">
+        <Nav className="ms-auto align-text-bottom">
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="aboutus">About us</Nav.Link>
           <Nav.Link href="contact">Contact</Nav.Link>
           <Nav.Link href="browse">Browse</Nav.Link>
@@ -27,8 +27,6 @@ function NavBar() {
           </NavDropdown>
         </Nav>
       </Navbar>
-    </div>
-   
   );
 }
 
