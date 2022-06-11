@@ -7,16 +7,16 @@ import './Navbar.css'
 
 function NavBar() {
   return (
-      <Navbar bg="dark blue" variant="dark" sticky="top" expand="lg" >
+      <Navbar className="pb-0 pt-0" bg="dark blue" variant="dark" fixed="top" expand="lg" >
         <Navbar.Brand className="logoname" href="/">
           <img src={logo} width="100px" height="80x"/> {' '}
           SneakersPickers
         </Navbar.Brand>
 
-        <Nav className="ms-auto align-text-bottom">
+        <Nav className="ms-auto align-text-bottom mt-5">
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="aboutus">About us</Nav.Link>
-          <Nav.Link href="contact">Contact</Nav.Link>
+          <Nav.Link href="#scroll-about-us">About us</Nav.Link>
+          <Nav.Link href="#scroll-contact-us">Contact</Nav.Link>
           <Nav.Link href="browse">Browse</Nav.Link>
           <NavDropdown title="My Account">
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
