@@ -1,5 +1,12 @@
 .NavBar{
-  justify-content: space-between;
+
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
 .logoname{
