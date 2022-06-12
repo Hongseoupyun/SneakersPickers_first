@@ -8,6 +8,7 @@ import MyListings from "./MyAccount/MyListings";
 import AddAListing from "./MyAccount/AddAListing";
 import Landingpage from "./landingpage/Landingpage";
 import Browse from "./browse/browse";
+import Login from "./loginpage/login";
 
 const Main = () => {
   return (
@@ -18,6 +19,7 @@ const Main = () => {
       <Route path="/mylistings" element={<MyListings />}></Route>
       <Route path="/addalisting" element={<AddAListing />}></Route>
       <Route path="/browse" element={<Browse />}></Route>
+      <Route path="/login" element={<Login />}></Route>
     </Routes>
   );
 };
