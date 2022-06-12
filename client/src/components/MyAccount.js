@@ -1,5 +1,5 @@
 import React from 'react'
-import './MyAccount/SideBar'
+
 import Profile from './Profile'
 import './MyAccount/myAccountPage.css'
 

@@ -1,12 +1,12 @@
 import React from "react";
-import nhan from "./images/nhan.jpg";
-import hong from "./images/hong.jpg";
-import hars from "./images/hars.jpg";
-import gitlogo from "./images/gitlogo.png";
-import email from "./images/email.png";
+import nhan from "../images/nhan.jpg";
+import hong from "../images/hong.jpg";
+import hars from "../images/hars.jpg";
+import gitlogo from "../images/gitlogo.png";
+import email from "../images/email.png";
 import "./Landingpage.scss";
-import landingbackground from "./images/landingbackground.mp4";
-import tradingaboutus from "./images/tradingaboutus.png";
+import landingbackground from "../images/landingbackground.mp4";
+import tradingaboutus from "../images/tradingaboutus.png";
 import {Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
