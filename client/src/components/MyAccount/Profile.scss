@@ -11,7 +11,7 @@
   padding-top: 0px;
   display: flex;
   align-items:center;
-  margin-top: 0px;
+ 
 }
 .profile-body {
   font-family: "Source Sans Pro", sans-serif;
@@ -20,17 +20,18 @@
   align-items: center;
   height: 200vh;
   background-color: rgb(33, 37, 41);
-  margin:0;
+  margin-top:-225px;
 } 
 
 .login-form {
   position: relative;
   z-index: 2;
-  margin-top:-107px;
-  margin-bottom: 170px;
-  background-color: azure;
+  margin-top:0px;
+  margin-bottom: 0px;
+  background-color: white ;
   padding:50px;
   border-radius: 25px;
+  animation: slide 1.6s ease;
 }
 .login-form h1 {
   font-size: 32px;
@@ -48,7 +49,7 @@
   padding: 20px 10px 10px;
   background-color: transparent;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 7px;
   border-bottom: 1px solid black;
   font-size: 18px;
   color:black;
@@ -59,14 +60,14 @@
   left: 10px;
   top:15px; 
   font-size: 18px;
-  color: black ;
+  color: #000000 ;
   transition: top .7s ease;
 } 
 .int-area input:focus + label,
 .int-area input:valid + label {
   top:0;
   font-size: 13px;
-  color :burlywood ;
+  color: rgb(17, 30, 108);
 }
 .btn-area  {
   margin-top:30px;
@@ -80,4 +81,18 @@
   background: black;
   color: white ;
   cursor:pointer;
+}
+
+@keyframes slide {
+  from{
+    top:-300px;
+    opacity: 0;
+
+  }
+  to{
+    top:0px;
+    opacity: 1;
+
+  }
+  
 }

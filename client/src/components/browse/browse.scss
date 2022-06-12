@@ -1,0 +1,42 @@
+.vertical-menu {
+  width: 200px; 
+  height: 100%;
+  min-height: 977px;
+  background: rgb(33, 37, 41);
+  padding-top: 90px;
+  color: white;
+  padding-left: 10px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 500;
+  flex-direction: column;
+}
+
+.filtername {
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+.brand-type {
+  align-items: flex-start;
+}
+
+.form-check-input {
+  background: rgb(255, 255, 255);
+  display: block; /* Make the links appear below each other */
+  padding: 12px; //
+  text-decoration: none; /* Remove underline from links */
+}
+
+.form-check-input:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.form-check-input.active {
+  background-color: #04AA6D; /* Add a green color to the "active/current" link */
+  color: white;
+}
