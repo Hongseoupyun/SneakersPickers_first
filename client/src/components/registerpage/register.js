@@ -18,7 +18,7 @@ function Register() {
           <div className="checkboxy">
             <input name="cecky" id="checky" value="1" type="checkbox" /><label className="terms">I accept the terms of use</label>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" className="register-button">Sign Up</button>
         </div>
       </form>
     </div>
