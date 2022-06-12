@@ -1,6 +1,16 @@
 .master-container {
   display: flex;
   flex-direction: row;
-  padding-top: 90px;
-  // border: solid black;
+  margin-top: 150px;
+  margin-bottom: 90px;
+  margin-right: 90px;
+  margin-left: 90px;
+  border: 5px solid red;
+  height :500px;
+}
+.add-body {
+  background-color:rgba(14,77,146,1);
+}
+.form{
+  padding-top: 15px;
 }
