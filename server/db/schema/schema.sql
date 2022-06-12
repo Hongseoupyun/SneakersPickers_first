@@ -15,15 +15,17 @@ CREATE TABLE listings (
   name VARCHAR(255),
   description VARCHAR(255),
   brand VARCHAR(255),
-  size VARCHAR(255),
+  size INTEGER,
   image_url VARCHAR(255),
-  preference VARCHAR(255)
+  preference VARCHAR(255),
+  active BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE offers (
   id SERIAL PRIMARY KEY NOT NULL,
   listing_offer_made_to_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
   listing_being_offered_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
-  accept BOOLEAN DEFAULT FALSE 
+  complete BOOLEAN DEFAULT FALSE,
+  pending BOOLEAN DEFAULT TRUE
 );
 
