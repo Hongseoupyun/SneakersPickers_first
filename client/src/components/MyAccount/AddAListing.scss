@@ -4,6 +4,7 @@
   position:relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   margin-top: 150px ;
   margin-bottom: 90px;
   margin-right: 90px;
@@ -24,8 +25,8 @@
 }
 
 .form{
-  padding-top: 15px;
-  
+  padding-top: 25px;
+
 }
 .size-brand{
   margin-top: 20px;
@@ -68,6 +69,7 @@
 }
 
 .add-a-listing-img {
-  width: 400px;
+  width: 505px;
     height: 548px;
+    border-radius: 13px;
 }
