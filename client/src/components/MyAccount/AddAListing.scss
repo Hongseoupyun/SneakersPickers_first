@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
 
 .master-container {
+  position:relative;
   display: flex;
   flex-direction: row;
   margin-top: 150px ;
@@ -12,11 +13,14 @@
   border-radius: 13px;
   background-color:white;
   font-family: "Source Sans Pro", sans-serif;
+  // animation: side-slide 1.4s ease-out;
 }
 .add-body{
-  padding-top: 0;
-  // animation: side-slide 1.6s ease;
+  padding-top: 50px;
   background-color: rgb(33, 37, 41);
+  margin-top: -60px;
+  height: 120vh;
+ 
 }
 
 .form{
@@ -61,4 +65,9 @@
 .description{
   padding: 20px 10px 10px;
 
+}
+
+.add-a-listing-img {
+  width: 400px;
+    height: 548px;
 }
