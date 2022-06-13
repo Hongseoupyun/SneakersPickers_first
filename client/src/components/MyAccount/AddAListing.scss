@@ -1,6 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
+
 .master-container {
   display: flex;
   flex-direction: row;
-  padding-top: 90px;
-  // border: solid black;
+  margin-top: 150px ;
+  margin-bottom: 90px;
+  margin-right: 90px;
+  margin-left: 90px;
+  border: 1px solid black;
+  height :550px;
+  border-radius: 13px;
+  background-color:white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.add-body{
+  padding-top: 0;
+  // animation: side-slide 1.6s ease;
+  background-color: rgb(33, 37, 41);
+}
+
+.form{
+  padding-top: 15px;
+  
+}
+.size-brand{
+  margin-top: 20px;
+  display: flex;
+  
+}
+
+.size{
+  width: 197.5px;
+  position: relative;
+  height: 50px;
+  border-radius: 7px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.brand {
+  width: 197.5px;
+  position: relative;
+  border-radius: 7px;
+  height: 50px;
+  font-size: 18px;
+  
+}
+@keyframes side-slide{
+  from{
+    left:-300px;
+    opacity: 0;
+
+  }
+  to{
+    right:0px;
+    opacity: 1;
+  }
+  
+}
+.description{
+  padding: 20px 10px 10px;
+
 }
