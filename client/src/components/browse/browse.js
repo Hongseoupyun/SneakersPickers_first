@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './browse.scss'
 import runlogo from '../images/runlogo.gif'
@@ -23,7 +23,7 @@ function Browse() {
             </optgroup> 
           </select><br/>
 
-          <label for="size" placeholder="Size">Pick a size:</label>
+          <label for="size">Pick a size:</label>
           <select name="size" id="size">
             <optgroup label="Size">
               <option value="4">Size 4</option>
@@ -42,7 +42,9 @@ function Browse() {
           <button type="submit" class="btn btn-secondary mt-3">Filter</button>
           <button type="button" href="/browse/" class="btn btn-secondary mt-3">Reset</button>
         </div>
-        <img src={runlogo} alt="run" className="runlogo"></img>
+        <div className="runlogo">
+        <img src={runlogo} alt="run" class="shoepic"></img>
+        </div>
       </header>
 
 

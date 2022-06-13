@@ -21,11 +21,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // directory for router
 const listingRouter = require('./routes/listings');
+const listingsfilterRouter = require('./routes/listingsfilter');
 
 //routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter());
 app.use('/api', listingRouter(db));
+app.use('/api', listingsfilterRouter(db));
+
 
 
 module.exports = app;

@@ -6,21 +6,21 @@
 .vertical-menu {
   width: 10%; 
   min-height: 100%;
-  min-height: 800px;
+  // min-height: 800px;
   background: rgb(46, 46, 46);
   color: white;
-  padding-left: 10px;
   display: flex;
   flex-direction: column;
-  // position:fixed;
+  position:fixed;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 
-  .runlogo {
-    width: 192px;
-    margin-left: -10px;
-    position: fixed;
-    bottom: 0;
-  }
+}
+
+.shoepic {
+  width: 10%;
+  height: 20%;
+  position: fixed;
+  bottom: 0;
 }
 
 
