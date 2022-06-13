@@ -1,42 +1,39 @@
-.vertical-menu {
-  width: 200px; 
-  height: 100%;
-  min-height: 977px;
-  background: rgb(33, 37, 41);
+.layout {
   padding-top: 90px;
+  display: flex;
+}
+
+.vertical-menu {
+  width: 10%; 
+  min-height: 100%;
+  min-height: 800px;
+  background: rgb(46, 46, 46);
   color: white;
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  // position:fixed;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  .runlogo {
+    width: 192px;
+    margin-left: -10px;
+    position: fixed;
+    bottom: 0;
+  }
 }
+
 
 .filter {
   display: flex;
-  justify-content: center;
   font-size: 1vw;
   font-weight: 500;
-  flex-direction: column;
 }
 
-.filtername {
-  font-size: 1vw;
-  font-weight: 400;
+
+.buttons {
+  justify-content: space-around;
+  display: flex;
+  padding-right: 30px;
 }
 
-.brand-type {
-  align-items: flex-start;
-}
-
-.form-check-input {
-  background: rgb(255, 255, 255);
-  display: block; /* Make the links appear below each other */
-  padding: 12px; //
-  text-decoration: none; /* Remove underline from links */
-}
-
-.form-check-input:hover {
-  background-color: #ccc; /* Dark grey background on mouse-over */
-}
-
-.form-check-input.active {
-  background-color: #04AA6D; /* Add a green color to the "active/current" link */
-  color: white;
-}
