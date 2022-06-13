@@ -9,6 +9,7 @@
   
 }
 .mylisting-container{
+  position: relative;
   font-family: "Source Sans Pro", sans-serif;
   color:white;
   display: flex;
@@ -20,6 +21,7 @@
   margin-top: 150px;
   height: 1000px;
   width: 700px;
+  animation: slide 1.3s ease;
 }
 .mylisting-img {
   width:200px;
@@ -39,4 +41,18 @@
   margin-top:10px;
   height:330px;
   width: 700px;
+}
+
+@keyframes slide {
+  from{
+    top:-300px;
+    opacity: 0;
+
+  }
+  to{
+    top:0px;
+    opacity: 1;
+
+  }
+  
 }
