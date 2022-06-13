@@ -1,8 +1,5 @@
 const router = require('express').Router();
 
-
-
-
 let queryString = `
 SELECT *
 FROM listings

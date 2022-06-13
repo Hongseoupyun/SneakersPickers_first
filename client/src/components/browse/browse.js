@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './browse.scss'
 import runlogo from '../images/runlogo.gif'
+import axios from "axios";
 
 function Browse() {
+
+  const [listings, setListings] = useState([])
+
+
+  //loads listing on page-load
+  useEffect(() => {
+    loadListing()
+  }, []);
+
+  //loads all available listing
+  function loadListing() {
+    return(axios.get('/api/listings')
+    .then((result) => {
+      console.log(result.data)
+      setListings(result.data)
+    })
+    )
+  }
+
+
+  function loadFilter() {
+    return(axios.get('/api/listingsfilter')
+      .then((result) => {
+        // setListing = result
+      })
+    )
+  }
+
+
   return (
     <header className="layout">
       <header class="vertical-menu" sticky="fixed">
@@ -40,16 +70,20 @@ function Browse() {
 
         <div className="buttons">
           <button type="submit" class="btn btn-secondary mt-3">Filter</button>
-          <button type="button" href="/browse/" class="btn btn-secondary mt-3">Reset</button>
+          <button type="button" href="/browse/" className="btn btn-secondary mt-3">Reset</button>
         </div>
         <div className="runlogo">
-        <img src={runlogo} alt="run" class="shoepic"></img>
+        <img src={runlogo} alt="run" className="shoepic"></img>
         </div>
       </header>
 
 
       <header className="tradecard">
-        Hello
+        {listings.map((listing, index) => (
+          <p key={index}>
+            {listing.name}
+          </p>
+        ))}
       </header>
     </header>
   );

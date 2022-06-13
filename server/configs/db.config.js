@@ -14,7 +14,7 @@ const pool = new Pool({
 
 pool.connect().then(() => {
 	console.log("Database connection established.")
-	console.log(process.env)
+	console.log("Port:", process.env.DB_PORT)
 }).catch( e => {
 	throw new Error(e);
 })
