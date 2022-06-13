@@ -1,12 +1,13 @@
 import React from "react";
 import "./AddAListing.scss";
+import addSneakers from "../images/sneakers2.jpeg"
 
 function AddAListing() {
   return (
     <body className="add-body">
       <div className="master-container">
         <div className="img-div">
-          <img src="/Users/hongseoupyun/lighthouse/SneakersPickers/client/src/components/images/sneakers2.jpeg"/>
+          <img  className="add-a-listing-img" name src={addSneakers}/>
         </div>
         <form className="form">
           <h3>Uploade your shoes to trade</h3>

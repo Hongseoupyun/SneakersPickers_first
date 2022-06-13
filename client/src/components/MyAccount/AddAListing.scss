@@ -1,27 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
 
+.add-body{
+  padding-top: 50px;
+  background-color: rgb(33, 37, 41);
+  margin-top: -60px;
+  height: 130vh;
+ 
+}
 .master-container {
+  position:relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   margin-top: 150px ;
   margin-bottom: 90px;
   margin-right: 90px;
   margin-left: 90px;
   border: 1px solid black;
   height :550px;
-  border-radius: 13px;
+  border-radius: 25px;
   background-color:white;
   font-family: "Source Sans Pro", sans-serif;
-}
-.add-body{
-  padding-top: 0;
-  // animation: side-slide 1.6s ease;
-  background-color: rgb(33, 37, 41);
+  // animation: side-slide 1.4s ease-out;
 }
 
 .form{
-  padding-top: 15px;
-  
+  padding-top: 25px;
+
 }
 .size-brand{
   margin-top: 20px;
@@ -61,4 +66,10 @@
 .description{
   padding: 20px 10px 10px;
 
+}
+
+.add-a-listing-img {
+  width: 505px;
+    height: 548px;
+    border-radius: 13px;
 }

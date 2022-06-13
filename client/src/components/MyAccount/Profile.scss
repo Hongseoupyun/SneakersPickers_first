@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200vh;
+  height: auto;
   background-color: rgb(33, 37, 41);
   margin-top:-225px;
 } 
@@ -26,8 +26,8 @@
 .login-form {
   position: relative;
   z-index: 2;
-  margin-top:0px;
-  margin-bottom: 0px;
+  margin-top:375px;
+  margin-bottom: 70px;
   background-color: white ;
   padding:50px;
   border-radius: 25px;
@@ -37,6 +37,7 @@
   font-size: 32px;
   text-align: center; 
   margin-bottom: 35px ;
+
 }
 .int-area {
   width: 400px;
