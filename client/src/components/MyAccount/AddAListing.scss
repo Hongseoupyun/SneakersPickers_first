@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
 
+.add-body{
+  padding-top: 50px;
+  background-color: rgb(33, 37, 41);
+  margin-top: -60px;
+  height: 130vh;
+ 
+}
 .master-container {
   position:relative;
   display: flex;
@@ -11,17 +18,10 @@
   margin-left: 90px;
   border: 1px solid black;
   height :550px;
-  border-radius: 13px;
+  border-radius: 25px;
   background-color:white;
   font-family: "Source Sans Pro", sans-serif;
   // animation: side-slide 1.4s ease-out;
-}
-.add-body{
-  padding-top: 50px;
-  background-color: rgb(33, 37, 41);
-  margin-top: -60px;
-  height: 120vh;
- 
 }
 
 .form{

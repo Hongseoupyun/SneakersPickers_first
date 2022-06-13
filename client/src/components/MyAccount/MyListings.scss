@@ -1,11 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
 
-.mylisting-container{
+.mylisting-body{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 130vh
+  
+}
+.mylisting-container{
+  font-family: "Source Sans Pro", sans-serif;
+  color:white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   padding-top:90px;
-  border-radius: 13px;
+  border-radius: 25px;
+  background-color: navy;
+  margin-top: 150px;
+  height: 1000px;
+  width: 700px;
 }
 .mylisting-img {
   width:200px;
   height: 200px;
   border-radius: 13px;
+}
+.mylisting-card-contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.addlisting-card{
+  font-family: "Source Sans Pro", sans-serif;
+  color:white;
+  border-radius: 25px;
+  background-color: navy;
+  margin-top:10px;
+  height:330px;
+  width: 700px;
 }
