@@ -19,10 +19,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// directory for router
+const listingRouter = require('./routes/listings');
 
 //routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter());
+app.use('/api', listingRouter(db));
 
 
 module.exports = app;
