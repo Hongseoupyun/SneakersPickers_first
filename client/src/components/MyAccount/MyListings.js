@@ -5,7 +5,7 @@ import "./MyListings.scss"
 export default function MyListings() {
   return (
     <body className="mylisting-body">
-      <div className="mylisting-container">
+      <section className="mylisting-container">
         <div className="mylisting-img-card">
           <img className="mylisting-img" src={myListingImg}/>
         </div>
@@ -26,7 +26,7 @@ export default function MyListings() {
             5 Users want to trade 
           </div>
         </div>
-      </div>
+      </section>
       <div className="addlisting-card">
         will add plus image and will redirect users to add a listing page
       </div>

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
+
+
+.offers-body{
+  display: flex;
+  justify-content: center;
+}
+
+
+.offers-container {
+  font-family: "Source Sans Pro", sans-serif;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  margin-top: 150px;
+  background-color: navy;
+  border-radius: 25px;
+  width:1000px;
+}
+.offers-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.my-shoes-card{
+  background-color: black;
+  height: 300px;
+  width: 200px;
+}
+.others-shoes-card{
+  background-color:black;
+  height: 300px;
+  width: 200px;
+}
+.accpet-decline{
+  display: flex;
+  justify-content: flex-end;
+}
+.my-shoes-img, 
+.others-shoes-img {
+  width: 50px;
+  height: 50px;
+}
+ 
