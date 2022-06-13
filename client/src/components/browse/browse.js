@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './browse.scss'
 import runlogo from '../images/runlogo.gif'
 import axios from "axios";
+import ListItem from "./ListingItem"
 
 function Browse() {
 
@@ -23,6 +24,21 @@ function Browse() {
     })
     )
   }
+
+  //assigns result variable
+  const cardListing = listings.map((listing) => {
+    return (
+      <ListItem
+        key={listing.id}
+        name={listing.name}
+        size={listing.size}
+        brand={listing.brand}
+        picture={listing.image_url}
+        preference={listing.preferece}
+        description={listing.description}
+      />
+    );
+  });
 
 
   function loadFilter() {
@@ -79,11 +95,7 @@ function Browse() {
 
 
       <header className="tradecard">
-        {listings.map((listing, index) => (
-          <p key={index}>
-            {listing.name}
-          </p>
-        ))}
+        {cardListing}
       </header>
     </header>
   );
