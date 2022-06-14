@@ -8,8 +8,8 @@ WHERE id = $4;`
 module.exports = (db) => {
 
   router.get("/profile", (req, res) => {
-    console.log("profile user:", req.user.id)
-    db.query(queryUser, [req.user.id])
+    // console.log("profile user:", req.user.id)
+    db.query(queryUser, [3])
       .then((result) => {
         res.json(result.rows[0]);
       })
@@ -20,12 +20,12 @@ module.exports = (db) => {
 
   router.post("/profile",(req,res)=>{
     const {name, email, newPassword, confirmedPassword, currentPassword}= req.body
-    db.query(`SELECT password FROM users where id = $1`,[req.user.id])
+    db.query(`SELECT password FROM users where id = $1`,[3])
     .then((result)=>{
       const passwordInDb=result.rows[0].password
       if(newPassword === confirmedPassword && currentPassword === passwordInDb ) {
         console.log(req.body)
-        db.query(updateUserProfile,[name, email, newPassword, req.user.id])
+        db.query(updateUserProfile,[name, email, newPassword, 3])
         .then(()=>{
           res.json({success:true, message:"Profile Updated"})
         })
