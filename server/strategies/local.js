@@ -20,11 +20,10 @@ passport.deserializeUser(async (email, done) => {
 
 passport.use(new LocalStrategy( {usernameField: 'email', passwordField: 'password'},
   async (email, password, done) => {
-    console.log("enter passport middleware")
-    console.log("email:", email)
+
     try {
-      const result = await db.query(`SELECT * FROM USERS WHERE email = '${email}'`);
-      console.log(result.rows[0].password)
+      const result = await db.query(`SELECT * FROM USERS WHERE email = $1`, [email]);
+      console.log("Authenticating: local.js:", result.rows[0])
       if (!result.rows.length){
         done(null, false)
       } else {

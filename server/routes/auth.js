@@ -10,7 +10,7 @@ const router = Router()
 
 router.post('/login', passport.authenticate('local'),  (req, res) => {
   const params = req.body
-  console.log({params})
+  console.log("/login route hit:", params)
   res.send("done")
 })
 

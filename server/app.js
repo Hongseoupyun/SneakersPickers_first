@@ -37,10 +37,12 @@ app.use(passport.session());
 const listingRouter = require('./routes/listings');
 const listingsfilterRouter = require('./routes/listingsfilter');
 const authRouter = require('./routes/auth')
+const logoutRouter = require('./routes/logout')
 
 //routes
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
+app.use('/auth', logoutRouter);
 app.use('/users', usersRouter(db));
 app.use('/api', listingRouter(db));
 app.use('/api', listingsfilterRouter(db));
