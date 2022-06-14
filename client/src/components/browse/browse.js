@@ -53,11 +53,9 @@ function Browse() {
   //runs each time listings gets updated
 
 
-
   return (
     <header className="layout">
       <header class="vertical-menu" sticky="fixed">
-        
           <span className="filter">Filter list</span><br/>
 
           <label for="brand">Pick a brand:</label>
