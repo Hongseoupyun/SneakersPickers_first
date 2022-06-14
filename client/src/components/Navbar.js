@@ -5,7 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {Navbar, Nav, NavDropdown} from "react-bootstrap"
 import './Navbar.css'
 
+
 function NavBar() {
+
+
+
   return (
       <Navbar className="pb-0 pt-0" bg="dark blue" variant="dark" fixed="top" expand="lg" >
         <Navbar.Brand className="logoname" href="/">
@@ -18,6 +22,8 @@ function NavBar() {
           <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
           <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
           <Nav.Link href="browse">Browse</Nav.Link>
+          {/* {isLoggedIn? (<button onClick={handleLogout}>Logout</button>):(<button onClick={handleLogin}>Login</button>)} */}
+
           <NavDropdown title="My Account">
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
             <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>

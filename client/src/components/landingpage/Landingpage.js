@@ -43,37 +43,37 @@ function Landingpage() {
           </div>
         </article>
 
-        <p2>
+        <div>
           <div className="scroll-contact" id="scroll-contact-us" ></div>
           <span className="contact-us">Contact Us</span>
           <div className="contact-us-description">
-            <div class="card">
-              <img src={nhan} class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Nhan Tran</h5>
-                <p class="card-text">Full-stack developer. CEO of this website.</p>
+            <div className="card">
+              <img src={nhan} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Nhan Tran</h5>
+                <p className="card-text">Full-stack developer. CEO of this website.</p>
                 <a href="https://github.com/nktrancs">
                 <img src={gitlogo} alt="..." height="50x" width="50px" href="https://github.com/bhinder97" target="_blank"/>
                 </a>
                 <img src={email} alt="..." height="120x" width="120px"/>
               </div>
             </div>
-            <div class="card">
-              <img src={hong} class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Hongseoup Yun</h5>
-                <p class="card-text">Full-stack developer. CEO of this website.</p>
+            <div className="card">
+              <img src={hong} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Hongseoup Yun</h5>
+                <p className="card-text">Full-stack developer. CEO of this website.</p>
                 <a href="https://github.com/Hongseoupyun">
                 <img src={gitlogo} alt="..." height="50x" width="50px" href="https://github.com/bhinder97" target="_blank"/>
                 </a>
                 <img src={email} alt="..." height="120x" width="120px"/>
               </div>
             </div>
-            <div class="card">
-              <img src={hars} class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Harsimranjeet Bhinder</h5>
-                <p class="card-text">Full-stack developer. CEO of this website.</p>
+            <div className="card">
+              <img src={hars} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Harsimranjeet Bhinder</h5>
+                <p className="card-text">Full-stack developer. CEO of this website.</p>
                 <a href="https://github.com/bhinder97">
                 <img src={gitlogo} alt="..." height="50x" width="50px" href="https://github.com/bhinder97" target="_blank"/>
                 </a>
@@ -81,7 +81,7 @@ function Landingpage() {
               </div>
             </div>
           </div>
-        </p2>
+        </div>
       </main>
     </div>
   );

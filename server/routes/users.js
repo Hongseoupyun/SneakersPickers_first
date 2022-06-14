@@ -6,7 +6,9 @@ module.exports = (db) => {
   // all routes will go here 
   router.get('/', (req, res) => {
       if (req.user) {
-        console.log(req.user)
+        console.log("logged in as:", req.user)
+      } else {
+        console.log("not logged in")
       }
   });
 

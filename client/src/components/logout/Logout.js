@@ -1,6 +1,6 @@
 import React, { useEffect} from "react";
 import axios from 'axios';
-import { useNavigate, useDispatch } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Logout() {
 
@@ -19,7 +19,7 @@ function Logout() {
 
   useEffect(() => {
     logout()
-  }, []);
+  });
 
   return (
     <div className="container">

@@ -21,7 +21,7 @@
   border-radius: 25px;
   background-color:white;
   font-family: "Source Sans Pro", sans-serif;
-  // animation: side-slide 1.4s ease-out;
+  animation: slide 1.3s ease-out;
 }
 
 .form{
@@ -51,18 +51,6 @@
   font-size: 18px;
   
 }
-@keyframes side-slide{
-  from{
-    left:-300px;
-    opacity: 0;
-
-  }
-  to{
-    right:0px;
-    opacity: 1;
-  }
-  
-}
 .description{
   padding: 20px 10px 10px;
 
@@ -72,4 +60,18 @@
   width: 505px;
     height: 548px;
     border-radius: 13px;
+}
+
+@keyframes slide {
+  from{
+    top:-300px;
+    opacity: 0;
+
+  }
+  to{
+    top:0px;
+    opacity: 1;
+
+  }
+  
 }

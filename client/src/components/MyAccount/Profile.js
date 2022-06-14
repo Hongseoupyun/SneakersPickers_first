@@ -1,41 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Profile.scss";
+import axios from "axios";
+import ProfileItem from "./ProfileItem";
+
 
 export default function Profile() {
+  //set state of the data
+  const [usersProfile, setUsersProfile] = useState({});
+
+  //fetch data from api using axios
+  const getUsersProfile = function () {
+    return axios.get("/api/profile")
+      .then((result) => {
+        console.log(result.data);
+        setUsersProfile(result.data);
+      });
+  };
+  //load usersProfile when rendering component
+  useEffect(() => {
+    getUsersProfile();
+  }, []);
+
   return (
-    <body className="profile-body">
-    <section class="login-form">
-      <h1 className="profile-heading">Profile</h1>
-      <form action="/profile" method = "POST">
-        <div className="int-area">
-          <input type="text" name ="user-name" autocomplete="off" required/>
-          <label>Name</label>
-        </div>
-        <div className="int-area">
-          <input type="password" name ="email" autocomplete="off" required/>
-          <label>Email</label>
-        </div> 
-        <div className="int-area">
-          <input type="password" name ="password" autocomplete="off" required/>
-          <label>Current Password</label>
-        </div>
-        <div className="int-area">
-          <input type="password" name ="new-password" autocomplete="off" required/>
-          <label>New Password </label>
-        </div> 
-        <div className="int-area">
-          <input type="password" name ="new-password-confirm" autocomplete="off" required/>
-          <label>Confirm New Password</label>
-        </div> 
-        <div className="btn-area">
-          <button type="submit" >Save Changes</button>
-        </div>
-      </form>
-      
-  
-    </section>
-    
-  </body>
-      
+    <div className="profile-body">
+      <ProfileItem
+        name={usersProfile.name}
+        email={usersProfile.email}
+      />
+    </div>
   );
 }

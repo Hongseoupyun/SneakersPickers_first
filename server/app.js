@@ -10,8 +10,8 @@ const session = require('express-session')
 // db connection
 const db = require('./configs/db.config');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 
 
 var app = express();
@@ -37,7 +37,7 @@ const listingRouter = require('./routes/listings');
 const listingsfilterRouter = require('./routes/listingsfilter');
 const authRouter = require('./routes/auth')
 const logoutRouter = require('./routes/logout')
-
+const profileRouter = require('./routes/profile')
 //routes
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
@@ -45,6 +45,7 @@ app.use('/auth', logoutRouter);
 app.use('/users', usersRouter(db));
 app.use('/api', listingRouter(db));
 app.use('/api', listingsfilterRouter(db));
+app.use('/api', profileRouter(db));
 
 
 
