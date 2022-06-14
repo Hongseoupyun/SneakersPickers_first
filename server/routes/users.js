@@ -5,7 +5,9 @@ const users = ['Bob', 'Alex', 'Will', 'Tristan'];
 module.exports = (db) => {
   // all routes will go here 
   router.get('/', (req, res) => {
-      res.json(users);
+      if (req.user) {
+        console.log(req.user)
+      }
   });
 
   return router;
