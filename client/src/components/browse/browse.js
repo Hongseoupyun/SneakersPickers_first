@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './browse.scss'
 import runlogo from '../images/runlogo.gif'
 import axios from "axios";
-import ListItem from "./ListingItem"
+import ListingItem from "./ListingItem"
 
 function Browse() {
 
@@ -26,10 +26,10 @@ function Browse() {
     )
   }
 
-  //assigns result variable
+  //assigns result variable to pass to ListingItem
   const cardListing = listings.map((listing) => {
     return (
-      <ListItem
+      <ListingItem
         key={listing.id}
         name={listing.name}
         size={listing.size}
