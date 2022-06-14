@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cookieSession = require('cookie-session')
 
 const db = require('./configs/db.config');
 
@@ -15,8 +15,14 @@ var app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express .static(path.join(__dirname, 'public')));
+app.use(cookieSession({
+  name: 'session',
+  keys: ["sneakerspickers"],
+
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}))
 
 // directory for router
 const listingRouter = require('./routes/listings');
