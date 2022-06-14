@@ -12,7 +12,6 @@ const db = require('./configs/db.config');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var bodyParser = require('body-parser')
 
 
 var app = express();
