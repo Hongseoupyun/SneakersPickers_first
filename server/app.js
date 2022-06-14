@@ -24,7 +24,7 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }))
 
-// directory for router
+// directory for router 
 const listingRouter = require('./routes/listings');
 const listingsfilterRouter = require('./routes/listingsfilter');
 
