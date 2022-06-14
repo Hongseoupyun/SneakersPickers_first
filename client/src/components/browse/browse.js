@@ -8,7 +8,8 @@ import ListItem from "./ListingItem"
 function Browse() {
 
   const [listings, setListings] = useState([])
-
+  const [brands, setBrands] = useState("")
+  const [sizes, setSizes] = useState("")
 
   //loads listing on page-load
   useEffect(() => {
@@ -34,20 +35,23 @@ function Browse() {
         size={listing.size}
         brand={listing.brand}
         picture={listing.image_url}
-        preference={listing.preferece}
+        preference={listing.preference}
         description={listing.description}
       />
     );
   });
 
-
+//fetches filtered api with onclick from filter button
   function loadFilter() {
-    return(axios.get('/api/listingsfilter')
+    return(axios.post('/api/listingsfilter', {size: sizes, brand: brands})
       .then((result) => {
-        // setListing = result
+        setListings(result.data)
       })
     )
   }
+
+  //runs each time listings gets updated
+
 
 
   return (
@@ -57,7 +61,7 @@ function Browse() {
           <span className="filter">Filter list</span><br/>
 
           <label for="brand">Pick a brand:</label>
-          <select name="brand" id="brand">
+          <select name="brand" id="brand" onChange={(e, value) => {setBrands(e.target.value)}}>
             <optgroup label="Brand">
               <option value="air jordan">Air Jordan</option>
               <option value="nike dunks">Nike Dunks</option>
@@ -70,7 +74,7 @@ function Browse() {
           </select><br/>
 
           <label for="size">Pick a size:</label>
-          <select name="size" id="size">
+          <select name="size" id="size" onChange={(e, value) => {setSizes(e.target.value)}}>
             <optgroup label="Size">
               <option value="4">Size 4</option>
               <option value="5">Size 5</option>
@@ -85,8 +89,8 @@ function Browse() {
           </select><br/>
 
         <div className="buttons">
-          <button type="submit" class="btn btn-secondary mt-3">Filter</button>
-          <button type="button" href="/browse/" className="btn btn-secondary mt-3">Reset</button>
+          <button type="submit" onClick={() => loadFilter()} class="btn btn-secondary mt-3">Filter</button>
+          <button type="button" onClick={() => loadListing()} className="btn btn-secondary mt-3">Reset</button>
         </div>
         <div className="runlogo">
         <img src={runlogo} alt="run" className="shoepic"></img>

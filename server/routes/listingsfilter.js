@@ -12,11 +12,11 @@ AND brand = $2;
 
 // Route /api/listings
 module.exports = db => {
-  router.get("/listingsfilter", (req, res) => {
+  router.post("/listingsfilter", (req, res) => {
+    console.log(req.body)
     db.query(queryString, [req.body.size, req.body.brand])
     .then(result => {
       rows = result.rows;
-      console.log(result)
       res.json(result.rows);
     })
     .catch(err => {
