@@ -1,10 +1,10 @@
 import React from "react";
 import "./ListingItem.scss"
 
-export default function ListItem(props) {
+export default function ListingItem(props) {
 
   return (
-  <div class="card">
+  <div class="cardsale">
     <div class="photo">
       <img src={props.picture} alt=""/>
     </div>
@@ -21,4 +21,4 @@ export default function ListItem(props) {
     </div>
   </div>
   );
-  }
+}

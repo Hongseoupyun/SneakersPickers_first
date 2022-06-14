@@ -5,6 +5,7 @@ let updateUserProfile = ``
 
 module.exports = (db) => {
   router.get("/profile", (req, res) => {
+    console.log(req.user)
     db.query(queryUser, [3])
       .then((result) => {
         res.json(result.rows[0]);

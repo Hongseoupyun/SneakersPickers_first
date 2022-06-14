@@ -43,7 +43,7 @@ function Landingpage() {
           </div>
         </article>
 
-        <article>
+        <p2>
           <div className="scroll-contact" id="scroll-contact-us" ></div>
           <span className="contact-us">Contact Us</span>
           <div className="contact-us-description">
@@ -81,7 +81,7 @@ function Landingpage() {
               </div>
             </div>
           </div>
-        </article>
+        </p2>
       </main>
     </div>
   );

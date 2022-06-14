@@ -8,6 +8,7 @@ export default function ProfileItem(props) {
   const [newEmail, setnewEmail] = useState(email && email)
   const [newPassword, setnewPassword] = useState("")
   const [confirmedPassword, setconfirmedPassword] = useState("")
+  console.log(newName)
 
   const saveChanges = function (e) {
     e.preventDefault();
@@ -16,8 +17,8 @@ export default function ProfileItem(props) {
         console.log("updating changes")
       })
   }
-  console.log("name-->", name)
-  // console.log("newName==>",newName)
+  // console.log("name-->", name)
+  // // console.log("newName==>",newName)
   return (
     <section className="login-form">
       <h1 className="profile-heading">Profile</h1>
