@@ -1,10 +1,11 @@
 const router = require("express").Router();
 
-let queryString = `SELECT * FROM users WHERE id = $1`;
+let queryUser = `SELECT * FROM users WHERE id = $1`;
+let updateUserProfile = ``
 
 module.exports = (db) => {
   router.get("/profile", (req, res) => {
-    db.query(queryString, [3])
+    db.query(queryUser, [3])
       .then((result) => {
         res.json(result.rows[0]);
       })
@@ -12,5 +13,11 @@ module.exports = (db) => {
         res.status(500).json({ error: err.message });
       });
   });
+  router.post("/profile",(req,res)=>{
+    const {newName, newEmail, newPassword, confirmedPassword}= req.body
+    // if(newPassword === confirmedPassword) {
+      db.query(updateUserProfile,[newName, newEmail, newPassword])
+    // }
+  })
   return router;
 };
