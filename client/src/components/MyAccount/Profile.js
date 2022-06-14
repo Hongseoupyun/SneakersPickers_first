@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./Profile.scss";
 import axios from "axios";
-import ProfileItem from "./ProfileItem";
-
 
 export default function Profile() {
-  //set state of the data
-  const [usersProfile, setUsersProfile] = useState({});
+
+  const [currentPassword,setCurrentPassword] = useState("")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [newPassword, setnewPassword] = useState("")
+  const [confirmedPassword, setconfirmedPassword] = useState("")
 
   //fetch data from api using axios
   const getUsersProfile = function () {
     return axios.get("/api/profile")
       .then((result) => {
-        console.log(result.data);
-        setUsersProfile(result.data);
+        setName(result.data.name)
+        setEmail(result.data.email)
       });
   };
   //load usersProfile when rendering component
@@ -21,12 +23,72 @@ export default function Profile() {
     getUsersProfile();
   }, []);
 
+ //sending updated dato to api
+  const saveChanges = function (e) {
+    e.preventDefault();
+    axios.post("api/profile", { name, email, currentPassword, newPassword, confirmedPassword })
+      .then((res) => {
+        console.log(res.data)
+        setnewPassword("")
+        setCurrentPassword("")
+        setconfirmedPassword("")
+      })
+      .catch((err)=>{
+        console.log("error!=>",err)
+      })
+  }
+ 
   return (
     <div className="profile-body">
-      <ProfileItem
-        name={usersProfile.name}
-        email={usersProfile.email}
-      />
+      <section className="login-form">
+      <h1 className="profile-heading">Profile</h1>
+      <form action="/api/profile" method="POST" onSubmit={saveChanges}>
+        <div className="int-area">
+          <input type="text" name="user-name" value={name} onChange={(e) => { setName(e.target.value) }} autoComplete="off" required />
+          <label>Name</label>
+        </div>
+        <div className="int-area">
+          <input type="email" name="email" value={email} onChange={(e) => { setEmail(e.target.value) }} autoComplete="off" required />
+          <label>Email</label>
+        </div>
+        <div className="int-area">
+          <input
+            type="password"
+            name="password"
+            value={currentPassword}
+            onChange={(e) => { setCurrentPassword(e.target.value) }}
+            autoComplete="off"
+            required
+          />
+          <label>Current Password</label>
+        </div>
+        <div className="int-area">
+          <input
+            type="password"
+            name="new-password"
+            value={newPassword}
+            onChange={(e) => { setnewPassword(e.target.value) }}
+            autoComplete="off"
+            required
+          />
+          <label>New Password </label>
+        </div>
+        <div className="int-area">
+          <input
+            type="password"
+            name="new-password-confirm"
+            value={confirmedPassword}
+            onChange={(e) => { setconfirmedPassword(e.target.value) }}
+            autoComplete="off"
+            required
+          />
+          <label>Confirm New Password</label>
+        </div>
+        <div className="btn-area">
+          <button type="submit" onClick={(e) => { saveChanges(e) }}>Save Changes</button>
+        </div>
+      </form>
+    </section>
     </div>
   );
 }
