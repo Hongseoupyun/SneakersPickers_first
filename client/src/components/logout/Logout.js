@@ -7,14 +7,9 @@ function Logout() {
   const navigate = useNavigate()
 
   function logout() {
-    return(axios.post('/auth/logout')
-      .then((result) => {
-        console.log("logout successful")
-        return navigate("/")
-      })
-     .catch((err) => {
-      console.log(err)
-    }))
+    localStorage.setItem('isLoggedIn', false);
+    window.open('/', "_self")
+
   }
 
   useEffect(() => {

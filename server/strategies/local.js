@@ -28,6 +28,7 @@ passport.use(new LocalStrategy( {usernameField: 'email', passwordField: 'passwor
         done(null, false)
       } else {
         if (result.rows[0].password === password) {
+          console.log("Successfully authenticated")
           done(null, result.rows[0]);
         } else {
           done(null, false)

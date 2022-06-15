@@ -1,24 +1,37 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./login.scss";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const navigate = useNavigate();
+
+
+
   
   function logUser(e) {
     e.preventDefault()
     console.log("submit fire")
     return(axios.post('/auth/login', {email:email, password:password})
     .then((result) => {
-      console.log(result.data)
-
+      console.log(result)
+      setIsLoggedIn(true)
+      localStorage.setItem('isLoggedIn', true);
+    })
+    .then(() => {
+      window.open('/', "_self")
     })
     )
   }
 
+
+ 
   return (
     <div className="login-wrapper">
       <h1>Please Log In</h1>
