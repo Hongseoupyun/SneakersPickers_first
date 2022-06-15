@@ -21,12 +21,19 @@ export default function Profile() {
     getUsersProfile();
   }, []);
 
+  console.log("userProfile l24:", usersProfile)
   return (
     <div className="profile-body">
-      <ProfileItem
+      {
+        usersProfile.name ? <ProfileItem
         name={usersProfile.name}
         email={usersProfile.email}
       />
+      : (
+        <div>
+          Nothing to show
+        </div>
+      )}
     </div>
   );
 }
