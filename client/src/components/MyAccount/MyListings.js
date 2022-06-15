@@ -11,8 +11,10 @@ export default function MyListings() {
   const loadMyListings = function () {
     axios.get("api/mylistings")
       .then((result) => {
-        console.log("result.data from mylistings=>",result.data)
         setListings(result.data)
+      })
+      .catch((err)=>{
+        console.log("Error Occured in", err)
       })
   }
 

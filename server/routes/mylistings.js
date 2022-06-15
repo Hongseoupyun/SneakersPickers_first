@@ -4,7 +4,7 @@ const queryListing = `SELECT * FROM listings WHERE user_id = $1 AND active = tru
 
 module.exports = (db) => {
   router.get("/mylistings", (req, res) => {
-    db.query(queryListing,[3])
+    db.query(queryListing,[req.user.id])
     .then((result)=>{
       res.json(result.rows)
     })
