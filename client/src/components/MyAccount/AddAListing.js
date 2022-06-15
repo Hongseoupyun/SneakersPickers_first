@@ -15,7 +15,7 @@ function AddAListing() {
             <input
               type="text"
               name="shoes-name"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
             <label>Name</label>
@@ -50,7 +50,7 @@ function AddAListing() {
             <input
               type="text"
               name="description"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
             <label>Description</label>
@@ -59,7 +59,7 @@ function AddAListing() {
             <input
               type="text"
               name="img-url"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
             <label>Image Url</label>
@@ -68,7 +68,7 @@ function AddAListing() {
             <input
               type="text"
               name="pref"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
             <label>Preference(eg.Nike Dunks Varisty red etc.)</label>
