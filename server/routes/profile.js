@@ -8,8 +8,8 @@ WHERE id = $4;`
 module.exports = (db) => {
 
   router.get("/profile", (req, res) => {
-    // console.log("profile user:", req.user.id)
-    db.query(queryUser, [3])
+    console.log("requser profile:", req.user.id)
+    db.query(queryUser, [req.user.id])
       .then((result) => {
         res.json(result.rows[0]);
       })

@@ -6,8 +6,12 @@ import {Navbar, Nav, NavDropdown} from "react-bootstrap"
 import './Navbar.css'
 
 
+
 function NavBar() {
 
+  //renders navbar based on localstoragestate
+  const LoggedIn = localStorage.getItem('isLoggedIn');
+  // console.log(typeof LoggedIn)
 
 
   return (
@@ -22,15 +26,21 @@ function NavBar() {
           <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
           <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
           <Nav.Link href="browse">Browse</Nav.Link>
-          {/* {isLoggedIn? (<button onClick={handleLogout}>Logout</button>):(<button onClick={handleLogin}>Login</button>)} */}
+          {LoggedIn == "true"? (
+            <NavDropdown title="My Account">
+              <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>
+              <NavDropdown.Item href="/mylistings">My listings</NavDropdown.Item>
+              <NavDropdown.Item href="/addalisting">Add a listing</NavDropdown.Item>
+              <NavDropdown.Item onClick={()=> {localStorage.setItem('isLoggedIn', false); window.open('/', "_self") }}>Logout</NavDropdown.Item>
+            </NavDropdown>
+          )
+          :
+          (
+          <Nav.Link href="/login">Login</Nav.Link>
 
-          <NavDropdown title="My Account">
-            <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-            <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>
-            <NavDropdown.Item href="/mylistings">My listings</NavDropdown.Item>
-            <NavDropdown.Item href="/addalisting">Add a listing</NavDropdown.Item>
-            <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
-          </NavDropdown>
+          )}
+
         </Nav>
       </Navbar>
   );

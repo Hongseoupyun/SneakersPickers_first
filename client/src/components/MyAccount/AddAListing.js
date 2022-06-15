@@ -1,13 +1,22 @@
 import React from "react";
 import "./AddAListing.scss";
 import addSneakers from "../images/sneakers2.jpeg"
+import { useState } from "react";
 
 function AddAListing() {
+
+  const [name, setName] = useState("")
+  const [size, setSize] = useState("")
+  const [brand, setBrand] = useState("")
+  const [description, setDescription] = useState("")
+  const [img, setImg] = useState("")
+  const [preference, setPreference] = useState("")
+
   return (
     <body className="add-body">
       <div className="master-container">
         <div className="img-div">
-          <img  className="add-a-listing-img" name src={addSneakers}/>
+          <img className="add-a-listing-img" name src={addSneakers} />
         </div>
         <form className="form">
           <h3>Uploade your shoes to trade</h3>
@@ -15,6 +24,8 @@ function AddAListing() {
             <input
               type="text"
               name="shoes-name"
+              value={name}
+              onChange={(e)=>{setName(e.target.value)}}
               autoComplete="off"
               required
             />
@@ -22,7 +33,7 @@ function AddAListing() {
           </div>
           <div className="size-brand">
             <div>
-              <select name="size" className="size">
+              <select name="size" className="size" value={size}>
                 <option>Size 4</option>
                 <option>Size 5</option>
                 <option>Size 6</option>
@@ -35,7 +46,7 @@ function AddAListing() {
               </select>
             </div>
             <div>
-              <select name="brand" className="brand">
+              <select name="brand" className="brand" value={size}>
                 <option>Air Jordan</option>
                 <option>Nike Dunks</option>
                 <option>Nike Air Force 1</option>
@@ -50,6 +61,7 @@ function AddAListing() {
             <input
               type="text"
               name="description"
+              value={description}
               autoComplete="off"
               required
             />
@@ -59,6 +71,7 @@ function AddAListing() {
             <input
               type="text"
               name="img-url"
+              value={img}
               autoComplete="off"
               required
             />
@@ -68,6 +81,7 @@ function AddAListing() {
             <input
               type="text"
               name="pref"
+              value={preference}
               autoComplete="off"
               required
             />
