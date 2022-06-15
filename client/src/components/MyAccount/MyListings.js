@@ -1,35 +1,43 @@
-import React from "react";
-import myListingImg from "../images/mylisting-img-sample.webp"
+import axios from "axios";
+import React, {useEffect,useState } from "react";
 import "./MyListings.scss"
+import MyListingItem from "./MyListingItem";
+import MyListingsAddCard from "./MyListingsAddCard";
+
 
 export default function MyListings() {
+  const [myListings,setmyListings] = useState("")
+
+  //fetch data from api
+  const loadMyListings = function () {
+    axios.get("api/mylistings")
+      .then((result) => {
+        console.log(result.data)
+        setmyListings(result.data)
+      })
+  }
+
+  //load my listings when rendering this component
+  useEffect(() => {
+    loadMyListings()
+  }, [])
+
+  //pass the data to MyListingsitem
+  const listings = myListings.map((e) => {
+    <MyListingItem
+      name={e.name}
+      brand={e.brand}
+      size={e.size}
+      description={e.description}
+    />
+  })
+
   return (
-    <body className="mylisting-body">
-      <section className="mylisting-container">
-        <div className="mylisting-img-card">
-          <img className="mylisting-img" src={myListingImg}/>
-        </div>
-        <div className="mylisting-card-contents">
-          <div className="listing-name">
-            Jordan 1 X Travis Scott
-          </div>
-          <div className="listing-brand">
-            Air Jordan
-          </div>
-          <div className="listing-size">
-            Size 11
-          </div>
-          <div className="listing-description">
-            Air jordan 1 X Travis Scott, Size 11, Gently used
-          </div>
-          <div className="listing-offers">
-            5 Users want to trade 
-          </div>
-        </div>
-      </section>
-      <div className="addlisting-card">
-        will add plus image and will redirect users to add a listing page
-      </div>
-      </body>
+    <div className="mylisting-body">
+      {listings}
+      {MyListingsAddCard}
+    </div>
+
+
   );
 }

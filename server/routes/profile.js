@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
-let queryUser = `SELECT * FROM users WHERE id = $1`;
-let updateUserProfile = `UPDATE users
+const queryUser = `SELECT * FROM users WHERE id = $1`;
+const updateUserProfile = `UPDATE users
 SET name = $1, email= $2, password= $3
 WHERE id = $4;`
 
