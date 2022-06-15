@@ -1,14 +1,9 @@
 import React from "react";
-import { useState } from "react";
 
 
 export default function MyListingItem (props) {
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
-  const [brand, setbrand] = useState("")
-  const [size, setSize] = useState("")
-  const [img, setImg] = useState("")
-
+  const {name,description,brand,size,img} = props
+  
   return (
     <section className="mylisting-container">
         <div className="mylisting-img-card">

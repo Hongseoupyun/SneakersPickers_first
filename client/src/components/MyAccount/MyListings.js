@@ -1,19 +1,18 @@
 import axios from "axios";
-import React, {useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MyListings.scss"
 import MyListingItem from "./MyListingItem";
 import MyListingsAddCard from "./MyListingsAddCard";
 
-
 export default function MyListings() {
-  const [myListings,setmyListings] = useState("")
+  const [listings, setListings] = useState([])
 
   //fetch data from api
   const loadMyListings = function () {
     axios.get("api/mylistings")
       .then((result) => {
-        console.log(result.data)
-        setmyListings(result.data)
+        console.log("result.data from mylistings=>",result.data)
+        setListings(result.data)
       })
   }
 
@@ -23,18 +22,21 @@ export default function MyListings() {
   }, [])
 
   //pass the data to MyListingsitem
-  const listings = myListings.map((e) => {
-    <MyListingItem
-      name={e.name}
-      brand={e.brand}
-      size={e.size}
-      description={e.description}
-    />
+  const eachListing = listings.map((e) => {
+    return (
+      <MyListingItem
+        key={e.id}
+        name={e.name}
+        brand={e.brand}
+        size={e.size}
+        description={e.description}
+      />
+      )
   })
 
   return (
     <div className="mylisting-body">
-      {listings}
+      {eachListing}
       {MyListingsAddCard}
     </div>
 
