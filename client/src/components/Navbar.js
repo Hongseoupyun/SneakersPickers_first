@@ -25,7 +25,7 @@ function NavBar() {
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
           <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
-          <Nav.Link href="browse">Browse</Nav.Link>
+          <Nav.Link href="/browse">Browse</Nav.Link>
           {LoggedIn == "true"? (
             <NavDropdown title="My Account">
               <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
@@ -37,8 +37,10 @@ function NavBar() {
           )
           :
           (
-          <Nav.Link href="/login">Login</Nav.Link>
-
+          <>
+            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/register">Register</Nav.Link>
+          </>
           )}
 
         </Nav>

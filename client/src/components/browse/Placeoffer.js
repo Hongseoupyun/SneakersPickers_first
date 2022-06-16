@@ -2,42 +2,79 @@ import React, { useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Placeoffer.scss";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import tradeImg from "../images/trade-sample.webp"
-import myShoesImg from "../images/mylisting-img-sample.webp"
-import othersShoesImg from "../images/mylisting-img-sample.webp"
+import MyItems from "./MyItems";
 
 function Placeoffer() {
 
-  const { id } = useParams();
-
-  const [listing, setListing] = useState(null);
-  const [myListings, setMyListings] = useState(null);
+//**************** */
+  // const location = useLocation();
 
   
+
+  const { id } = useParams();
+
+  const [offeredID, setOfferedID] = useState(0);
+  const [listing, setListing] = useState([]);
+  const [myListings, setMyListings] = useState([]);
+
+  
+  //Gets the listing from the selected listing
   function loadListing() {
     return(axios.get(`/api/listeditem/${id}`)
     .then((result) => {
-      console.log("load listing:", result.data[0])
+      // console.log("load listing:", result.data[0])
       setListing(result.data[0])
-      console.log("newMylisting:", listing)
     })
     )
   }
-  
+
+  //Gets all of user's listing to offer 
   const loadMyListings = function () {
-    axios.get("api/mylistings")
+    axios.get("/api/mylistings")
     .then((result) => {
       console.log("result.data from mylistings=>",result.data)
       setMyListings(result.data)
     })
   }
   
+  // console.log("mylistings:", myListings)
+  
+  const myListed = myListings.map((e) => {
+   return (
+     <MyItems
+     key={e.id}
+     name={e.name}
+     brand={e.brand}
+     size={e.size}
+     description={e.description}
+     image_url={e.image_url}
+     id={e.id}
+     setOfferedID={setOfferedID}
+     />
+    )
+  })
+  
+
+  console.log({myListed})
+
+
   useEffect(() => {
     loadMyListings()
     loadListing()
   }, [])
   
+
+
+  //sends axios post request using id from param, and offeredID from selected on myListed component
+  const handleOffer = () => {
+    return(axios.post('/api/listingsfilter', {listingID: id, offeredID: offeredID})
+      .then((result) => {
+        console.log("offered complete!")
+      })
+    )
+  }
 
 
 
@@ -46,7 +83,7 @@ function Placeoffer() {
       {listing && myListings? (
        <section className="offers-container">
         <div className="from">
-          From username
+          Place offer for:
         </div>
         <article className="offers-cards">
           <div className="my-shoes-card">
@@ -68,23 +105,11 @@ function Placeoffer() {
             <img src={tradeImg}/>
           </div>
 
-          <div className="others-shoes-card">
-            <div>
-              <img className="others-shoes-img"src={othersShoesImg} />
-            </div>
-            <div className="others-shoes-name">
-              name
-            </div>
-            <div className="others-shoes-size">
-              size
-            </div>
-            <div className="others-shoes-description">
-              description
-            </div>
-          </div>
+          {myListed}
+
         </article>
-        <div className="accpet-decline">
-          <button>Offer</button>
+        <div className="accept-decline">
+          <button onClick={handleOffer}>Offer</button>
           <button>Cancel</button>
         </div>
 

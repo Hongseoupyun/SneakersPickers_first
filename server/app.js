@@ -42,18 +42,20 @@ const profileRouter = require("./routes/profile");
 const registerRouter = require("./routes/register");
 const myListingsRouter = require("./routes/mylistings");
 const listedItemOfferingRouter = require("./routes/listedItemOffering")
-const addAListing = require("./routes/addalisting")
+const addAListingRouter = require("./routes/addalisting")
+const makeOfferRouter = require("./routes/makeOffer");
+
 //routes
-app.use("/", indexRouter);
 app.use("/auth", authRouter);
 app.use("/auth", logoutRouter);
 app.use("/register", registerRouter(db));
-app.use("/users", usersRouter(db));
 app.use("/api", listingRouter(db));
 app.use("/api", listingsfilterRouter(db));
 app.use("/api", profileRouter(db));
 app.use("/api", myListingsRouter(db));
 app.use("/api", listedItemOfferingRouter(db));
-app.use("/api", addAListing(db));
+app.use("/api", addAListingRouter(db));
+app.use("/api", makeOfferRouter(db))
+
 
 module.exports = app;
