@@ -18,7 +18,7 @@ export default function ListingItem(props) {
         <p>{props.description}</p>
         <h4>Preferences:</h4>
         <p>{props.preference}</p>
-        <Link to={`/placeoffer/${props.key}`} > Offer </Link>
+        <Link to={`/placeoffer/${props.id}`} > Offer </Link>
         <button>Favorite</button>
       </div>
     </div>

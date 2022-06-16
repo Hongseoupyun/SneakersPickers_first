@@ -11,47 +11,56 @@ function Placeoffer() {
 
   const { id } = useParams();
 
-  const [listing, setListing] = useState();
-  const [myListings, setMyListings] = useState();
+  const [listing, setListing] = useState(null);
+  const [myListings, setMyListings] = useState(null);
 
+  
   function loadListing() {
-    return(axios.get('/api/listeditem/' + id)
+    return(axios.get(`/api/listeditem/${id}`)
     .then((result) => {
-      console.log(result.data)
-      setListing(result.data)
+      console.log("load listing:", result.data[0])
+      setListing(result.data[0])
+      console.log("newMylisting:", listing)
     })
     )
   }
-
+  
   const loadMyListings = function () {
     axios.get("api/mylistings")
-      .then((result) => {
-        console.log("result.data from mylistings=>",result.data)
-        setMyListings(result.data)
-      })
+    .then((result) => {
+      console.log("result.data from mylistings=>",result.data)
+      setMyListings(result.data)
+    })
   }
+  
+  useEffect(() => {
+    loadMyListings()
+    loadListing()
+  }, [])
+  
 
 
 
   return (
     <body className="offers-body">
-      <section className="offers-container">
+      {listing && myListings? (
+       <section className="offers-container">
         <div className="from">
           From username
         </div>
         <article className="offers-cards">
           <div className="my-shoes-card">
             <div>
-              <img className="my-shoes-img" src={myShoesImg}/>
+              <img className="my-shoes-img" src={listing.image_url} alt=""/>
             </div>
             <div className="my-shoes-name">
-              name
+              Name: {listing.name}
             </div>
             <div className="my-shoes-size">
-              size
+              Size: {listing.size}
             </div>
             <div className="my-shoes-description">
-              description
+              Description: {listing.description}
             </div>
           </div>
           
@@ -79,9 +88,11 @@ function Placeoffer() {
           <button>Cancel</button>
         </div>
 
-      </section>
+      </section> )
+      :
+      (<div>No Data!</div>
+      )}
     </body>
-
   );
 }
 

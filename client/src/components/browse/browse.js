@@ -38,6 +38,7 @@ function Browse() {
         picture={listing.image_url}
         preference={listing.preference}
         description={listing.description}
+        id={listing.id}
       />
     );
   });
@@ -61,20 +62,20 @@ function Browse() {
           <span className="filter">Filter list</span><br/>
 
           <label for="brand">Pick a brand:</label>
-          <select name="brand" id="brand" onChange={(e, value) => {setBrands(e.target.value)}}>
+          <select name="brand" id="brand" onChange={(e) => {setBrands(e.target.value)}}>
             <optgroup label="Brand">
               <option value="air jordan">Air Jordan</option>
               <option value="nike dunks">Nike Dunks</option>
               <option value="nike air force">Nike Air Force</option>
               <option value="adidas yeezy">Adidas Yeezy</option>
               <option value="new balances">New Balances</option>
-              <option value="vans">Vans</option>
+              <option value="vans/converse">Vans/Converse</option>
               <option value="others">Others</option>
             </optgroup> 
           </select><br/>
 
           <label for="size">Pick a size:</label>
-          <select name="size" id="size" onChange={(e, value) => {setSizes(e.target.value)}}>
+          <select name="size" id="size" onChange={(e) => {setSizes(e.target.value)}}>
             <optgroup label="Size">
               <option value="4">Size 4</option>
               <option value="5">Size 5</option>

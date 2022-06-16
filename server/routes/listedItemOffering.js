@@ -4,7 +4,8 @@ const queryListing = `SELECT * FROM listings WHERE listings.id = $1`
 
 module.exports = (db) => {
   router.get("/listeditem/:id", (req, res) => {
-    db.query(queryListing,[3])
+    db.query(queryListing, [req.params.id])
+    // db.query(queryListing, [3])
     .then((result)=>{
       res.json(result.rows)
     })

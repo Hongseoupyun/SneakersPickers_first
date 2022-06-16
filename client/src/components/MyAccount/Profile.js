@@ -12,7 +12,7 @@ export default function Profile() {
 
   //fetch data from api using axios
   const getUsersProfile = function () {
-    return axios.get("/api/profile")
+    return axios.get("api/profile")
       .then((result) => {
         setName(result.data.name)
         setEmail(result.data.email)
@@ -34,7 +34,7 @@ export default function Profile() {
         setconfirmedPassword("")
       })
       .catch((err)=>{
-        console.log("error!=>",err)
+        console.log("Error Occured in ",err)
       })
   }
  

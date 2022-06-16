@@ -1,7 +1,7 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 const passport = require("passport");
 const local = require("./strategies/local");
 const session = require("express-session");
@@ -13,7 +13,7 @@ const db = require("./configs/db.config");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
-var app = express();
+const app = express();
 
 app.use(
   session({
@@ -23,7 +23,7 @@ app.use(
     cookie: { maxAge: 60000000 },
   })
 );
-
+//using middlewares
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -42,6 +42,7 @@ const profileRouter = require("./routes/profile");
 const registerRouter = require("./routes/register");
 const myListingsRouter = require("./routes/mylistings");
 const listedItemOfferingRouter = require("./routes/listedItemOffering")
+const addAListing = require("./routes/addalisting")
 //routes
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
@@ -53,5 +54,6 @@ app.use("/api", listingsfilterRouter(db));
 app.use("/api", profileRouter(db));
 app.use("/api", myListingsRouter(db));
 app.use("/api", listedItemOfferingRouter(db));
+app.use("/api", addAListing(db));
 
 module.exports = app;

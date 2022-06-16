@@ -13,9 +13,9 @@ export default function Offers() {
         </div>
         <article className="offers-cards">
           <div className="my-shoes-card">
-            <div>
+            {/* <div>
               <img className="my-shoes-img" src={myShoesImg}/>
-            </div>
+            </div> */}
             <div className="my-shoes-name">
               name
             </div>
