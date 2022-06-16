@@ -12,6 +12,7 @@ export default function MyListings() {
     axios.get("api/mylistings")
       .then((result) => {
         setListings(result.data)
+        console.log("result.data=",result.data)
       })
       .catch((err)=>{
         console.log("Error Occured in", err)
@@ -23,6 +24,8 @@ export default function MyListings() {
     loadMyListings()
   }, [])
 
+  
+  console.log("listings",listings)
   //pass the data to MyListingsitem
   const eachListing = listings.map((e) => {
     return (

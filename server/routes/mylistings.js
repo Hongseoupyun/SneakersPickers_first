@@ -6,8 +6,8 @@ module.exports = (db) => {
   router.get("/mylistings", (req, res) => {
     db.query(queryListing,[req.user.id])
     .then((result)=>{
-      res.json({ success: true, message: "User uploaded listing" })
       res.json(result.rows)
+      console.log(result.rows)
     })
     .catch((err)=>[
       console.log("Error found in mylistings =>", err)
