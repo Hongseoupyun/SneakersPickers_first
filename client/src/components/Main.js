@@ -11,6 +11,7 @@ import Browse from "./browse/browse";
 import Login from "./loginpage/login";
 import Register from "./registerpage/register";
 import Logout from "./logout/Logout";
+import Placeoffer from "./browse/Placeoffer";
 
 const Main = () => {
   return (
@@ -24,6 +25,7 @@ const Main = () => {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/register" element={<Register />}></Route>
       <Route path="/logout" element={<Logout />}></Route>
+      <Route path="/placeoffer/:id" element={<Placeoffer />}></Route>
     </Routes>
   );
 };

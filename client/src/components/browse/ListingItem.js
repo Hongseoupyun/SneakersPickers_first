@@ -1,11 +1,9 @@
-import React, { useState, useEffect, Button, Modal } from "react";
+import React from "react";
 import "./ListingItem.scss";
+import { Link } from "react-router-dom";
 
 export default function ListingItem(props) {
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <div class="cardsale">
@@ -20,23 +18,11 @@ export default function ListingItem(props) {
         <p>{props.description}</p>
         <h4>Preferences:</h4>
         <p>{props.preference}</p>
-        <button onClick={handleShow}>Offer</button>
+        <Link to={`/placeoffer/${props.key}`} > Offer </Link>
         <button>Favorite</button>
       </div>
-      {/* <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog> */}
     </div>
   );
 }
+
+

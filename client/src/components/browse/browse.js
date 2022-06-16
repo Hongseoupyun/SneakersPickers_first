@@ -28,6 +28,7 @@ function Browse() {
 
   //assigns result variable to pass to ListingItem
   const cardListing = listings.map((listing) => {
+    console.log("listingidhere:", listing.id)
     return (
       <ListingItem
         key={listing.id}
@@ -41,6 +42,7 @@ function Browse() {
     );
   });
 
+  
 //fetches filtered api with onclick from filter button
   function loadFilter() {
     return(axios.post('/api/listingsfilter', {size: sizes, brand: brands})
