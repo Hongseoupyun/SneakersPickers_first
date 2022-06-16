@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -6,6 +7,8 @@ const passport = require("passport");
 const local = require("./strategies/local");
 const session = require("express-session");
 const bodyParser = require("body-parser");
+// const PORT = 3000;
+
 
 // db connection
 const db = require("./configs/db.config");
@@ -42,6 +45,8 @@ const profileRouter = require("./routes/profile");
 const registerRouter = require("./routes/register");
 const myListingsRouter = require("./routes/mylistings");
 const addAListing = require("./routes/addalisting")
+const offersRouter = require("./routes/offers");
+
 //routes
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
@@ -53,5 +58,10 @@ app.use("/api", listingsfilterRouter(db));
 app.use("/api", profileRouter(db));
 app.use("/api", myListingsRouter(db));
 app.use("/api", addAListing(db));
+app.use("/api", offersRouter(db));
 
 module.exports = app;
+
+// app.listen(PORT, () => {
+//   console.log(`Example app listening on port ${PORT}!`);
+// });

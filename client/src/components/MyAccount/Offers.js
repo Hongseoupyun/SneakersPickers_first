@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Offers.scss"
 import tradeImg from "../images/trade-sample.webp"
 import myShoesImg from "../images/mylisting-img-sample.webp"
 import othersShoesImg from "../images/mylisting-img-sample.webp"
 
 export default function Offers() {
+  const [ offer, setOffer ] = useState({});
+  
+  const getOffers = function () {
+    axios.get("/offers/1")
+    .then((result) => {
+      setOffer(result.data)
+    })
+    .catch((err) => {
+      console.log("error!", err)
+    })
+  }
+
+  useEffect(() => {
+    console.log("IS THIS WORKING?")
+    getOffers()
+  }, [])
+
+
   return (
     <body className="offers-body">
       <section className="offers-container">
@@ -17,13 +36,13 @@ export default function Offers() {
               <img className="my-shoes-img" src={myShoesImg}/>
             </div>
             <div className="my-shoes-name">
-              name
+              {offer.from_name}
             </div>
             <div className="my-shoes-size">
-              size
+              {offer.from_size}
             </div>
             <div className="my-shoes-description">
-              description
+              {offer.from_description}
             </div>
           </div>
           <div className="trade-img">
@@ -44,7 +63,7 @@ export default function Offers() {
             </div>
           </div>
         </article>
-        <div className="accpet-decline">
+        <div className="accept-decline">
           <button>Accept</button>
           <button>Decline</button>
         </div>
