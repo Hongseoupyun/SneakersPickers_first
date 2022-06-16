@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./register.scss"
+import "./Register.scss"
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
@@ -27,23 +27,43 @@ function Register() {
 
 
   return (
-    <div className="container">
+    <div className="signup-body">
+      <section className="signup-form">
+      <h1 className="signup-heading">Sign Up</h1>
       <form method="POST" onSubmit={registerUser} id="signup">
-        <div className="header">
-          <h3>Sign Up</h3>
-          <p>You want to fill out this form</p>
+        <div className="int-area">
+          <input type="text" name="name" onChange={event => setName(event.target.value)}autoComplete="off" required />
+          <label>Your Name</label>
         </div>
-        <div className="sep"></div>
-        <div className="inputs">
-          <input type="text" name="name" onChange={event => setName(event.target.value)} placeholder="Full name" />
-          <input type="text" name="email" onChange={event => setEmail(event.target.value)} placeholder="Email"/>
-          <input type="password" name="password" onChange={event => setPassword(event.target.value)} placeholder="Password" />
-          <div className="checkboxy">
-            <input name="cecky" id="checky" value="1" type="checkbox" /><label className="terms">I accept the terms of use</label>
+        <div className="int-area">
+          <input input type="text" name="email" onChange={event => setEmail(event.target.value)}autoComplete="off" required />
+          <label>Your Email</label>
+        </div>
+        <div className="int-area">
+          <input
+            input type="password" name="password" onChange={event => setPassword(event.target.value)}
+            autoComplete="off"
+            required
+          />
+          <label>Password</label>
+        </div>
+        <div className="int-area">
+          <input
+            type="password"
+            name="new-password"
+            autoComplete="off"
+            required
+          />
+          <label>Confirm Password </label>
+        </div>
+        <div className="btn-area">
+          <button type="submit" >Save Changes</button>
+        </div>
+        <div class="caption">
+            Have an account? Sign in <a href="/login">here</a>
           </div>
-          <button type="submit" className="register-button">Sign Up</button>
-        </div>
       </form>
+    </section>
     </div>
   )
 }

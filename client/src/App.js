@@ -11,8 +11,8 @@ function App() {
       <ApplicationProvider>
         <div className="App">
           <NavBar />
-        </div>
           <Main />
+        </div>
       </ApplicationProvider>
     </Fragment>
   );
