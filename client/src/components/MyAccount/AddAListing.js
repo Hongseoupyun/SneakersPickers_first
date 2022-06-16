@@ -6,6 +6,15 @@ import axios from "axios";
 
 function AddAListing() {
 
+  // const [state, setState] = useState({
+  //   name,
+  //   size :4
+  //   brand :"Air Jordan"
+  //   description,
+  //   img,
+  //   preference
+  // })
+
   const [name, setName] = useState("")
   const [size, setSize] = useState("")
   const [brand, setBrand] = useState("")
@@ -24,6 +33,15 @@ function AddAListing() {
       console.log("Error occured in ",err)
     })
   }
+
+  const handleChange = (e) => {
+    console.log("handleChange e  => ", e.target.value, typeof e.target.value)
+    console.log("name=",e.target.name)
+    const val = Number(e.target.value);
+    setSize(val)
+  }
+
+
 
 
   return (
@@ -47,7 +65,7 @@ function AddAListing() {
           </div>
           <div className="size-brand">
             <div>
-              <select name="size" className="size" onChange={(e)=>{setSize(e.target.value)}}>
+              <select name="size" className="size" onChange={handleChange}>
                 <option value="4">Size 4</option>
                 <option value="5">Size 5</option>
                 <option value="6">Size 6</option>
