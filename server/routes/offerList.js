@@ -12,6 +12,7 @@ pending IS TRUE;
 const offeredListings = `
 SELECT * FROM listings 
 JOIN offers ON listings.id=listing_being_offered_id
+JOIN users ON user_id=users.id
 WHERE listing_being_offered_id = $1;
 `;
 

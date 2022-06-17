@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Profile() {
 
   const [currentPassword,setCurrentPassword] = useState("")
-  const [name, setName] = useState("")
+  const [user_name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [newPassword, setnewPassword] = useState("")
   const [confirmedPassword, setconfirmedPassword] = useState("")
@@ -26,7 +26,7 @@ export default function Profile() {
  //sending updated dato to api
   const saveChanges = function (e) {
     e.preventDefault();
-    axios.post("api/profile", { name, email, currentPassword, newPassword, confirmedPassword })
+    axios.post("api/profile", { user_name, email, currentPassword, newPassword, confirmedPassword })
       .then((res) => {
         console.log(res.data)
         setnewPassword("")
@@ -44,7 +44,7 @@ export default function Profile() {
       <h1 className="profile-heading">Profile</h1>
       <form action="/api/profile" method="POST" onSubmit={saveChanges}>
         <div className="int-area">
-          <input type="text" name="user-name" value={name} onChange={(e) => { setName(e.target.value) }} autoComplete="off" required />
+          <input type="text" name="user-name" value={user_name} onChange={(e) => { setName(e.target.value) }} autoComplete="off" required />
           <label>Name</label>
         </div>
         <div className="int-area">
