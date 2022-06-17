@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .signup-heading {
   color: black;
   padding-top: 0px;
@@ -28,14 +24,14 @@
   margin-top:20%;
   margin-bottom: 15%;
   background-color: white ;
-  padding:5%;
+  padding:4%;
   border-radius: 25px;
   animation: slide 1.3s ease-out;
 }
 .signup-form h1 {
   font-size: 35px;
   text-align: center; 
-  margin-bottom: 35px ;
+  margin-bottom: 7% ;
 
 }
 .int-area {
@@ -68,7 +64,7 @@
   color: rgb(17, 30, 108);
 }
 .btn-area  {
-  margin-top:30px;
+  margin-top:8%;
 }
 .btn-area button {
   width: 100%;
