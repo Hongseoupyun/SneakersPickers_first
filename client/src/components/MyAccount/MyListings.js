@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./MyListings.scss"
 import MyListingItem from "./MyListingItem";
-import MyListingsAddCard from "./MyListingsAddCard";
+
 
 export default function MyListings() {
   const [listings, setListings] = useState([])
@@ -42,7 +42,6 @@ export default function MyListings() {
   return (
     <div className="mylisting-body">
       {eachListing}
-      {MyListingsAddCard}
     </div>
 
 

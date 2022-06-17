@@ -4,7 +4,7 @@ import axios from "axios";
 import MyOffers from "./MyOffers"
 
 
-//Component path: Offer > MyOffer > OfferedItem
+//Component path: Offer > MyOffers > OfferedItem
 export default function Offers() {
 
   const [allMyOffers, setAllMyOffers] = useState([])
@@ -18,7 +18,7 @@ export default function Offers() {
     })
   }
 
-  // console.log("myoffers:", allMyOffers)
+  console.log("myoffers:", allMyOffers)
 
   //Pass props to Myoffers component which will do another axios call to render the offered listing
   const showMyOffers = allMyOffers.map((e) => {
@@ -47,10 +47,6 @@ export default function Offers() {
     <body className="offers-body">
       <section className="offers-container">
       {showMyOffers}
-      <div className="accept-decline">
-          <button>Accept</button>
-          <button>Decline</button>
-        </div>
       </section>
     </body>
 

@@ -1,35 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
 
 .add-body{
-  padding-top: 50px;
+  padding-top: 1%;
+  padding-bottom: 10%;
   background-color: rgb(33, 37, 41);
-  margin-top: -60px;
-  height: 130vh;
+  height: 100vh;
+  margin-bottom: 10%;
  
 }
 .master-container {
   position:relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 150px ;
-  margin-bottom: 90px;
-  margin-right: 90px;
-  margin-left: 90px;
-  border: 1px solid black;
-  height :550px;
+  margin-top: 10% ;
+  margin-bottom: 15%;
+  margin-right: 5%;
+  margin-left: 5%;
+  height :89%;
   border-radius: 25px;
-  background-color:white;
   font-family: "Source Sans Pro", sans-serif;
-  animation: slide 1.3s ease-out;
+  animation: slide-side 1.5s ease-out;
 }
 
 .form{
-  padding-top: 25px;
-
+  padding-top:3%;
+  padding-right:3%;
+  padding-left:3%;
+  padding-bottom: 3%;
+  background-color:white;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
+
 .size-brand{
-  margin-top: 20px;
+  margin-top: 5%;
   display: flex;
   
 }
@@ -57,19 +61,20 @@
 }
 
 .add-a-listing-img {
-  width: 505px;
-    height: 548px;
-    border-radius: 13px;
+  width: 100%;
+    height: 100%;
+    border-top-left-radius:13px;
+    border-bottom-left-radius:13px;
 }
 
-@keyframes slide {
+@keyframes slide-side {
   from{
-    top:-300px;
+    left:-1000px;
     opacity: 0;
 
   }
   to{
-    top:0px;
+    left:0px;
     opacity: 1;
 
   }

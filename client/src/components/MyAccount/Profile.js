@@ -40,7 +40,7 @@ export default function Profile() {
  
   return (
     <div className="profile-body">
-      <section className="login-form">
+      <section className="profile-form">
       <h1 className="profile-heading">Profile</h1>
       <form action="/api/profile" method="POST" onSubmit={saveChanges}>
         <div className="int-area">

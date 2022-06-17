@@ -8,8 +8,8 @@ import MyListings from "./MyAccount/MyListings";
 import AddAListing from "./MyAccount/AddAListing";
 import Landingpage from "./landingpage/Landingpage";
 import Browse from "./browse/browse";
-import Login from "./loginpage/login";
-import Register from "./registerpage/register";
+import Login from "./loginpage/Login";
+import Register from "./registerpage/Register";
 import Logout from "./logout/Logout";
 import Placeoffer from "./browse/Placeoffer";
 

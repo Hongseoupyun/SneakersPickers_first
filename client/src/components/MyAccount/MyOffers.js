@@ -60,8 +60,12 @@ export default function MyOffers(props) {
         </div>
 
         {showIndividual}
-        
+
       </article>
+      <div className="accept-decline">
+          <button>Accept</button>
+          <button>Decline</button>
+        </div>
     </div>
   );
 }

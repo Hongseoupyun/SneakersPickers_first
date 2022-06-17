@@ -47,7 +47,7 @@ function AddAListing() {
   return (
     <body className="add-body">
       <div className="master-container">
-        <div className="img-div">
+        <div>
           <img className="add-a-listing-img" name src={addSneakers} />
         </div>
         <form className="form">
@@ -126,7 +126,7 @@ function AddAListing() {
             <button type="submit" onClick={(e)=>{uploadListing(e)}}>Publish</button>
           </div>
         </form>
-      </div>
+        </div>
     </body>
   );
 }
