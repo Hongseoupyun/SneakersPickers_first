@@ -43,7 +43,7 @@ const registerRouter = require("./routes/register");
 const myListingsRouter = require("./routes/mylistings");
 const listedItemOfferingRouter = require("./routes/listedItemOffering")
 const addAListingRouter = require("./routes/addalisting")
-const makeOfferRouter = require("./routes/makeOffer");
+const makeOfferRouter = require("./routes/makeoffer");
 const offerListRouter = require("./routes/offerList")
 
 //routes

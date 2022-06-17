@@ -10,13 +10,15 @@ VALUES
 // Route /api/listings
 module.exports = db => {
   router.post("/makeoffer", (req, res) => {
-    console.log(req.body)
+    console.log("bodyrequest offer:", req.body)
     db.query(queryString, [req.body.listingID, req.body.offeredID])
     .then(result => {
-      rows = result.rows;
-      res.json(result.rows);
+      console.log("result makeoffer:", "test")
+
+      res.json({"Offering id:": 3});
     })
     .catch(err => {
+      console.log("error in make offer:", err)
       res
       .status(500)
       .json({ error: err.message });

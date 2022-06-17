@@ -8,14 +8,14 @@ function Register() {
 
   const [email, setEmail] = useState('');;
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const [user_name, setName] = useState('');
 
   const navigate = useNavigate();
   
   function registerUser(e) {
     e.preventDefault()
     console.log("submit fire")
-    return(axios.post('/register', {email:email, password:password, name:name})
+    return(axios.post('/register', {email:email, password:password, user_name:user_name})
     .then((result) => {
       console.log("Successful registration", result)
     })

@@ -26,7 +26,7 @@ module.exports = (db) => {
     db.query(queryListings, [req.user.id])
       .then((result) => {
         console.log("result rows:", result.rows)
-        res.json(result.rows[0]);
+        res.json(result.rows);
       })
       .catch((err) => {
         res.status(500).json({ error: err.message });
@@ -39,7 +39,7 @@ module.exports = (db) => {
     db.query(offeredListings, [req.body.offeredid])
       .then((result) => {
         console.log("result rows:", result.rows)
-        res.json(result.rows[0]);
+        res.json(result.rows);
       })
       .catch((err) => {
         res.status(500).json({ error: err.message });

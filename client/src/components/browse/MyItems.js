@@ -11,6 +11,8 @@ function MyItems(props) {
     props.setOfferedID(props.id)
   }
 
+  console.log("thisis props id", props.id)
+
   return (
     <div className="others-shoes-card" >
       <input type="radio" id="css" name="itemfromuser" onClick={handleClick} value={props.id}></input>

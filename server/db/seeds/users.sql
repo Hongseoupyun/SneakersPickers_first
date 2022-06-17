@@ -27,5 +27,8 @@ INSERT INTO offers (listing_offer_made_to_id, listing_being_offered_id, complete
 VALUES
   (1,2, TRUE, FALSE),
   (3,4, FALSE, TRUE),
+  (3,6, FALSE, TRUE),
+  (3,9, FALSE, TRUE),
+  (3,7, FALSE, TRUE),
   (5,6, FALSE, TRUE),
   (7,8, FALSE, TRUE);

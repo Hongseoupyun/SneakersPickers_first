@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 let queryString = `
-INSERT INTO users (name, email, password)
+INSERT INTO users (user_name, email, password)
 VALUES ($1, $2, $3);
 `;
 
@@ -14,7 +14,7 @@ VALUES ($1, $2, $3);
 module.exports = db => {
   router.post("/", (req, res) => {
     console.log(req.body)
-    db.query(queryString, [req.body.name, req.body.email, req.body.password])
+    db.query(queryString, [req.body.user_name, req.body.email, req.body.password])
     .then(result => {
       console.log("successfully registered")
       // console.log(result)

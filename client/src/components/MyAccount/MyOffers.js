@@ -7,20 +7,21 @@ import OfferedItem from "./OfferedItem";
 
 //Component path: Offer > MyOffer > OfferedItem
 export default function MyOffers(props) {
+
   const [eachOffer, setEachOffer] = useState([]);
 
   console.log("this is prop:", props.offered_item_id);
 
   //Axios post request to get the offered listing details using the listingID from props from Offer
   const loadEachOffer = function () {
-    return axios.post(
-      "/api/offerlist", { offeredid: props.offered_item_id }
+    return axios.post("/api/offerlist", { offeredid: props.offered_item_id })
       .then((result) => {
         console.log("returning each offer:", result.data);
         setEachOffer(result.data);
       })
-    );
   };
+
+  console.log({eachOffer})
 
   const showIndividual = eachOffer.map((e) => {
     return (

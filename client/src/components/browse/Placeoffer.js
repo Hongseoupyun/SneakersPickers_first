@@ -15,7 +15,7 @@ function Placeoffer() {
 
   const { id } = useParams();
 
-  const [offeredID, setOfferedID] = useState(0);
+  const [offeredID, setOfferedID] = useState();
   const [listing, setListing] = useState([]);
   const [myListings, setMyListings] = useState([]);
 
@@ -39,7 +39,9 @@ function Placeoffer() {
     })
   }
   
-  // console.log("mylistings:", myListings)
+  
+  console.log("mylisting:", typeof Number(id))
+  console.log(typeof offeredID)
   
   const myListed = myListings.map((e) => {
    return (
@@ -69,7 +71,7 @@ function Placeoffer() {
 
   //sends axios post request using id from param, and offeredID from selected on myListed component
   const handleOffer = () => {
-    return(axios.post('/api/listingsfilter', {listingID: id, offeredID: offeredID})
+    return(axios.post('/api/makeoffer', {listingID: Number(id), offeredID: offeredID})
       .then((result) => {
         console.log("offered complete!")
       })

@@ -20,7 +20,6 @@ function Browse() {
   function loadListing() {
     return(axios.get('/api/alllistings')
     .then((result) => {
-      console.log(result.data)
       setListings(result.data)
     })
     )
@@ -28,7 +27,6 @@ function Browse() {
 
   //assigns result variable to pass to ListingItem
   const cardListing = listings.map((listing) => {
-    console.log("listingidhere:", listing.id)
     return (
       <ListingItem
         key={listing.id}
