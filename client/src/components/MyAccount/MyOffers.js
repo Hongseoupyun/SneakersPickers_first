@@ -10,18 +10,19 @@ export default function MyOffers(props) {
 
   const [eachOffer, setEachOffer] = useState([]);
 
-  console.log("this is prop:", props.offered_item_id);
+  // console.log("this is offered_item_id:", props.offered_item_id);
+  // console.log("this is listing_offer_made_to_id:", props.wanted_item_id)
 
   //Axios post request to get the offered listing details using the listingID from props from Offer
   const loadEachOffer = function () {
-    return axios.post("/api/offerlist", { offeredid: props.offered_item_id })
+    return axios.post("/api/offerlist", { offeredid: props.offered_item_id, wantedID: props.wanted_item_id })
       .then((result) => {
         console.log("returning each offer:", result.data);
         setEachOffer(result.data);
       })
   };
 
-  console.log({eachOffer})
+  // console.log({eachOffer})
 
   const showIndividual = eachOffer.map((e) => {
     return (
