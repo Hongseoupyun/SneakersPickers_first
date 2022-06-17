@@ -6,12 +6,12 @@ import myShoesImg from "../images/mylisting-img-sample.webp"
 import othersShoesImg from "../images/mylisting-img-sample.webp"
 
 export default function Offers() {
-  const [ offer, setOffer ] = useState({});
+  const [ offers, setOffers ] = useState([]);
   
   const getOffers = function () {
-    axios.get("/offers/1")
+    axios.get("/offers")
     .then((result) => {
-      setOffer(result.data)
+      setOffers(result.data)
       console.log("this is:", result.data)
     })
     .catch((err) => {
@@ -24,8 +24,8 @@ export default function Offers() {
   }, [])
 
 
-  return (
-    <body className="offers-body">
+  return (<>
+  {offers.map((offer) => <body className="offers-body">
       <section className="offers-container">
         <div className="from">
           From username
@@ -53,13 +53,13 @@ export default function Offers() {
               <img className="others-shoes-img"src={othersShoesImg} />
             </div>
             <div className="others-shoes-name">
-              name
+              {offer.to_name}
             </div>
             <div className="others-shoes-size">
-              size
+              {offer.to_size}
             </div>
             <div className="others-shoes-description">
-              description
+              {offer.to_description}
             </div>
           </div>
         </article>
@@ -70,6 +70,7 @@ export default function Offers() {
 
       </section>
     </body>
-
+    )}
+    </>
   );
 }
