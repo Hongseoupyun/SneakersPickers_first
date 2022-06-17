@@ -12,6 +12,7 @@ export default function Offers() {
     axios.get("/offers/1")
     .then((result) => {
       setOffer(result.data)
+      console.log("this is:", result.data)
     })
     .catch((err) => {
       console.log("error!", err)
@@ -19,7 +20,6 @@ export default function Offers() {
   }
 
   useEffect(() => {
-    console.log("IS THIS WORKING?")
     getOffers()
   }, [])
 
