@@ -21,10 +21,13 @@ CREATE TABLE listings (
   active BOOLEAN DEFAULT TRUE
 );
 
+
+
 CREATE TABLE offers (
   id SERIAL PRIMARY KEY NOT NULL,
   listing_offer_made_to_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
   listing_being_offered_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
+  
   complete BOOLEAN DEFAULT FALSE,
   pending BOOLEAN DEFAULT TRUE
 );

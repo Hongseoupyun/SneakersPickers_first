@@ -44,6 +44,7 @@ const myListingsRouter = require("./routes/mylistings");
 const listedItemOfferingRouter = require("./routes/listedItemOffering")
 const addAListingRouter = require("./routes/addalisting")
 const makeOfferRouter = require("./routes/makeOffer");
+const offerListRouter = require("./routes/offerList")
 
 //routes
 app.use("/auth", authRouter);
@@ -56,6 +57,7 @@ app.use("/api", myListingsRouter(db));
 app.use("/api", listedItemOfferingRouter(db));
 app.use("/api", addAListingRouter(db));
 app.use("/api", makeOfferRouter(db))
+app.use("/api", offerListRouter(db))
 
 
 module.exports = app;

@@ -1,54 +1,56 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import "./Offers.scss"
-import tradeImg from "../images/trade-sample.webp"
-import myShoesImg from "../images/mylisting-img-sample.webp"
-import othersShoesImg from "../images/mylisting-img-sample.webp"
+import axios from "axios";
+import MyOffers from "./MyOffers"
 
+
+//Component path: Offer > MyOffer > OfferedItem
 export default function Offers() {
+
+  const [allMyOffers, setAllMyOffers] = useState([])
+
+  //Axios GET the user's listings that has an offer
+  const loadMyOffers = function () {
+    axios.get("/api/offerlist")
+    .then((result) => {
+      console.log("returning my load offers:", result.data)
+      setAllMyOffers(result.data)
+    })
+  }
+
+  // console.log("myoffers:", allMyOffers)
+
+  //Pass props to Myoffers component which will do another axios call to render the offered listing
+  const showMyOffers = allMyOffers.map((e) => {
+    return (
+      <MyOffers
+      key={e.id}
+      name={e.name}
+      brand={e.brand}
+      size={e.size}
+      description={e.description}
+      image_url={e.image_url}
+      id={e.id}
+      wanted_item_id={e.listing_offer_made_to_id}
+      offered_item_id={e.listing_being_offered_id}
+      />
+     )
+   })
+
+  useEffect(() => {
+    loadMyOffers()
+  }, [])
+
+
+
   return (
     <body className="offers-body">
       <section className="offers-container">
-        <div className="from">
-          From username
-        </div>
-        <article className="offers-cards">
-          <div className="my-shoes-card">
-            {/* <div>
-              <img className="my-shoes-img" src={myShoesImg}/>
-            </div> */}
-            <div className="my-shoes-name">
-              name
-            </div>
-            <div className="my-shoes-size">
-              size
-            </div>
-            <div className="my-shoes-description">
-              description
-            </div>
-          </div>
-          <div className="trade-img">
-            <img src={tradeImg}/>
-          </div>
-          <div className="others-shoes-card">
-            <div>
-              <img className="others-shoes-img"src={othersShoesImg} />
-            </div>
-            <div className="others-shoes-name">
-              name
-            </div>
-            <div className="others-shoes-size">
-              size
-            </div>
-            <div className="others-shoes-description">
-              description
-            </div>
-          </div>
-        </article>
-        <div className="accpet-decline">
+      {showMyOffers}
+      <div className="accept-decline">
           <button>Accept</button>
           <button>Decline</button>
         </div>
-
       </section>
     </body>
 
