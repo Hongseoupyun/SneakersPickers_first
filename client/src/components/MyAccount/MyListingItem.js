@@ -6,21 +6,19 @@ export default function MyListingItem (props) {
   
   return (
     <section className="mylisting-container">
-        <div className="mylisting-img-card">
           <img className="mylisting-img" src={img} />
-        </div>
         <div className="mylisting-card-contents">
           <div className="listing-name">
-            {name}
+            <h1>{name}</h1>
           </div>
           <div className="listing-brand">
-            {brand}
+           <span>{brand}</span> 
           </div>
           <div className="listing-size">
-            Size {size}
+          <span>Size {size}</span> 
           </div>
           <div className="listing-description">
-            {description}
+          <span>{description}</span> 
           </div>
           <div className="listing-offers">
             5 Users want to trade
