@@ -14,7 +14,7 @@ export default function Profile() {
   const getUsersProfile = function () {
     return axios.get("api/profile")
       .then((result) => {
-        setName(result.data.name)
+        setName(result.data.user_name)
         setEmail(result.data.email)
       });
   };

@@ -7,7 +7,7 @@ import tradeImg from "../images/trade-sample.webp";
 export default function OfferedItem(props) {
   return (
     <div className="others-shoes-card">
-      <div className="from">Offered Item:</div>
+      <div className="offer">Offered Item:</div>
       <div>
         <img className="others-shoes-img" src={props.image_url} alt="" />
       </div>
@@ -16,6 +16,8 @@ export default function OfferedItem(props) {
       <div className="others-shoes-description">
         Description:{props.description}
       </div>
+      <div className="from">Offered by: {props.user_name}</div>
+      <div className="contact">Email: {props.email}</div>
     </div>
   );
 }

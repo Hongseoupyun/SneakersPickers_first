@@ -18,7 +18,7 @@ CREATE TABLE listings (
   size INTEGER,
   image_url VARCHAR(255),
   preference VARCHAR(255),
-  active BOOLEAN DEFAULT TRUE
+  active BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const uploadListing = `INSERT INTO listings (user_id, name, description, brand, size, image_url, preference, active) VALUES ($1,$2,$3, $4, $5, $6, $7, FALSE);`;
+const uploadListing = `INSERT INTO listings (user_id, name, description, brand, size, image_url, preference, active) VALUES ($1,$2,$3, $4, $5, $6, $7, TRUE);`;
 
 module.exports = (db) => {
   router.post("/listings", (req, res) => {

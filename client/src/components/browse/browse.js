@@ -18,7 +18,7 @@ function Browse() {
 
   //loads all available listing
   function loadListing() {
-    return(axios.get('/api/listings')
+    return(axios.get('/api/alllistings')
     .then((result) => {
       console.log(result.data)
       setListings(result.data)

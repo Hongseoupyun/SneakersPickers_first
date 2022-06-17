@@ -32,6 +32,8 @@ export default function MyOffers(props) {
         description={e.description}
         image_url={e.image_url}
         id={e.id}
+        user_name={e.user_name}
+        email={e.email}
       />
     );
   });

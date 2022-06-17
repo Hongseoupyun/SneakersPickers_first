@@ -41,6 +41,8 @@ function AddAListing() {
     setSize(val)
   }
 
+  console.log({name})
+
 
 
 

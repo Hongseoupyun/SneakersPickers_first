@@ -9,7 +9,7 @@ WHERE active IS TRUE;
 
 // Route /api/listings
 module.exports = db => {
-  router.get("/listings", (req, res) => {
+  router.get("/alllistings", (req, res) => {
     db.query(queryString)
     .then(result => {
       rows = result.rows;
