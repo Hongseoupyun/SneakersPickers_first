@@ -41,9 +41,9 @@ export default function MyListings() {
   })
 
   return (
-    <div className="mylisting-body">
+    <body className="mylisting-body">
       {eachListing}
-    </div>
+    </body>
 
 
   );

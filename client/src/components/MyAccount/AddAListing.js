@@ -51,7 +51,7 @@ function AddAListing() {
           <img className="add-a-listing-img" name src={addSneakers} />
         </div>
         <form className="form">
-          <h3>Uploade your shoes to trade</h3>
+          <h3 className="form-heading">Uploade your shoes to trade</h3>
           <div className="int-area">
             <input
               type="text"

@@ -1,74 +1,117 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap");
-
-.mylisting-body{
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@200;700&display=swap");
+.mylisting-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: navy;
+  background-color: rgb(33, 37, 41);
   height: 100%;
-  padding-bottom:15%;
-  
+  padding-bottom: 15%;
 }
-.mylisting-container{
+.mylisting-container {
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
-  color:black;
+  color: black;
   display: flex;
   flex-direction: row;
-  padding-top:5%;
+  padding-top: 5%;
   border-radius: 25px;
   background-color: none;
   margin-top: 8%;
   height: 100%;
-  width: 70%;
   animation: slide 1.3s ease-out;
   margin-left: 10%;
 }
 .mylisting-img {
   width: 28rem;
-    height: 28rem;
-    border-radius: 13px;
-    position: relative;
-    left: -6.5rem;
-    top:3rem;
-    z-index: 5;
-}
-.mylisting-card-contents{
+  height: 28rem;
+  border-radius: 13px;
   position: relative;
-  left:-8rem;
+  left: -0.5rem;
+  top: 2rem;
+  z-index: 5;
+}
+.mylisting-card-contents {
+  position: relative;
+  left: -8rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  height: 35rem;
+  height: 32rem;
   width: 40rem;
   border-radius: 10px;
 }
-.addlisting-card{
-  font-family: "Source Sans Pro", sans-serif;
-  color:white;
-  border-radius: 25px;
-  background-color: navy;
-  margin-top:10px;
-  height:330px;
-  width: 700px;
+
+.listing-text {
+  margin-left: 9rem;
+  position: relative;
+  h1 {
+    padding-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
 }
 
-.listing-text{
-  margin-left: 3.5rem;
+.view-offers {
+  position: relative;
+  left: 4rem;
+  top:-2rem;
+
+  button {
+    color: white;
+    position: relative;
+    font-weight: 700;
+    height: 4rem;
+    width: 11em;
+    top: 7rem;
+    left: 23rem;
+    border-radius: 30px;
+    background-color: rgb(17, 30, 108);
+    border: none;
+    &:hover {
+      background-color :black
+    }
+  }
+}
+#brand-size {
+  font-size: 1.5rem;
+  position: relative;
+  top: 11.5rem;
+  font-weight: 600;
+}
+#description {
+  font-size: 1.5rem;
+  position: relative;
+  top: -2rem;
+  left: 1rem;
+}
+#offers {
+  position: relative;
+  top: -20.5rem;
+  left: 22.5rem;
+}
+.btn-primary {
+  background-color: #E60023;
+  border-radius: 20px;
+  font-weight: 700;
+  border: none;
+  &:hover{
+    background-color :rgb(17, 30, 108);
+  }
+    
+}
+.my-brand {
+  font-size: 1.9rem;
 }
 
 @keyframes slide {
-  from{
-    top:-300px;
+  from {
+    top: -300px;
     opacity: 0;
-
   }
-  to{
-    top:0px;
+  to {
+    top: 0px;
     opacity: 1;
-
   }
-  
 }
