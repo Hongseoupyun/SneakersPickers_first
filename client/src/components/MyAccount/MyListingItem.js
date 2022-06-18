@@ -1,30 +1,35 @@
 import React from "react";
 
 
-export default function MyListingItem (props) {
-  const {name,description,brand,size,img} = props
-  
+export default function MyListingItem(props) {
+  const { name, description, brand, size, img } = props
+
   return (
     <section className="mylisting-container">
-          <img className="mylisting-img" src={img} />
-        <div className="mylisting-card-contents">
-          <div className="listing-name">
-            <h1>{name}</h1>
-          </div>
-          <div className="listing-brand">
-           <span>{brand}</span> 
-          </div>
-          <div className="listing-size">
-          <span>Size {size}</span> 
-          </div>
-          <div className="listing-description">
-          <span>{description}</span> 
-          </div>
-          <div className="listing-offers">
-            5 Users want to trade
-          </div>
+
+      <img className="mylisting-img" src={img} />
+
+      <div className="mylisting-card-contents">
+        <div className="listing-text" id="name">
+          <h1>{name}</h1>
         </div>
-      </section>
+        <div className="listing-text" id="brand-size">
+          <div className="my-brand">{brand}</div>
+          <div className="my-size">Size {size}</div>
+        </div>
+        <div className="listing-text" id="description">
+          <span>{description}</span>
+        </div>
+        <div className="view-offers">
+        <a href="/offers"> <button type="submit">View Offers</button></a>
+        </div>
+        <div className="listing-text" id="offers">
+          <button type="button" class="btn btn-primary">
+          <span className="badge badge-light">4</span>OFFERS
+          </button>
+        </div>
+      </div>
+    </section>
   )
 
 }

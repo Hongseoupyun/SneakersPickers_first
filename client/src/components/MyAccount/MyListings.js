@@ -34,15 +34,16 @@ export default function MyListings() {
         name={e.name}
         brand={e.brand}
         size={e.size}
+        img={e.image_url}
         description={e.description}
       />
       )
   })
 
   return (
-    <div className="mylisting-body">
+    <body className="mylisting-body">
       {eachListing}
-    </div>
+    </body>
 
 
   );
