@@ -6,9 +6,7 @@ JOIN users ON users.id=user_id
 JOIN offers ON listings.id=listing_offer_made_to_id
 WHERE users.id = $1
 AND
-pending IS TRUE
-AND
-active IS TRUE;
+active IS FALSE;
 `;
 
 const offeredListings = `
@@ -30,7 +28,7 @@ AND listing_offer_made_to_id = $2;
 
 module.exports = (db) => {
 
-  router.get("/offerlist", (req, res) => {
+  router.get("/myacceptedoffers", (req, res) => {
     // console.log("User id:", req.user.id)
     console.log("offerlist")
     db.query(queryListings, [req.user.id])
@@ -44,7 +42,7 @@ module.exports = (db) => {
       });
   });
 
-  router.post("/offerlist", (req, res) => {
+  router.post("/myofferedproducts", (req, res) => {
     // console.log("User id:", req.user.id)
 
     db.query(offeredListings, [req.body.offeredid, req.body.wantedID])

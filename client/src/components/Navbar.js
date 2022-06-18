@@ -54,6 +54,7 @@ function NavBar() {
               <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>
               <NavDropdown.Item href="/mylistings">My listings</NavDropdown.Item>
               <NavDropdown.Item href="/addalisting">Add a listing</NavDropdown.Item>
+              <NavDropdown.Item href="/history">History</NavDropdown.Item>
               <NavDropdown.Item onClick={ ()=> 
                 {localStorage.setItem('isLoggedIn', false);  
                 setName(null); 

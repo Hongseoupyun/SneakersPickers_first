@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import "./Offers.scss";
+import "./forOffer.scss";
 import tradeImg from "../images/trade-sample.webp";
 import axios from "axios";
-import OfferedItem from "./OfferedItem";
+import ByOffer from "./byOffer";
 
 
-//Component path: Offer > MyOffer > OfferedItem
-export default function MyOffers(props) {
+//Component path: acceptedOffers > forOffer > byOffer
+export default function ForOffers(props) {
 
   const [eachOffer, setEachOffer] = useState([]);
 
 
   //Axios post request to get the offered listing details using the listingID from props from Offer
   const loadEachOffer = function () {
-    return axios.post("/api/offerlist", { offeredid: props.offered_item_id, wantedID: props.wanted_item_id })
+    return axios.post("/api/myofferedproducts", { offeredid: props.offered_item_id, wantedID: props.wanted_item_id })
       .then((result) => {
         setEachOffer(result.data);
       })
@@ -22,7 +22,7 @@ export default function MyOffers(props) {
 
   const showIndividual = eachOffer.map((e) => {
     return (
-      <OfferedItem
+      <ByOffer
         key={e.id}
         name={e.name}
         brand={e.brand}
@@ -42,6 +42,7 @@ export default function MyOffers(props) {
 
   return (
     <div>
+      <div className="accepted">Accepted Trade</div>
       <article className="offers-cards">
         <div className="my-shoes-card">
       <div className="from">My Item:</div>
@@ -62,10 +63,6 @@ export default function MyOffers(props) {
         {showIndividual}
 
       </article>
-      <div className="accept-decline">
-          <button>Accept</button>
-          <button>Decline</button>
-        </div>
     </div>
   );
 }
