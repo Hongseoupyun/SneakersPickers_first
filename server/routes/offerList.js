@@ -6,14 +6,16 @@ JOIN users ON users.id=user_id
 JOIN offers ON listings.id=listing_offer_made_to_id
 WHERE users.id = $1
 AND
-pending IS TRUE;
+pending IS TRUE
+AND
+active IS TRUE;
 `;
 
 const offeredListings = `
 SELECT * FROM listings 
 JOIN offers ON listings.id=listing_being_offered_id
 JOIN users ON user_id=users.id
-WHERE listings.id = $1
+WHERE listing_being_offered_id = $1
 AND listing_offer_made_to_id = $2;
 `;
 

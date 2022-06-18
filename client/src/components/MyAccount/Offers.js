@@ -13,12 +13,11 @@ export default function Offers() {
   const loadMyOffers = function () {
     axios.get("/api/offerlist")
     .then((result) => {
-      console.log("returning my load offers:", result.data)
       setAllMyOffers(result.data)
     })
   }
 
-  console.log("myoffers:", allMyOffers)
+
 
   //Pass props to Myoffers component which will do another axios call to render the offered listing
   const showMyOffers = allMyOffers.map((e) => {
