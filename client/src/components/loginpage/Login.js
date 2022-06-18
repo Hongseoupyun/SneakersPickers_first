@@ -8,7 +8,7 @@ function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginError, setLoginError] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,11 +21,14 @@ function Login() {
     return (axios.post('/auth/login', { email: email, password: password })
       .then((result) => {
         console.log(result)
-        setIsLoggedIn(true)
+        setLoginError(false)
         localStorage.setItem('isLoggedIn', true);
       })
       .then(() => {
         window.open('/', "_self")
+      })
+      .catch((error) => {
+        setLoginError(true)
       })
     )
   }
@@ -43,6 +46,11 @@ function Login() {
             <input type="password" name="password" onChange={event => setPassword(event.target.value)} autoComplete="off" required />
             <label>Password</label>
           </div>
+          {loginError && (
+            <div class="caption">
+              Incorrect Email or password. Please try again.
+            </div>)
+            }
           <div className="btn-area">
             <button type="submit">Sign in</button>
           </div>

@@ -28,8 +28,8 @@ module.exports = (db) => {
     console.log("offerlist")
     db.query(queryListings, [req.user.id])
       .then((result) => {
-        console.log("result rows:", result.rows)
-        console.log("/////////////////////////////SELLERS DATA")
+        // console.log("result rows:", result.rows)
+        // console.log("/////////////////////////////SELLERS DATA")
         res.json(result.rows);
       })
       .catch((err) => {
@@ -42,9 +42,9 @@ module.exports = (db) => {
 
     db.query(offeredListings, [req.body.offeredid, req.body.wantedID])
       .then((result) => {
-        console.log("result rows:", result.rows)
-        console.log("/////////////////////////////////BUYERS DATA")
-        console.log(req.body.wantedID)
+        // console.log("result rows:", result.rows)
+        // console.log("/////////////////////////////////BUYERS DATA")
+        // console.log(req.body.wantedID)
         res.json(result.rows);
       })
       .catch((err) => {
