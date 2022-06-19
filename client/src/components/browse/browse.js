@@ -55,9 +55,10 @@ function Browse() {
 
   return (
 
-    <body className="browse-body">
+    <div className="browse-body">
       <div className="filter-bar">
-        <select name="brand" id="brand" onChange={(e) => { setBrands(e.target.value) }}>
+        
+        <select name="brand" id="brand-browse" onChange={(e) => { setBrands(e.target.value) }}>
           <optgroup label="Brand">
             <option value="air jordan">Air Jordan</option>
             <option value="nike dunks">Nike Dunks</option>
@@ -68,7 +69,9 @@ function Browse() {
             <option value="others">Others</option>
           </optgroup>
         </select>
-        <select name="size" id="size" onChange={(e) => { setSizes(e.target.value) }}>
+        
+        
+        <select name="size" id="size-browse" onChange={(e) => { setSizes(e.target.value) }}>
           <optgroup label="Size">
             <option value="4">Size 4</option>
             <option value="5">Size 5</option>
@@ -81,11 +84,12 @@ function Browse() {
             <option value="12">Size 12</option>
           </optgroup>
         </select>
-        <button type="submit" onClick={() => loadFilter()} >Filter</button>
-        <button type="button" onClick={() => loadListing()} >Reset</button>
+        
+        <button type="submit" id="search" onClick={() => loadFilter()} >Search</button>
+        <button type="button" id="reset" onClick={() => loadListing()} >Reset</button>
       </div>
         {cardListing}
-    </body>
+    </div>
   );
 }
 

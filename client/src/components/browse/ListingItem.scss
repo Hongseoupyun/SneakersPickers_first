@@ -1,0 +1,43 @@
+
+#pref {
+  position: relative;
+  left: 1rem;
+  font-size: 1.4rem;
+}
+
+#browse-name {
+  position: relative;
+  top: -3rem;
+  left: 0rem;
+}
+
+.make-offers {
+  position: relative;
+  left: 4rem;
+  top: -2rem;
+
+  button {
+    color: white;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 11em;
+    top: 7rem;
+    left: 22rem;
+    border-radius: 32px;
+    background-color: rgb(17, 30, 108);
+    border: none;
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+#brand-size-br {
+  font-size: 1.5rem;
+  position: relative;
+  top: 11.5rem;
+  font-weight: 600;
+}
+

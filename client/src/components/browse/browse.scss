@@ -1,5 +1,5 @@
 .browse-body{
-  background-color: rgb(33, 37, 41);
+  background-color: #112D4E;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,4 +12,33 @@
   display: flex;
   flex-direction: row;
   margin-top:10rem;
+  font-family: "Source Sans Pro", sans-serif;
+  
+}
+#brand-browse{
+width: 17rem;
+height: 2.5rem;
+border-radius:7px;
+font-weight: 600;
+}
+#size-browse{
+width: 17rem;
+height: 2.5rem;
+border-radius:7px;
+margin-left: 0.7rem;
+font-weight: 600;
+}
+#reset{
+width: 6rem;
+height: 2.5rem;
+border-radius:7px;
+margin-left: 0.7rem;
+font-weight: 600;
+}
+#search{
+  width: 6rem;
+  height: 2.5rem;
+  border-radius:7px;
+  margin-left: 0.7rem;
+  font-weight: 600;
 }

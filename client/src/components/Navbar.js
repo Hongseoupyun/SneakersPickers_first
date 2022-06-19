@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import logo from './images/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Navbar, Nav, NavDropdown} from "react-bootstrap"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import { withCookies, Cookies } from 'react-cookie';
 import './Navbar.css'
 import axios from "axios";
@@ -36,43 +36,45 @@ function NavBar() {
 
 
   return (
-      <Navbar className="pb-0 pt-0" bg="dark blue" variant="dark" fixed="top" expand="lg" >
-        <Navbar.Brand className="logoname" href="/">
-          <img src={logo} width="100px" height="80x"/> {' '}
-          SneakersPickers 
-          {LoggedIn !== "false" && (<div className="username">Welcome, {name}</div>)}
-        </Navbar.Brand>
+    <Navbar style={{paddingTop:"1.1rem", paddingBottom:"1.1rem"}} bg="dark blue" variant="dark" fixed="top" expand="lg" >
+      <Navbar.Brand className="logoname" href="/">
+        SNEAKERSPICKERS
+        {/* {LoggedIn !== "false" && (<div className="username">Welcome, {name}</div>)} */}
+      </Navbar.Brand>
 
-        <Nav className="ms-auto align-text-bottom mt-5">
+      <Nav className="ms-auto align-text-bottom ">
+        <div className="nav-elms">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
           <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
           <Nav.Link href="/browse">Browse</Nav.Link>
-          {LoggedIn === "true"? (
-            <NavDropdown title="My Profile">
-              <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-              <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>
-              <NavDropdown.Item href="/mylistings">My listings</NavDropdown.Item>
-              <NavDropdown.Item href="/addalisting">Add a listing</NavDropdown.Item>
-              <NavDropdown.Item href="/history">History</NavDropdown.Item>
-              <NavDropdown.Item onClick={ ()=> 
-                {localStorage.setItem('isLoggedIn', false);  
-                setName(null); 
-                window.open('/', "_self")}
-                }
-                >Logout</NavDropdown.Item>
-            </NavDropdown>
-          )
+        {LoggedIn === "true" ? (
+          <NavDropdown title="My Profile">
+            <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+            <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>
+            <NavDropdown.Item href="/mylistings">My listings</NavDropdown.Item>
+            <NavDropdown.Item href="/addalisting">Add a listing</NavDropdown.Item>
+            <NavDropdown.Item href="/history">History</NavDropdown.Item>
+            <NavDropdown.Item onClick={() => {
+              localStorage.setItem('isLoggedIn', false);
+              setName(null);
+              window.open('/', "_self")
+            }
+            }
+            >Logout</NavDropdown.Item>
+          </NavDropdown>
+        )
           :
           (
-          <>
-            <Nav.Link href="/register">Register</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
-          </>
+            <>
+              <Nav.Link href="/register">Register</Nav.Link>
+              <Nav.Link href="/login">Login</Nav.Link>
+            </>
           )}
+          </div>
 
-        </Nav>
-      </Navbar>
+      </Nav>
+    </Navbar>
   );
 }
 

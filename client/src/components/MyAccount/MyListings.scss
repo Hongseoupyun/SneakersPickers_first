@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@200;700&display=swap");
+
 .mylisting-body {
   display: flex;
   flex-direction: column;
@@ -19,8 +19,8 @@
   background-color: none;
   margin-top: 8%;
   height: 100%;
-  animation: slide 1.3s ease-out;
-  margin-left: 10%;
+  left:1.4%;
+  animation: slide-to-top 1.3s ease-out;
 }
 .mylisting-img {
   width: 28rem;
@@ -56,7 +56,7 @@
 .view-offers {
   position: relative;
   left: 4rem;
-  top:-2rem;
+  top: -2rem;
 
   button {
     color: white;
@@ -64,20 +64,25 @@
     font-weight: 700;
     height: 4rem;
     width: 11em;
-    top: 7rem;
-    left: 23rem;
+    font-size: 1.2rem;
+    top: 9rem;
+    left: 22rem;
     border-radius: 30px;
     background-color: rgb(17, 30, 108);
     border: none;
     &:hover {
-      background-color :black
+      background-color: black;
     }
   }
+}
+#name{
+  position: relative;
+  top:-2rem;
 }
 #brand-size {
   font-size: 1.5rem;
   position: relative;
-  top: 11.5rem;
+  top: 13.5rem;
   font-weight: 600;
 }
 #description {
@@ -88,29 +93,31 @@
 }
 #offers {
   position: relative;
-  top: -20.5rem;
-  left: 22.5rem;
+  top: -21.5rem;
+  left: 23.5rem;
+  width:6rem;
 }
+
 .btn-primary {
-  background-color: #E60023;
+  background-color: #e60023;
   border-radius: 20px;
   font-weight: 700;
   border: none;
   &:hover {
-    background-color :#E60023;
+    background-color: #e60023;
   }
 }
 .my-brand {
   font-size: 1.9rem;
 }
 
-@keyframes slide {
+@keyframes slide-to-top {
   from {
-    top: -300px;
+    bottom: -300px;
     opacity: 0;
   }
   to {
-    top: 0px;
+    bottom: 0px;
     opacity: 1;
   }
 }
