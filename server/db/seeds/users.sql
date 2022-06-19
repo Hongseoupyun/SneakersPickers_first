@@ -13,7 +13,6 @@ VALUES
   (1,'Test shoes 1','test', 'vans', 4 , 'https://i.imgur.com/5zSnioJb.jpg' , 'some other fancy shoes pls', FALSE),
   (2,'Test shoes 2','nhan', 'adidas yeezy', 5 , 'https://i.imgur.com/iqKDft8b.jpg', 'some other fancy shoes pls', FALSE),
   (3,'New balances 990 Grey','New balnce 990 Grey color, Gently used', 'new balance',9, 'https://i.pinimg.com/originals/c3/c7/84/c3c7844c9e8b1990753809a5f8c99943.jpg' , 'Jordans and Dunks', TRUE),
-  (3,'New balances 990 Grey','New balnce 990 Grey color, Gently used', 'new balance',9, 'https://i.pinimg.com/originals/c3/c7/84/c3c7844c9e8b1990753809a5f8c99943.jpg' , 'Jordans and Dunks', TRUE),
   (4,'Test shoes 2','harsimran', 'nike air force', 7 , 'https://i.imgur.com/ISBvrFJb.jpg', 'some other fancy shoes pls', TRUE),
   (2,'Test shoes 2','Cnz7', 'nike dunks', 8 , 'https://i.imgur.com/Vquj6Jhb.jpg', 'some other fancy shoes pls', TRUE),
   (1,'Test shoes 2','test','adidas yeezy', 10 , 'https://i.imgur.com/rg7Ghb.jpg',  'some other fancy shoes pls', TRUE),

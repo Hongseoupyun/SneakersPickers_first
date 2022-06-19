@@ -1,58 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect} from "react";
-=======
 import React, { useState, useEffect } from "react";
 import axios from "axios";
->>>>>>> dbf47e8ec0354d334a56028935f5bcbad7d21aab
 import "./Offers.scss"
-import axios from "axios";
-import MyOffers from "./MyOffers"
+import tradeImg from "../images/trade-sample.webp"
+import myShoesImg from "../images/mylisting-img-sample.webp"
+import othersShoesImg from "../images/mylisting-img-sample.webp"
 
-
-//Component path: Offer > MyOffers > OfferedItem
 export default function Offers() {
-<<<<<<< HEAD
-
-  const [allMyOffers, setAllMyOffers] = useState([])
-
-  //Axios GET the user's listings that has an offer
-  const loadMyOffers = function () {
-    axios.get("/api/offerlist")
-    .then((result) => {
-      setAllMyOffers(result.data)
-    })
-  }
-
-
-
-  //Pass props to Myoffers component which will do another axios call to render the offered listing
-  const showMyOffers = allMyOffers.map((e) => {
-    return (
-      <MyOffers
-      key={e.id}
-      name={e.name}
-      brand={e.brand}
-      size={e.size}
-      description={e.description}
-      image_url={e.image_url}
-      id={e.id}
-      wanted_item_id={e.listing_offer_made_to_id}
-      offered_item_id={e.listing_being_offered_id}
-      />
-     )
-   })
-
-  useEffect(() => {
-    loadMyOffers()
-  }, [])
-
-
-
-  return (
-    <body className="offers-body">
-      <section className="offers-container">
-      {showMyOffers}
-=======
   const [ offers, setOffers ] = useState([]);
   
   const getOffers = function () {
@@ -80,10 +33,13 @@ export default function Offers() {
         <article className="offers-cards">
           <div className="my-shoes-card">
             <div>
-              <img className="my-shoes-img" src={myShoesImg}/>
+              <img className="my-shoes-img" src={offer.from_image}/>
             </div>
             <div className="my-shoes-name">
               {offer.from_name}
+            </div>
+            <div className="my-shoes-brand">
+              {offer.from_brand}
             </div>
             <div className="my-shoes-size">
               {offer.from_size}
@@ -97,10 +53,13 @@ export default function Offers() {
           </div>
           <div className="others-shoes-card">
             <div>
-              <img className="others-shoes-img"src={othersShoesImg} />
+              <img className="others-shoes-img"src={offer.to_image} />
             </div>
             <div className="others-shoes-name">
               {offer.to_name}
+            </div>
+            <div className="others-shoes-brand">
+              {offer.to_brand}
             </div>
             <div className="others-shoes-size">
               {offer.to_size}
@@ -115,7 +74,6 @@ export default function Offers() {
           <button>Decline</button>
         </div>
 
->>>>>>> dbf47e8ec0354d334a56028935f5bcbad7d21aab
       </section>
     </body>
     )}
