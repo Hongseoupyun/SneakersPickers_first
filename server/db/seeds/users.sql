@@ -23,10 +23,14 @@ VALUES
 
 INSERT INTO offers (listing_offer_made_to_id, listing_being_offered_id, complete, pending)
 VALUES
-  (1,2, TRUE, FALSE),
-  (3,4, FALSE, TRUE),
-  (3,6, FALSE, TRUE),
-  (3,9, FALSE, TRUE),
-  (3,7, FALSE, TRUE),
-  (5,6, FALSE, TRUE),
-  (7,8, FALSE, TRUE);
+  (1, 2, TRUE, FALSE),
+  (3, 4, FALSE, TRUE),
+  (3, 5, FALSE, TRUE),
+  (3, 7, FALSE, TRUE),
+  (3, 8, FALSE, TRUE),
+  (6, 8, FALSE, TRUE),
+  (5, 6, FALSE, TRUE),
+  (4, 3, FALSE, TRUE),
+  (4, 5, FALSE, TRUE),
+  (4, 6, FALSE, TRUE),
+  (7, 8, FALSE, TRUE);

@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -6,6 +7,8 @@ const passport = require("passport");
 const local = require("./strategies/local");
 const session = require("express-session");
 const bodyParser = require("body-parser");
+// const PORT = 3000;
+
 
 // db connection
 const db = require("./configs/db.config");
@@ -41,11 +44,8 @@ const logoutRouter = require("./routes/logout");
 const profileRouter = require("./routes/profile");
 const registerRouter = require("./routes/register");
 const myListingsRouter = require("./routes/mylistings");
-const listedItemOfferingRouter = require("./routes/listedItemOffering")
-const addAListingRouter = require("./routes/addalisting")
-const makeOfferRouter = require("./routes/makeoffer");
-const offerListRouter = require("./routes/offerList")
-const historyRouter = require("./routes/history.js")
+const addAListing = require("./routes/addalisting")
+const offersRouter = require("./routes/offers");
 
 //routes
 app.use("/auth", authRouter);
@@ -55,11 +55,11 @@ app.use("/api", listingRouter(db));
 app.use("/api", listingsfilterRouter(db));
 app.use("/api", profileRouter(db));
 app.use("/api", myListingsRouter(db));
-app.use("/api", listedItemOfferingRouter(db));
-app.use("/api", addAListingRouter(db));
-app.use("/api", makeOfferRouter(db))
-app.use("/api", offerListRouter(db))
-app.use("/api", historyRouter(db))
-
+app.use("/api", addAListing(db));
+app.use("/api", offersRouter(db));
 
 module.exports = app;
+
+// app.listen(PORT, () => {
+//   console.log(`Example app listening on port ${PORT}!`);
+// });
