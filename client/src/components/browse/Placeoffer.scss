@@ -31,7 +31,7 @@
     width: 34vw;
     position: relative;
     display: flex;
-    // left: -6rem;
+    border-radius: 20px;
     flex-direction: column;
    
 }
@@ -57,9 +57,27 @@
   height: 89%;
   top: 4%;
   left: 4.2%;
+  border-radius: 20px;
 }
-.placeoffer-heading {
+.placeoffer-name{
+  font-family: "Staatliches", cursive;
+  font-size: 3rem;
   position: relative;
+    left: 6%;
+    top:-3%;
+}
+.placeoffer-pref{
+  display: flex;
+  flex-direction: column;
+}
+.placeoffer-desc{
+  display: flex;
+  flex-direction: column;
+}
+.placeoffer-texts{
+  position: relative;
+  left: 6%;
+ 
 }
 .tradeimg {
   width: 16vw;
