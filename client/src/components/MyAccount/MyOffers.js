@@ -29,12 +29,26 @@ export default function MyOffers(props) {
         size={e.size}
         description={e.description}
         image_url={e.image_url}
-        id={e.id}
         user_name={e.user_name}
         email={e.email}
       />
     );
   });
+
+  const acceptOffer = function () {
+    return axios.post("/api/acceptoffer", { offerid: props.offerid, offeredid: props.offered_item_id, wantedID: props.wanted_item_id })
+      .then((result) => {
+        console.log("offer accepted");
+      })
+  };
+
+  
+  const declineOffer = function () {
+    return axios.post("/api/declineoffer", { offerid: props.offerid})
+      .then((result) => {
+        console.log("offer declined")
+      })
+  };
 
   useEffect(() => {
     loadEachOffer();
@@ -63,8 +77,8 @@ export default function MyOffers(props) {
 
       </article>
       <div className="accept-decline">
-          <button>Accept</button>
-          <button>Decline</button>
+          <button onClick={acceptOffer}>Accept</button>
+          <button onClick={declineOffer}>Decline</button>
         </div>
     </div>
   );

@@ -24,7 +24,7 @@ CREATE TABLE listings (
 
 
 CREATE TABLE offers (
-  id SERIAL PRIMARY KEY NOT NULL,
+  offerid SERIAL PRIMARY KEY NOT NULL,
   listing_offer_made_to_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
   listing_being_offered_id INTEGER REFERENCES listings(id) ON DELETE CASCADE,
   

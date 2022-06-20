@@ -29,7 +29,7 @@ export default function Offers() {
       size={e.size}
       description={e.description}
       image_url={e.image_url}
-      id={e.id}
+      offerid={e.offerid}
       wanted_item_id={e.listing_offer_made_to_id}
       offered_item_id={e.listing_being_offered_id}
       />
