@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Offers.scss";
 import tradeImg from "../images/trade-sample.webp";
 import axios from "axios";
 import OfferedItem from "./OfferedItem";
