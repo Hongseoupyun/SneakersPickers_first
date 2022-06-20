@@ -2,6 +2,7 @@ const router = require("express").Router();
 
 const queryListing = `SELECT * FROM listings WHERE user_id = $1 AND active = true;`
 
+// selects all necessary info from listings as well as the total count of offers each listing has
 const queryListing2 = `
 SELECT listings.id, name, brand, size, image_url, description, listings, COUNT(offers.listing_offer_made_to_id) AS total_offers 
 FROM offers 

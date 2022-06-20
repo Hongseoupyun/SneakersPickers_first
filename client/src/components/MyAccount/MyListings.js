@@ -25,7 +25,6 @@ export default function MyListings() {
   }, [])
 
   
-  console.log("listings",listings)
   //pass the data to MyListingsitem
   const eachListing = listings.map((e) => {
     return (
