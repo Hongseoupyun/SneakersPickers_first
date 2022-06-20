@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import tradeImg from "../images/trade-sample.webp";
+import tradeImg from "../images/trade.png";
 import axios from "axios";
 import OfferedItem from "./OfferedItem";
 
@@ -58,30 +58,30 @@ export default function MyOffers(props) {
 
   return (
     <div>
-      <article className="offers-cards">
-        <div className="my-shoes-card">
-      <div className="from">My Item:</div>
-          <div>
-            <img className="my-shoes-img" src={props.image_url} alt="" />
-          </div>
-          <div className="my-shoes-name">Name:{props.name}</div>
-          <div className="my-shoes-size">Size:{props.size}</div>
-          <div className="my-shoes-description">
-            Description:{props.description}
-          </div>
-        </div>
+    <section className="mylisting-container-left">
+      <img className="mylisting-img" src={props.image_url} alt="" />
 
-        <div className="trade-img">
-          <img src={tradeImg} alt="" />
+      <div className="mylisting-card-contents-left">
+        <div className="listing-text" id="name">
+          <h1>{props.name}</h1>
         </div>
-
-        {showIndividual}
-
-      </article>
-      <div className="accept-decline">
-          <button onClick={acceptOffer}>Accept</button>
-          <button onClick={declineOffer}>Decline</button>
+        <div className="listing-text" id="brand-size">
+          <div className="my-brand">{props.brand}</div>
+          <div className="my-size">Size {props.size}</div>
         </div>
+        <div className="listing-text" id="description">
+          <span>{props.description}</span>
+        </div>
+        <div className="listing-text" id="offers">
+        </div>
+      </div>
+      <div className="tradeslot">
+          <button class="acceptofferbutton" onClick={acceptOffer}>Accept</button>
+        <img className="tradepic" src={tradeImg} alt="" />
+          <button class="declineofferbutton" onClick={declineOffer}>Decline</button>
+      </div>
+      {showIndividual}
+    </section>
     </div>
   );
 }

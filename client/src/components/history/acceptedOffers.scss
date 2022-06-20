@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@200;700&display=swap");
-.mylisting-body {
+.mylisting-body-history {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   height: 100%;
 
 }
-.mylisting-container {
+.mylisting-container-history-left {
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
   color: black;
@@ -16,7 +16,7 @@
   flex-direction: row;
   padding-top: 5%;
   border-radius: 25px;
-  background-color: none;
+  background-color: transparent;
   margin-top: 8%;
   height: 100%;
   animation: slide 1.3s ease-out;
@@ -33,12 +33,17 @@
 }
 
 
-.tradeicon {
+.tradeslot {
   height: 5em;
-  width: 5em;
+  width: 10em;
   flex-direction: column;
   justify-content: center;
   display: flex;
+  margin-top: 13rem;
+}
+
+.tradepic {
+  padding-left: 2rem;
 }
 
 .mylisting-img {
@@ -61,15 +66,15 @@
   z-index: 5;
 }
 
-.mylisting-card-contents {
+.mylisting-card-contents-history-left {
   position: relative;
   left: -8rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
+  background-color: white;
   height: 32rem;
-  width: 25rem;
+  width: 27rem;
   border-radius: 10px;
 
 
@@ -94,7 +99,7 @@
   flex-direction: column;
   background-color: white;
   height: 32rem;
-  width: 25rem;
+  width: 28rem;
   border-radius: 10px;
 
 }
@@ -115,26 +120,17 @@
   margin-bottom: 2rem;
 }
 
-.view-offers {
-  position: relative;
-  left: 4rem;
-  top:-2rem;
-
-  button {
-    color: white;
-    position: relative;
-    font-weight: 700;
+.acceptofferbutton {
+  font-weight: 700;
+    font-size: 1.2rem;
     height: 4rem;
     width: 11em;
     top: 7rem;
-    left: 23rem;
-    border-radius: 30px;
-    background-color: rgb(17, 30, 108);
-    border: none;
-    &:hover {
-      background-color :black
+    left: 22rem;
+    border-radius: 32px;
+    :hover {
+      background-color: black;
     }
-  }
 }
 #brand-size {
   font-size: 1.5rem;
