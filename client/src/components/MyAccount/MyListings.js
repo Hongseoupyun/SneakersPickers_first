@@ -36,6 +36,7 @@ export default function MyListings() {
         size={e.size}
         img={e.image_url}
         description={e.description}
+        total_offers={e.total_offers}
       />
       )
   })

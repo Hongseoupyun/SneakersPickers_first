@@ -2,7 +2,7 @@ import React from "react";
 
 
 export default function MyListingItem(props) {
-  const { name, description, brand, size, img } = props
+  const { name, description, brand, size, img, total_offers } = props
 
   return (
     <section className="mylisting-container">
@@ -25,7 +25,7 @@ export default function MyListingItem(props) {
         </div>
         <div className="listing-text" id="offers">
           <button type="button" class="btn btn-primary">
-          <span className="badge badge-light">4</span>OFFERS
+          <span className="badge badge-light">{total_offers}</span>OFFERS
           </button>
         </div>
       </div>
