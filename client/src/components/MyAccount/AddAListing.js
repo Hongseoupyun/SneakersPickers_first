@@ -28,6 +28,7 @@ function AddAListing() {
     axios.post("api/listings",{name, size, brand, description, img, preference})
     .then((res)=>{
       console.log(res.data)
+      window.open('/browse', "_self")
     })
     .catch((err)=>{
       console.log("Error occured in ",err)

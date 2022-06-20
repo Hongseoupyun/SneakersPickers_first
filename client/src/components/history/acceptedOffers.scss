@@ -1,59 +1,171 @@
-
-.offers-body{
-  display: flex;
-  justify-content: center;
-}
-
-
-.offers-container {
-  position: relative;
-  font-family: "Source Sans Pro", sans-serif;
-  color:white;
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@200;700&display=swap");
+.mylisting-body-history {
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
-  margin-top: 150px;
-  background-color: navy;
-  border-radius: 25px;
-  width:1000px;
-  animation: slide 1.3s ease;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(33, 37, 41);
+  height: 100%;
+
 }
-.offers-cards {
+.mylisting-container-history-left {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  padding-top: 5%;
+  border-radius: 25px;
+  background-color: transparent;
+  margin-top: 8%;
+  height: 100%;
+  animation: slide 1.3s ease-out;
+  margin-left: 5%;
 }
 
-.my-shoes-card{
-  background-color: black;
-  height: 300px;
-  width: 200px;
-}
-.others-shoes-card{
-  background-color:black;
-  height: 300px;
-  width: 200px;
-}
-.accpet-decline{
+.mylisting-container-second {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  padding-left: 3em;
 }
-.my-shoes-img, 
-.others-shoes-img {
-  width: 50px;
-  height: 50px;
+
+
+.tradeslot {
+  height: 5em;
+  width: 10em;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  margin-top: 13rem;
 }
- 
+
+.tradepic {
+  padding-left: 2rem;
+}
+
+.mylisting-img {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 13px;
+  position: relative;
+  left: -0.5rem;
+  top: 2rem;
+  z-index: 5;
+}
+
+.mylisting-img-second {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 13px;
+  position: relative;
+  left: 26rem;
+  top: 2rem;
+  z-index: 5;
+}
+
+.mylisting-card-contents-history-left {
+  position: relative;
+  left: -8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  height: 32rem;
+  width: 27rem;
+  border-radius: 10px;
+
+
+}
+
+
+.listing-text {
+  margin-left: 9rem;
+  position: relative;
+  h1 {
+    padding-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+}
+
+.mylisting-card-contents-second {
+  position: relative;
+  left: -8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  height: 32rem;
+  width: 28rem;
+  border-radius: 10px;
+
+}
+
+.listing-text-second {
+  margin-right: 8rem;
+  position: relative;
+  margin-left: 2rem;
+  h1 {
+    padding-bottom: -2rem;
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+}
+
+.my-email-second {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.acceptofferbutton {
+  font-weight: 700;
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 11em;
+    top: 7rem;
+    left: 22rem;
+    border-radius: 32px;
+    :hover {
+      background-color: black;
+    }
+}
+#brand-size {
+  font-size: 1.5rem;
+  position: relative;
+  top: 11.5rem;
+  font-weight: 600;
+}
+#description {
+  font-size: 1.5rem;
+  position: relative;
+  top: -2rem;
+  left: 1rem;
+}
+#offers {
+  position: relative;
+  top: -20.5rem;
+  left: 22.5rem;
+}
+.btn-primary {
+  background-color: #E60023;
+  border-radius: 20px;
+  font-weight: 700;
+  border: none;
+}
+.my-brand {
+  font-size: 1.9rem;
+}
+
 @keyframes slide {
-  from{
-    top:-300px;
+  from {
+    top: -300px;
     opacity: 0;
-
   }
-  to{
-    top:0px;
+  to {
+    top: 0px;
     opacity: 1;
-
   }
-  
 }

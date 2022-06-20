@@ -43,10 +43,10 @@ export default function Offers() {
 
 
   return (
-    <body className="offers-body">
-      <section className="offers-container">
+    <body className="mylisting-body">
+
       {showMyOffers}
-      </section>
+
     </body>
 
   );

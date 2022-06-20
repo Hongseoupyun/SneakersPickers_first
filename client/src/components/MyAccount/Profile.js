@@ -33,6 +33,9 @@ export default function Profile() {
         setCurrentPassword("")
         setconfirmedPassword("")
       })
+      .then(() => {
+        window.open('/', "_self")
+      })
       .catch((err)=>{
         console.log("Error Occured in ",err)
       })

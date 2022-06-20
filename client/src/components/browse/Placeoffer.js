@@ -74,6 +74,7 @@ function Placeoffer() {
     return (axios.post('/api/makeoffer', { listingID: Number(id), offeredID: offeredID })
       .then((result) => {
         console.log("offered complete!")
+        window.open('/browse', "_self")
       })
     )
   }
@@ -90,13 +91,16 @@ function Placeoffer() {
                 <img className="placeoffer-img" src={listing.image_url} alt="" />
               </div>
               <div className="my-shoes-name">
-                Name: {listing.name}
+                {listing.name}
               </div>
               <div className="my-shoes-size">
-                preference:  {listing.preference}
+                preference: {listing.preference}
               </div>
               <div className="my-shoes-description">
-                Description: {listing.description}
+                {listing.description}
+              </div>
+              <div className="my-shoes-size">
+               {listing.brand}
               </div>
               <div className="my-shoes-size">
                 Size: {listing.size}
@@ -104,21 +108,19 @@ function Placeoffer() {
             </div>
 
             <div className="placeoffer-tradeimg">
+              <button onClick={handleOffer}>Offer</button>
               <img className="tradeimg" src={tradeImg} />
+              <button>Cancel</button>
             </div>
-            
+
             <div className="placeoffer-mylisting">
               {myListed}
             </div>
 
           </article>
 
-          <div className="placeoffer-buttons">
-            <button onClick={handleOffer}>Offer</button>
-            <button>Cancel</button>
-          </div>
 
-          </>)
+        </>)
         :
         (<div>No Data!</div>
         )}
