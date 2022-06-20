@@ -47,7 +47,7 @@ function AddAListing() {
 
 
   return (
-    <body className="add-body">
+    <div className="add-body">
       <div className="master-container">
         <div>
           <img className="add-a-listing-img" name src={addSneakers} />
@@ -129,7 +129,7 @@ function AddAListing() {
           </div>
         </form>
         </div>
-    </body>
+    </div>
   );
 }
 

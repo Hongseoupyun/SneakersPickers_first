@@ -18,21 +18,19 @@ function Landingpage() {
       </video>
 
       <header className="viewport-header">
-        <h1>
-          Tired of your old sneakers?
-          <span>Trade them for a new pair today!</span>
+        <h1>Stop reselling and buying new pairs </h1>
+          <h2 className="landing-h2">Sign up for trading shoes</h2> 
           <div className="mb-2 pt-5">
             <Button variant="secondary" size="lg" href='/register'>
-              Sign up today!
+              Sign up
             </Button>{' '}
           </div>
-        </h1>
+       
       </header>
 
       <div className="scroll-us" id="scroll-about-us" ></div>
       <main>
         <article>
-          <span className="about-us">About Us</span>
           <div className="about-us-description ">
             <div className="about-us-text">
               <h2>A Bag Full of Second Chances </h2>
@@ -44,9 +42,8 @@ function Landingpage() {
         </article>
 
         <div>
-          <div className="scroll-contact" id="scroll-contact-us" ></div>
-          <span className="contact-us">Contact Us</span>
-          <div className="contact-us-description">
+         
+          <div className="contact-us-description scroll-contact" id="scroll-contact-us">
             <div className="card">
               <img src={nhan} className="card-img-top" alt="..." />
               <div className="card-body">

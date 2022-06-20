@@ -11,12 +11,11 @@
  
 }
 .signup-body {
-  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(33, 37, 41);
+  background-color: #071522;
 } 
 
 .signup-form {
@@ -60,12 +59,7 @@
   color: #000000 ;
   transition: top .4s ease;
 } 
-.int-area input:focus + label,
-.int-area input:valid + label {
-  top:0px;
-  font-size: 13px;
-  color: rgb(17, 30, 108);
-}
+
 .btn-area  {
   margin-top:8%;
 }
@@ -78,6 +72,9 @@
   background: black;
   color: white ;
   cursor:pointer;
+  &:hover{
+    background-color:#F15025;
+  }
 }
 .caption{
   font-weight: 600;

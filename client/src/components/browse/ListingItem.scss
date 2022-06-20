@@ -1,20 +1,23 @@
 
 #pref {
   position: relative;
-  left: 1rem;
+  left: 1.6rem;
+  top:1.5rem;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
 }
 
 #browse-name {
   position: relative;
-  top: -3rem;
-  left: 0rem;
+  top: -1.5rem;
+  left: 1.3rem;
 }
 
 .make-offers {
   position: relative;
-  left: 4rem;
-  top: -2rem;
+    left: 3.5rem;
+    top: -3.7rem;
 
   button {
     color: white;
@@ -25,11 +28,11 @@
     width: 11em;
     top: 7rem;
     left: 22rem;
-    border-radius: 32px;
-    background-color: rgb(17, 30, 108);
+    border-radius: 25px;
+    background-color: navy;
     border: none;
     &:hover {
-      background-color: black;
+      background-color: #F15025;
     }
   }
 }
@@ -38,6 +41,7 @@
   font-size: 1.5rem;
   position: relative;
   top: 11.5rem;
+  left: 1.3rem;
   font-weight: 600;
 }
 

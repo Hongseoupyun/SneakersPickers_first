@@ -14,7 +14,7 @@ export default function Profile() {
   const getUsersProfile = function () {
     return axios.get("api/profile")
       .then((result) => {
-        setName(result.data.user_name)
+        setName(result.data.name)
         setEmail(result.data.email)
       });
   };
@@ -37,7 +37,7 @@ export default function Profile() {
         console.log("Error Occured in ",err)
       })
   }
- 
+
   return (
     <div className="profile-body">
       <section className="profile-form">

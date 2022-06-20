@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Fragment }from "react";
 
+
 import NavBar from "./components/Navbar"
 import Main from './components/Main'
 import ApplicationProvider from './context/ApplicationProvider';

@@ -4,6 +4,7 @@ import "./MyListings.scss"
 import MyListingItem from "./MyListingItem";
 
 
+
 export default function MyListings() {
   const [listings, setListings] = useState([])
 
@@ -36,6 +37,7 @@ export default function MyListings() {
         size={e.size}
         img={e.image_url}
         description={e.description}
+        preference={e.preference}
       />
       )
   })
