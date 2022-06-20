@@ -25,7 +25,7 @@ export default function MyListingItem(props) {
         </div>
         <div className="listing-text" id="offers">
           <button type="button" class="btn btn-primary">
-          <span className="badge badge-light">{total_offers}</span>OFFERS
+          <span className="badge badge-light">{total_offers}</span>{total_offers <=1 ? "OFFER" : "OFFERS"}
           </button>
         </div>
       </div>
