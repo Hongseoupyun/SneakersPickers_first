@@ -1,43 +1,44 @@
-.layout {
-  padding-top: 90px;
-  display: flex;
-}
-
-.vertical-menu {
-  width: 10%; 
-  min-height: 100%;
-  // min-height: 800px;
-  background: rgb(46, 46, 46);
-  color: white;
+.browse-body{
+  background-color: #112D4E;
   display: flex;
   flex-direction: column;
-  position:fixed;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
-}
-
-.shoepic {
-  width: 10%;
-  height: 20%;
-  position: fixed;
-  bottom: 0;
-}
-
-
-.filter {
-  display: flex;
-  font-size: 1vw;
-  font-weight: 500;
-}
-
-
-.buttons {
-  justify-content: space-between;
-  display: flex;
+  align-items: center;
   justify-content: center;
+  height: 100%;
+  padding-bottom: 15%;
 }
 
-.tradecard {
-  margin-left: 200px;
-
+.filter-bar{
+  display: flex;
+  flex-direction: row;
+  margin-top:10rem;
+  font-family: "Source Sans Pro", sans-serif;
+  
+}
+#brand-browse{
+width: 17rem;
+height: 2.5rem;
+border-radius:7px;
+font-weight: 600;
+}
+#size-browse{
+width: 17rem;
+height: 2.5rem;
+border-radius:7px;
+margin-left: 0.7rem;
+font-weight: 600;
+}
+#reset{
+width: 6rem;
+height: 2.5rem;
+border-radius:7px;
+margin-left: 0.7rem;
+font-weight: 600;
+}
+#search{
+  width: 6rem;
+  height: 2.5rem;
+  border-radius:7px;
+  margin-left: 0.7rem;
+  font-weight: 600;
 }

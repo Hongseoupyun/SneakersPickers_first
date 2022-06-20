@@ -1,7 +1,6 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './browse.scss'
-import runlogo from '../images/runlogo.gif'
 import axios from "axios";
 import ListingItem from "./ListingItem"
 
@@ -18,10 +17,10 @@ function Browse() {
 
   //loads all available listing
   function loadListing() {
-    return(axios.get('/api/alllistings')
-    .then((result) => {
-      setListings(result.data)
-    })
+    return (axios.get('/api/alllistings')
+      .then((result) => {
+        setListings(result.data)
+      })
     )
   }
 
@@ -41,10 +40,10 @@ function Browse() {
     );
   });
 
-  
-//fetches filtered api with onclick from filter button
+
+  //fetches filtered api with onclick from filter button
   function loadFilter() {
-    return(axios.post('/api/listingsfilter', {size: sizes, brand: brands})
+    return (axios.post('/api/listingsfilter', { size: sizes, brand: brands })
       .then((result) => {
         setListings(result.data)
       })
@@ -55,52 +54,42 @@ function Browse() {
 
 
   return (
-    <header className="layout">
-      <header class="vertical-menu" sticky="fixed">
-          <span className="filter">Filter list</span><br/>
 
-          <label for="brand">Pick a brand:</label>
-          <select name="brand" id="brand" onChange={(e) => {setBrands(e.target.value)}}>
-            <optgroup label="Brand">
-              <option value="air jordan">Air Jordan</option>
-              <option value="nike dunks">Nike Dunks</option>
-              <option value="nike air force">Nike Air Force</option>
-              <option value="adidas yeezy">Adidas Yeezy</option>
-              <option value="new balances">New Balances</option>
-              <option value="vans/converse">Vans/Converse</option>
-              <option value="others">Others</option>
-            </optgroup> 
-          </select><br/>
-
-          <label for="size">Pick a size:</label>
-          <select name="size" id="size" onChange={(e) => {setSizes(e.target.value)}}>
-            <optgroup label="Size">
-              <option value="4">Size 4</option>
-              <option value="5">Size 5</option>
-              <option value="6">Size 6</option>
-              <option value="7">Size 7</option>
-              <option value="8">Size 8</option>
-              <option value="9">Size 9</option>
-              <option value="10">Size 10</option>
-              <option value="11">Size 11</option>
-              <option value="12">Size 12</option>
-            </optgroup>
-          </select><br/>
-
-        <div className="buttons">
-          <button type="submit" onClick={() => loadFilter()} class="btn btn-secondary mt-3">Filter</button>
-          <button type="button" onClick={() => loadListing()} className="btn btn-secondary mt-3">Reset</button>
-        </div>
-        <div className="runlogo">
-        <img src={runlogo} alt="run" className="shoepic"></img>
-        </div>
-      </header>
-
-
-      <header className="tradecard">
+    <div className="browse-body">
+      <div className="filter-bar">
+        
+        <select name="brand" id="brand-browse" onChange={(e) => { setBrands(e.target.value) }}>
+          <optgroup label="Brand">
+            <option value="air jordan">Air Jordan</option>
+            <option value="nike dunks">Nike Dunks</option>
+            <option value="nike air force">Nike Air Force</option>
+            <option value="adidas yeezy">Adidas Yeezy</option>
+            <option value="new balances">New Balances</option>
+            <option value="vans/converse">Vans/Converse</option>
+            <option value="others">Others</option>
+          </optgroup>
+        </select>
+        
+        
+        <select name="size" id="size-browse" onChange={(e) => { setSizes(e.target.value) }}>
+          <optgroup label="Size">
+            <option value="4">Size 4</option>
+            <option value="5">Size 5</option>
+            <option value="6">Size 6</option>
+            <option value="7">Size 7</option>
+            <option value="8">Size 8</option>
+            <option value="9">Size 9</option>
+            <option value="10">Size 10</option>
+            <option value="11">Size 11</option>
+            <option value="12">Size 12</option>
+          </optgroup>
+        </select>
+        
+        <button type="submit" id="search" onClick={() => loadFilter()} >Search</button>
+        <button type="button" id="reset" onClick={() => loadListing()} >Reset</button>
+      </div>
         {cardListing}
-      </header>
-    </header>
+    </div>
   );
 }
 

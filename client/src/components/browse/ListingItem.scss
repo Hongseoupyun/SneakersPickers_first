@@ -1,106 +1,43 @@
-  .cardsale {
-    flex-direction: row;
-    margin-bottom: 10px;
-    top: 1%;
-    left: 20%;
-    width: 1200px;
-    height: 375px;
-    
-    background: white;
-    margin:  auto;
 
+#pref {
+  position: relative;
+  left: 1rem;
+  font-size: 1.4rem;
+}
 
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    transition: all 0.3s;
-    
+#browse-name {
+  position: relative;
+  top: -3rem;
+  left: 0rem;
+}
+
+.make-offers {
+  position: relative;
+  left: 4rem;
+  top: -2rem;
+
+  button {
+    color: white;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 11em;
+    top: 7rem;
+    left: 22rem;
+    border-radius: 32px;
+    background-color: rgb(17, 30, 108);
+    border: none;
     &:hover {
-      
-      box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    
+      background-color: black;
     }
-    
-
-    .photo {
-      
-      padding: 10px;
-      width: 45%;
-      text-align: center;
-      float: left;
-      
-      img { 
-        min-height: 100%; 
-      }
-      
-    }
-    
-    .description {
-      
-       padding: 30px;
-       float: left;
-       width: 55%;
-       border-left: 2px solid #efefef;
-       
-       h1 {
-         color: #515151;
-         font-weight: 300;
-         padding-top: 15px;
-         margin: 0;
-         font-size: 20px;
-         font-weight: 300;
-         text-transform: uppercase;
-       }
-     
-       h2 {
-        color: #515151;
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: 500;
-       }
-      
-       h4 { 
-         margin: 0;
-         color: #727272;
-         text-transform: uppercase;
-         font-weight: 500;
-         font-size: 12px
-       }
-      
-       p { 
-         font-size: 12px; 
-         line-height: 20px;
-         color: #727272;
-         padding: 20px 0;
-         margin: 0;
-      }
-      
-       button {
-
-         outline: 0;
-         border: 0;
-         background: none;
-         border: 1px solid #d9d9d9;
-         padding: 8px 0px;
-         margin-bottom: 30px;
-         color: #515151;
-         text-transform: uppercase;
-         width: 125px;
-         font-family: inherit;
-         margin-right: 5px;
-         transition: all 0.3s ease;
-         font-weight: 500;
-         
-         &:hover {
-           
-           background: darken(white, 2%);
-           border: 1px solid #aedaa6;
-           color: #aedaa6;
-           cursor: pointer;
-           
-         }
-
-       }
-      
-    }
-    
   }
-  
+}
+
+#brand-size-br {
+  font-size: 1.5rem;
+  position: relative;
+  top: 11.5rem;
+  font-weight: 600;
+}
+

@@ -11,10 +11,13 @@ button .login-button {
   width: 25%;
 }
 
-button:hover {
-  background-color: #0dcaf0;
-  border: 2px solid #101fbd;
+.accept-decline button{
+  &:hover{
+    background-color: #0dcaf0;
+    border: 2px solid #101fbd;
+  }
 }
+
 
 input {
   margin: 0 10px 0 0;
