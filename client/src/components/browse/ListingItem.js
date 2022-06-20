@@ -12,7 +12,7 @@ export default function ListingItem(props) {
 
   return (
 
-    <section className="mylisting-container">
+    <section className="browse-container">
       <img className="mylisting-img" src={picture} />
       <div className="mylisting-card-contents">
         <div className="listing-text" id="browse-name">

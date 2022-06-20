@@ -44,4 +44,15 @@
   left: 5%;
   font-weight: 600;
 }
-
+.browse-container {
+  position: relative;
+  font-family: "Anek Latin", sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+  border-radius: 25px;
+  height: 100%;
+  animation: slide 1.3s ease-out;
+  margin-left: 10%;
+}
