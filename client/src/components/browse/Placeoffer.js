@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Placeoffer.scss";
 import axios from "axios";
@@ -8,10 +8,10 @@ import MyItems from "./MyItems";
 
 function Placeoffer() {
 
-//**************** */
+  //**************** */
   // const location = useLocation();
 
-  
+
 
   const { id } = useParams();
 
@@ -19,59 +19,59 @@ function Placeoffer() {
   const [listing, setListing] = useState([]);
   const [myListings, setMyListings] = useState([]);
 
-  
+
   //Gets the listing from the selected listing
   function loadListing() {
-    return(axios.get(`/api/listeditem/${id}`)
-    .then((result) => {
-      // console.log("load listing:", result.data[0])
-      setListing(result.data[0])
-    })
+    return (axios.get(`/api/listeditem/${id}`)
+      .then((result) => {
+        // console.log("load listing:", result.data[0])
+        setListing(result.data[0])
+      })
     )
   }
 
   //Gets all of user's listing to offer 
   const loadMyListings = function () {
     axios.get("/api/mylistings")
-    .then((result) => {
-      console.log("result.data from mylistings=>",result.data)
-      setMyListings(result.data)
-    })
+      .then((result) => {
+        console.log("result.data from mylistings=>", result.data)
+        setMyListings(result.data)
+      })
   }
-  
-  
+
+
   console.log("mylisting:", typeof Number(id))
   console.log(typeof offeredID)
-  
+
   const myListed = myListings.map((e) => {
-   return (
-     <MyItems
-     key={e.id}
-     name={e.name}
-     brand={e.brand}
-     size={e.size}
-     description={e.description}
-     image_url={e.image_url}
-     id={e.id}
-     setOfferedID={setOfferedID}
-     />
+    return (
+      <MyItems
+        key={e.id}
+        name={e.name}
+        brand={e.brand}
+        size={e.size}
+        description={e.description}
+        image_url={e.image_url}
+        id={e.id}
+        setOfferedID={setOfferedID}
+      />
     )
   })
-  
 
-  console.log({myListed})
+
+  console.log({ myListed })
 
 
   useEffect(() => {
     loadMyListings()
     loadListing()
   }, [])
-  
+
 
 
   //sends axios post request using id from param, and offeredID from selected on myListed component
   const handleOffer = () => {
-    return(axios.post('/api/makeoffer', {listingID: Number(id), offeredID: offeredID})
+    return (axios.post('/api/makeoffer', { listingID: Number(id), offeredID: offeredID })
       .then((result) => {
         console.log("offered complete!")
       })
@@ -81,45 +81,48 @@ function Placeoffer() {
 
 
   return (
-    <body className="offers-body">
-      {listing && myListings? (
-       <section className="offers-container">
-        <div className="from">
-          Place offer for:
-        </div>
-        <article className="offers-cards">
-          <div className="my-shoes-card">
-            <div>
-              <img className="my-shoes-img" src={listing.image_url} alt=""/>
+    <div className="placeoffer-body">
+      {listing && myListings ? (
+        <>
+          <article className="placeoffers-cards">
+            <div className="placeoffer-other-card">
+              <div>
+                <img className="placeoffer-img" src={listing.image_url} alt="" />
+              </div>
+              <div className="my-shoes-name">
+                Name: {listing.name}
+              </div>
+              <div className="my-shoes-size">
+                preference:  {listing.preference}
+              </div>
+              <div className="my-shoes-description">
+                Description: {listing.description}
+              </div>
+              <div className="my-shoes-size">
+                Size: {listing.size}
+              </div>
             </div>
-            <div className="my-shoes-name">
-              Name: {listing.name}
+
+            <div className="placeoffer-tradeimg">
+              <img className="tradeimg" src={tradeImg} />
             </div>
-            <div className="my-shoes-size">
-              Size: {listing.size}
+            
+            <div className="placeoffer-mylisting">
+              {myListed}
             </div>
-            <div className="my-shoes-description">
-              Description: {listing.description}
-            </div>
+
+          </article>
+
+          <div className="placeoffer-buttons">
+            <button onClick={handleOffer}>Offer</button>
+            <button>Cancel</button>
           </div>
-          
-          <div className="trade-img">
-            <img src={tradeImg}/>
-          </div>
 
-          {myListed}
-
-        </article>
-        <div className="accept-decline">
-          <button onClick={handleOffer}>Offer</button>
-          <button>Cancel</button>
-        </div>
-
-      </section> )
-      :
-      (<div>No Data!</div>
-      )}
-    </body>
+          </>)
+        :
+        (<div>No Data!</div>
+        )}
+    </div>
   );
 }
 
