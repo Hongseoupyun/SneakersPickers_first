@@ -85,6 +85,9 @@ module.exports = (db) => {
         console.log("changing buyers info")
         db.query(acceptBuyer, [req.body.offeredid])
       })
+      .then((result) => {
+        res.json(result);
+      })
       .catch((err) => {
         res.status(500).json({ error: err.message });
       });

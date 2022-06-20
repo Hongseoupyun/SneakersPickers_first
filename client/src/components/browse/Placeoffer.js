@@ -74,6 +74,7 @@ function Placeoffer() {
     return(axios.post('/api/makeoffer', {listingID: Number(id), offeredID: offeredID})
       .then((result) => {
         console.log("offered complete!")
+        window.open('/browse', "_self")
       })
     )
   }

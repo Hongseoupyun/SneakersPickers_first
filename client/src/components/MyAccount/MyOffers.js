@@ -37,8 +37,9 @@ export default function MyOffers(props) {
 
   const acceptOffer = function () {
     return axios.post("/api/acceptoffer", { offerid: props.offerid, offeredid: props.offered_item_id, wantedID: props.wanted_item_id })
-      .then((result) => {
+    .then((result) => {
         console.log("offer accepted");
+        window.open('/offers', "_self")
       })
   };
 
@@ -47,12 +48,14 @@ export default function MyOffers(props) {
     return axios.post("/api/declineoffer", { offerid: props.offerid})
       .then((result) => {
         console.log("offer declined")
+        window.open('/offers', "_self")
       })
   };
 
   useEffect(() => {
     loadEachOffer();
   }, []);
+  
 
   return (
     <div>
