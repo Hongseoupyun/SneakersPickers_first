@@ -9,16 +9,15 @@ function MyItems(props) {
 
   const handleClick = () => {
     props.setOfferedID(props.id)
+    console.log("select:", props.id)
   }
 
   console.log("thisis props id", props.id)
 
   return (
     <div className="others-shoes-card" >
-      <input type="radio" id="css" name="itemfromuser" onClick={handleClick} value={props.id}></input>
         <div>
-          <img className="others-shoes-img"src={props.image_url} alt="" />
-        </div>
+          <input type="image" id="css" onClick={handleClick} value={props.id} className="others-shoes-img" src={props.image_url} alt="" />
         <div className="others-shoes-name">
           Name: {props.name}
         </div>
@@ -27,6 +26,7 @@ function MyItems(props) {
         </div>
         <div className="others-shoes-description">
           Description: {props.description}
+        </div>
         </div>
     </div>
   )
