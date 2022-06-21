@@ -1,11 +1,8 @@
 import React from "react";
-import { BsFillBookmarkHeartFill} from "react-icons/bs";
-import { MdDescription} from "react-icons/md";
-
 
 
 export default function MyListingItem(props) {
-  const { name, description, brand, size, img, total_offers, preference } = props
+  const { name, description, brand, size, img } = props
 
   return (
     <section className="mylisting-container">
@@ -20,18 +17,15 @@ export default function MyListingItem(props) {
           <div className="my-brand">{brand}</div>
           <div className="my-size">Size {size}</div>
         </div>
-        <div className="listing-text" id="my-pref">
-          <BsFillBookmarkHeartFill/><span>Preference:{preference}</span>
-        </div>
         <div className="listing-text" id="description">
-          <MdDescription/><span>{description}</span>
+          <span>{description}</span>
         </div>
         <div className="view-offers">
         <a href="/offers"> <button type="submit">View Offers</button></a>
         </div>
         <div className="listing-text" id="offers">
           <button type="button" class="btn btn-primary">
-          <span className="badge badge-light">{total_offers}</span>{total_offers <=1 ? "OFFER" : "OFFERS"}
+          <span className="badge badge-light">4</span>OFFERS
           </button>
         </div>
       </div>
