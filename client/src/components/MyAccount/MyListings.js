@@ -10,7 +10,7 @@ export default function MyListings() {
 
   //fetch data from api
   const loadMyListings = function () {
-    axios.get("api/mylistings")
+    axios.get("api/mylistingsoffers")
       .then((result) => {
         setListings(result.data)
         console.log("result.data=",result.data)
