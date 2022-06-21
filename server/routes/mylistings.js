@@ -8,6 +8,8 @@ LEFT JOIN offers ON offers.listing_offer_made_to_id=listings.id
 WHERE user_id = $1 AND active = true
 GROUP BY listings.id, name, brand, size, image_url, description;`
 
+
+
 module.exports = (db) => {
   router.get("/mylistings", (req, res) => {
     db.query(queryListing,[req.user.id])
@@ -29,6 +31,7 @@ module.exports = (db) => {
     .catch((err)=>[
       console.log("Error found in mylistings =>", err)
     ])
-  }) 
+  })  
+
   return router;
 }
