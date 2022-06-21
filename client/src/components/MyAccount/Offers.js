@@ -2,21 +2,32 @@ import React, { useState, useEffect} from "react";
 import "./Offers.scss"
 import axios from "axios";
 import MyOffers from "./MyOffers"
+import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 
 //Component path: Offer > MyOffers > OfferedItem
 export default function Offers() {
 
   const [allMyOffers, setAllMyOffers] = useState([])
+  const [warning, setWarning] = useState()
 
   //Axios GET the user's listings that has an offer
   const loadMyOffers = function () {
     axios.get("/api/offerlist")
     .then((result) => {
-      setAllMyOffers(result.data)
+      if(result.data.length === 0) {
+        setWarning(true)
+        setAllMyOffers(result.data)
+      }
+      else {
+        setWarning(false)
+        setAllMyOffers(result.data)
+      }
     })
   }
-
+  
+  console.log("thisismyoffer", allMyOffers)
 
 
   //Pass props to Myoffers component which will do another axios call to render the offered listing
@@ -30,6 +41,7 @@ export default function Offers() {
       description={e.description}
       image_url={e.image_url}
       offerid={e.offerid}
+      preference={e.preference}
       wanted_item_id={e.listing_offer_made_to_id}
       offered_item_id={e.listing_being_offered_id}
       />
@@ -40,13 +52,21 @@ export default function Offers() {
     loadMyOffers()
   }, [])
 
-
+  const noOfferToast = () => {
+    toast.error("You have no offers currently :(", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
 
   return (
-    <div className="mylisting-body">
-
-      {showMyOffers}
-
+    <div className="myoffers-body">
+      {warning && noOfferToast()}
+        <ToastContainer 
+        autoClose={4000}
+        />
+      {showMyOffers} 
     </div>
 
   );

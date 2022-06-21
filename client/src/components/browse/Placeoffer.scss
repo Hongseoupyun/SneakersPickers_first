@@ -2,13 +2,12 @@
   position: relative;
   padding-top: 6rem;
   height: 100vh;
-  background-color: navajowhite;
+  background-color: #151929;
 }
-
 .placeoffers-cards {
   display: flex;
+  position: relative;
   justify-content: center;
-  // gap: 14%;
 }
 
 .placeoffer-other-card {
@@ -20,6 +19,7 @@
   display: flex;
   border-radius: 20px;
   flex-direction: column;
+  animation: slide-up-noop 1.3s ease-out;
 }
 .placeoffer-mylisting {
   display: flex;
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 30vh;
+  top: 27vh;
   margin: 1.5%;
 }
 .placeoffer-img {
@@ -97,17 +97,28 @@ button .login-button {
 }
 .my-shoes-card {
   display: flex;
-  width: 44vw;
+  width: 40vw;
   height: 27vh;
   background-color: white;
   margin-bottom: 2.5%;
   margin-right: 2vw;
   border-radius: 20px;
+  position: relative;
+  animation: slide-noop 1.3s ease-out;
   transform: scale(1);
   transition: 0.7s;
+  cursor: pointer;
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     transition: 0.6s;
+  }
+}
+.shoes-selected {
+  transform: scale(1.083);
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.083);
+    transition: 0.3s;
   }
 }
 
@@ -141,20 +152,42 @@ button .login-button {
   display: flex;
   align-items: center;
 }
-.placeoffer-mylisting{
+.placeoffer-mylisting {
   position: relative;
   display: flex;
   flex-direction: column;
   left: 7%;
-  top:  8%;
+  top: 8%;
 }
 
-.my-shoes-name{
+.my-shoes-name {
   font-family: "Staatliches", cursive;
   font-size: 2rem;
   margin-bottom: 7%;
 }
-.my-shoes-pref,.my-shoes-desc,.my-shoes-size{
+.my-shoes-pref,
+.my-shoes-desc,
+.my-shoes-size {
   font-size: 1.2rem;
   margin-bottom: 3%;
+}
+@keyframes slide-up-noop {
+  from {
+    bottom: -300px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-noop {
+  from {
+    top: -300px;
+    opacity: 1;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }

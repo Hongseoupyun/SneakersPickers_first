@@ -32,32 +32,6 @@
   padding-left: 3em;
 }
 
-
-.tradeslot {
-  height: 5em;
-  width: 10em;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-  margin-top: 13rem;
-}
-
-.tradepic {
-  padding-left: 2rem;
-}
-
-
-
-.offerpic-second {
-  width: 17rem;
-  height: 17rem;
-  border-radius: 13px;
-  position: relative;
-  left: 26rem;
-  top: 2rem;
-  z-index: 5;
-}
-
 .mylisting-card-contents-history-left {
   position: relative;
   left: -8rem;
@@ -73,28 +47,8 @@
 }
 
 
-.listing-text-history {
-  margin-left: 9rem;
-  position: relative;
-  h1 {
-    padding-bottom: 1rem;
-    font-size: 2.8rem;
-    font-weight: 900;
-  }
-}
 
-.mylisting-card-contents-second {
-  position: relative;
-  left: -13rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: white;
-  height: 32rem;
-  width: 32rem;
-  border-radius: 10px;
 
-}
 
 .listing-text-second {
   margin-right: 3rem;
@@ -113,12 +67,7 @@
   margin-left: 1rem;
 }
 
-.btn-primary {
-  background-color: #E60023;
-  border-radius: 20px;
-  font-weight: 700;
-  border: none;
-}
+
 .my-brand {
   font-size: 1.9rem;
 }

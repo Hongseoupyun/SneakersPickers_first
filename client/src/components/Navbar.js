@@ -37,7 +37,7 @@ function NavBar() {
     <Navbar className="nav-bar" style={{paddingTop:"1.1rem", paddingBottom:"1.1rem"}} variant="dark" fixed="top">
       <Navbar.Brand className="logoname" href="/">
         SNEAKERSPICKERS
-        {/* {LoggedIn !== "false" && (<div className="username">Welcome, {name}</div>)} */}
+        {LoggedIn !== "false" && (<div className="username">Welcome, {name}</div>)}
       </Navbar.Brand>
 
       <Nav className="ms-auto align-text-bottom ">
