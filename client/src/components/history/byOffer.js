@@ -1,32 +1,23 @@
 import React, { useState, useEffect } from "react";
-
-
+import { BsFillBookmarkHeartFill } from "react-icons/bs";
+import { MdDescription } from "react-icons/md";
+import { GiBarefoot } from "react-icons/gi";
+import { FiMail, FiUser } from "react-icons/fi";
 
 
 //Component path: acceptedOffers > forOffer > byOffer
 export default function ByItem(props) {
   return (
-    <section className="mylisting-container-second">
-      <img className="offerpic-second" src={props.image_url} alt="" />
-
-      <div className="mylisting-card-contents-second">
-          <div className="my-email-second">Email: {props.email}</div>
-          <div className="my-email-second">Offered by: {props.user_name}</div>
-      <div className="listing-text-second" >
-        </div>
-        <div className="listing-text-second" id="name">
+    <div className="myoffers-cards" id="right">
+      <img className="myoffers-img" src={props.image_url} alt="" id="history_id_card"/>
+      <div className="listing-text-history" >
           <h1>{props.name}</h1>
+          <div className="myoffers-text"><BsFillBookmarkHeartFill /> {props.preference}</div>
+          <div className="myoffers-text"><MdDescription />{props.description}</div>
+          <div className="myoffers-text"><GiBarefoot/>{props.brand}/Size {props.size}</div>
+          <div className="myoffers-text"><FiMail /> {props.email}</div>
+          <div className="myoffers-text"><FiUser />By: {props.user_name}</div>
         </div>
-        <div className="listing-text-second" >
-          <div className="my-brand-second">{props.brand}</div>
-          <div className="my-size-second">Size {props.size}</div>
-        </div>
-        <div className="listing-text-second" >
-          <span>{props.description}</span>
-        </div>
-        <div className="listing-text" >
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

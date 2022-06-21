@@ -35,6 +35,17 @@
   top: -4.5%;
   z-index: 5;
 }
+
+#history_id_card {
+  width: 92%;
+  height: 55%;
+  border-radius: 20px;
+  position: relative;
+  left: 4%;
+  top: -1.5%;
+  z-index: 5;
+}
+
 .mylisting-body-history {
   display: flex;
   flex-direction: column;
@@ -72,8 +83,6 @@
   flex-direction: column;
   display: flex;
   margin-top: 13rem;
-  margin-left: 1.5%;
-  margin-right: 5.5%;
 }
 
 .tradepic {
