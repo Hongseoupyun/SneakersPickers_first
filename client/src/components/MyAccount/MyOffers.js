@@ -5,6 +5,8 @@ import OfferedItem from "./OfferedItem";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
 import { MdDescription } from "react-icons/md";
 import { GiBarefoot } from "react-icons/gi";
+import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 //Component path: Offer > MyOffer > OfferedItem
 export default function MyOffers(props) {
@@ -46,8 +48,11 @@ export default function MyOffers(props) {
         wantedID: props.wanted_item_id,
       })
       .then((result) => {
+        acceptToast()
+      })
+      .then((result) => {
         console.log("offer accepted");
-        window.open("/offers", "_self");
+        setTimeout(() => window.open("/offers", "_self"), 1000);
       });
   };
 
@@ -55,8 +60,11 @@ export default function MyOffers(props) {
     return axios
       .post("/api/declineoffer", { offerid: props.offerid })
       .then((result) => {
+        declineToast()
+      })
+      .then((result) => {
         console.log("offer declined");
-        window.open("/offers", "_self");
+        setTimeout(() => window.open("/offers", "_self"), 1000);
       });
   };
 
@@ -64,8 +72,27 @@ export default function MyOffers(props) {
     loadEachOffer();
   }, []);
 
+  const acceptToast = () => {
+    toast.success("Offer accepted successfully!", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
+
+  const declineToast = () => {
+    toast.warning("Offer has been declined!", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
+
   return (
     <section className="myoffers-container">
+      <ToastContainer 
+        autoClose={1000}
+      />
       <div className="myoffers-cards" id="left">
         <img className="myoffers-img" src={props.image_url} alt="" />
         <div className="listing-text-history" >
