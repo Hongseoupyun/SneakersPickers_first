@@ -53,6 +53,7 @@ function Placeoffer() {
         image_url={e.image_url}
         id={e.id}
         setOfferedID={setOfferedID}
+        offeredID={offeredID}
       />
     );
   });

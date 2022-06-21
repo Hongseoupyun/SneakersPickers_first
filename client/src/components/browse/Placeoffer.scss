@@ -107,9 +107,18 @@ button .login-button {
   animation: slide-noop 1.3s ease-out;
   transform: scale(1);
   transition: 0.7s;
+  cursor: pointer;
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     transition: 0.6s;
+  }
+}
+.shoes-selected {
+  transform: scale(1.083);
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.083);
+    transition: 0.3s;
   }
 }
 
@@ -143,44 +152,42 @@ button .login-button {
   display: flex;
   align-items: center;
 }
-.placeoffer-mylisting{
+.placeoffer-mylisting {
   position: relative;
   display: flex;
   flex-direction: column;
   left: 7%;
-  top:  8%;
+  top: 8%;
 }
 
-.my-shoes-name{
+.my-shoes-name {
   font-family: "Staatliches", cursive;
   font-size: 2rem;
   margin-bottom: 7%;
 }
-.my-shoes-pref,.my-shoes-desc,.my-shoes-size{
+.my-shoes-pref,
+.my-shoes-desc,
+.my-shoes-size {
   font-size: 1.2rem;
   margin-bottom: 3%;
 }
 @keyframes slide-up-noop {
-  from{
-    bottom:-300px;
+  from {
+    bottom: -300px;
     opacity: 1;
-
   }
-  to{
-    bottom:0px;
+  to {
+    bottom: 0px;
     opacity: 1;
-
   }
 }
 @keyframes slide-noop {
-  from{
-    top:-300px;
+  from {
+    top: -300px;
     opacity: 1;
-
   }
-  to{
-    top:0px;
+  to {
+    top: 0px;
     opacity: 1;
-
   }
 }

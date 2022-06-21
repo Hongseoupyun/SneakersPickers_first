@@ -6,6 +6,7 @@ import "./Placeoffer.scss";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
 import { MdDescription } from "react-icons/md";
 import { GiBarefoot } from "react-icons/gi";
+import classNames from "classnames";
 
 
 
@@ -18,10 +19,12 @@ function MyItems(props) {
 
   console.log("thisis props id", props.id)
 
+  const handleClass = classNames("my-shoes-card", {"shoes-selected ":props.offeredID === props.id })
+
   return (
-    <div className="my-shoes-card" >
-      <input type="image" id="css" onClick={handleClick} value={props.id} className="my-shoes-img" src={props.image_url} />
-      <div className="placeoffer-mylisting">
+    <div className={handleClass} onClick={handleClick} value={props.id}>
+      <input type="image" id="css" className="my-shoes-img" src={props.image_url} />
+      <div className="placeoffer-mylisting" >
         <div className="my-shoes-name">
           {props.name}
         </div>
