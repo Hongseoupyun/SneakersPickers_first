@@ -103,13 +103,13 @@ function AddAListing() {
             </div>
             <div>
               <select name="brand" className="brand" onChange={(e)=>{setBrand(e.target.value)}}>
-                <option value="air jordan">Air Jordan</option>
-                <option value="nike dunks">Nike Dunks</option>
-                <option value="nike air force">Nike Air Force 1</option>
-                <option value="adidas yeezy">Adidas Yeezy</option>
-                <option value="new balnces">New balances</option>
-                <option value="vans/converse">Vans/Converse</option>
-                <option value="others">Others</option>
+                <option value="Air Jordan">Air Jordan</option>
+                <option value="Nike Dunks">Nike Dunks</option>
+                <option value="Nike Air Force">Nike Air Force 1</option>
+                <option value="Adidas Yeezy">Adidas Yeezy</option>
+                <option value="New Balances">New balances</option>
+                <option value="Vans/Converse">Vans/Converse</option>
+                <option value="Others">Others</option>
               </select>
             </div>
           </div>

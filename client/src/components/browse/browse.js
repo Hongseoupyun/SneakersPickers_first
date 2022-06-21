@@ -60,13 +60,13 @@ function Browse() {
         
         <select name="brand" id="brand-browse" onChange={(e) => { setBrands(e.target.value) }}>
           <optgroup label="Brand">
-            <option value="air jordan">Air Jordan</option>
-            <option value="nike dunks">Nike Dunks</option>
-            <option value="nike air force">Nike Air Force</option>
-            <option value="adidas yeezy">Adidas Yeezy</option>
-            <option value="new balances">New Balances</option>
-            <option value="vans/converse">Vans/Converse</option>
-            <option value="others">Others</option>
+            <option value="Air Jordan">Air Jordan</option>
+            <option value="Nike Dunks">Nike Dunks</option>
+            <option value="Nike Air Force">Nike Air Force</option>
+            <option value="Adidas Yeezy">Adidas Yeezy</option>
+            <option value="New Balances">New Balances</option>
+            <option value="Vans/Converse">Vans/Converse</option>
+            <option value="Others">Others</option>
           </optgroup>
         </select>
         
