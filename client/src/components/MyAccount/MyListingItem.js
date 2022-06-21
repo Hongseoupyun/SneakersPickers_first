@@ -5,7 +5,7 @@ import { MdDescription} from "react-icons/md";
 
 
 export default function MyListingItem(props) {
-  const { name, description, brand, size, img, preference } = props
+  const { name, description, brand, size, img, total_offers, preference } = props
 
   return (
     <section className="mylisting-container">
@@ -30,8 +30,8 @@ export default function MyListingItem(props) {
         <a href="/offers"> <button type="submit">View Offers</button></a>
         </div>
         <div className="listing-text" id="offers">
-          <button type="button" className="btn btn-primary">
-          <span className="badge badge-light">4</span>OFFERS
+          <button type="button" class="btn btn-primary">
+          <span className="badge badge-light">{total_offers}</span>{total_offers <=1 ? "OFFER" : "OFFERS"}
           </button>
         </div>
       </div>
