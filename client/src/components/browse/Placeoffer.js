@@ -5,13 +5,15 @@ import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import tradeImg from "../images/trade-sample.webp"
 import MyItems from "./MyItems";
+import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 function Placeoffer() {
 
 //**************** */
   // const location = useLocation();
 
-  
+  toast.success("Offer placed successfully!")
 
   const { id } = useParams();
 
@@ -55,6 +57,14 @@ function Placeoffer() {
      />
     )
   })
+
+  const successToast = () => {
+    toast("Offer placed successfully!", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
   
 
 
@@ -71,8 +81,14 @@ function Placeoffer() {
   const handleOffer = () => {
     return(axios.post('/api/makeoffer', {listingID: Number(id), offeredID: offeredID})
       .then((result) => {
-        console.log("offered complete!")
-        window.open('/browse', "_self")
+        successToast()
+        setTimeout(window.open('/browse', "_self"), 3000)
+      })
+      .then(() => {
+        setTimeout(window.open('/browse', "_self"), 3000)
+      })
+      .catch(() => {
+        console.log("error")
       })
     )
   }
@@ -82,7 +98,12 @@ function Placeoffer() {
   return (
     <body className="offers-body">
       {listing && myListings? (
-       <section className="offers-container">
+        <section className="offers-container">
+         {/* <ToastContainer 
+         draggable={false}
+         transition={Zoom}
+         autoClose={5000}
+         /> */}
         <div className="from">
           Place offer for:
         </div>

@@ -1,8 +1,11 @@
 import React from "react";
 import "./AddAListing.scss";
 import addSneakers from "../images/sneakers2.jpeg"
-import { useState} from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
+import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 function AddAListing() {
 
@@ -15,6 +18,8 @@ function AddAListing() {
   //   preference
   // })
 
+  const navigate = useNavigate();
+
   const [name, setName] = useState("")
   const [size, setSize] = useState("")
   const [brand, setBrand] = useState("")
@@ -22,13 +27,18 @@ function AddAListing() {
   const [img, setImg] = useState("")
   const [preference, setPreference] = useState("")
 
+  toast.success("Offer placed successfully!")
+
   //send data to api
   const uploadListing = function (e) {
     e.preventDefault();
     axios.post("api/listings",{name, size, brand, description, img, preference})
-    .then((res)=>{
-      console.log(res.data)
-      window.open('/browse', "_self")
+    .then(() => {
+      toast.success("Success!");
+
+    })
+    .then(() => {
+      setTimeout(navigate('/browse'), 5000)
     })
     .catch((err)=>{
       console.log("Error occured in ",err)
@@ -44,7 +54,15 @@ function AddAListing() {
 
   console.log({name})
 
+  const successToast = () => {
+    toast("Listing added successfully!", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
 
+  
 
 
   return (
@@ -126,7 +144,7 @@ function AddAListing() {
             <label>Preference(eg.Nike Dunks Varisty red etc.)</label>
           </div>
           <div className="btn-area">
-            <button type="submit" onClick={(e)=>{uploadListing(e)}}>Publish</button>
+            <button type="submit" onClick={(e)=>{uploadListing(e); successToast()}}>Publish</button>
           </div>
         </form>
         </div>
