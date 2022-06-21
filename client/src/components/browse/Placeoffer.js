@@ -80,7 +80,7 @@ function Placeoffer() {
         successToast()
       })
       .then(() => {
-        setTimeout(() => window.open('/browse', "_self"), 2000)
+        setTimeout(() => window.open('/browse', "_self"), 1300)
       })
       .catch(() => {
         console.log("error")
@@ -95,7 +95,7 @@ function Placeoffer() {
         <>
           <article className="placeoffers-cards">
             <ToastContainer 
-            autoClose={2000}
+            autoClose={1300}
             />
             <div className="placeoffer-other-card">
                 <img
