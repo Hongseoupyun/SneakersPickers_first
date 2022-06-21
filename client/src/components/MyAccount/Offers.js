@@ -30,6 +30,7 @@ export default function Offers() {
       description={e.description}
       image_url={e.image_url}
       offerid={e.offerid}
+      preference={e.preference}
       wanted_item_id={e.listing_offer_made_to_id}
       offered_item_id={e.listing_being_offered_id}
       />
@@ -43,7 +44,7 @@ export default function Offers() {
 
 
   return (
-    <div className="mylisting-body">
+    <div className="myoffers-body">
 
       {showMyOffers}
 
