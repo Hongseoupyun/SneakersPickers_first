@@ -54,10 +54,11 @@ export default function ForOffers(props) {
           <div className="myoffers-text"><GiBarefoot/>{props.brand}/Size {props.size}</div>
         </div>
       </div>
-      <div className="tradeslot">
-        <img src={tradeImg} alt="" />
-      </div>
+        <div className="tradepic" id="history_trade_icon">
+          <img src={tradeImg} alt="" />
+        </div>
       {showIndividual}
+
     </section>
   );
 }
