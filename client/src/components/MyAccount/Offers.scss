@@ -11,6 +11,7 @@
 }
 .myoffers-container {
   display: flex;
+  position: relative;
   margin-top: 8%;
 }
 .myoffers-cards {
@@ -155,13 +156,11 @@
   }
 }
 
-@keyframes slide {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0px;
-    opacity: 1;
-  }
+#left{
+  animation: slide 1.5s ease;
 }
+#right{
+  animation: slide-up 1.5s ease;
+}
+
+

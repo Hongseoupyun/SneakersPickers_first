@@ -66,7 +66,7 @@ export default function MyOffers(props) {
 
   return (
     <section className="myoffers-container">
-      <div className="myoffers-cards" id="offerleft">
+      <div className="myoffers-cards" id="left">
         <img className="myoffers-img" src={props.image_url} alt="" />
         <div className="listing-text-history" >
           <h1>{props.name}</h1>
