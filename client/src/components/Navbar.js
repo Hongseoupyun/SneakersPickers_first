@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import './Navbar.css'
 import axios from "axios";
+import bellicon from "./images/bellicon.png"
 
 
 function NavBar() {
@@ -13,7 +14,7 @@ function NavBar() {
   // console.log(typeof LoggedIn)
 
   const [name, setName] = useState()
-
+  const [notification, setNotification] = useState()
 
   //fetch data from api using axios
   const getUsersProfile = function () {
@@ -23,11 +24,27 @@ function NavBar() {
       });
   };
 
+  const loadMyListings = function () {
+    axios.get("api/offerlist")
+      .then((result) => {
+        console.log(result)
+        if(result.data.length === 0) {
+          setNotification(false)        
+        }
+        else {
+          setNotification(true)
+        }
+      })
+      .catch((err)=>{
+        console.log("Error Occured in", err)
+      })
+  }
+
   //load usersProfile when rendering component
   useEffect(() => {
     getUsersProfile();
+    loadMyListings();
   }, []);
-
 
 
   console.log(name)
@@ -42,6 +59,7 @@ function NavBar() {
 
       <Nav className="ms-auto align-text-bottom ">
         <div className="nav-elms">
+        {notification && (<a href="/offers"><img src={bellicon} className="notificationIcon"/></a>)}
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
           <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
