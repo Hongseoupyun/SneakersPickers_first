@@ -70,9 +70,9 @@ export default function MyOffers(props) {
         <img className="myoffers-img" src={props.image_url} alt="" />
         <div className="listing-text-history" >
           <h1>{props.name}</h1>
-          <div><BsFillBookmarkHeartFill /> {props.preference}</div>
-          <div className="itembrand"><MdDescription />{props.description}</div>
-          <div className="itemsize"><GiBarefoot/>{props.brand}/Size {props.size}</div>
+          <div className="myoffers-text"><BsFillBookmarkHeartFill /> {props.preference}</div>
+          <div className="myoffers-text"><MdDescription />{props.description}</div>
+          <div className="myoffers-text"><GiBarefoot/>{props.brand}/Size {props.size}</div>
         </div>
       </div>
       <div className="tradeslot">

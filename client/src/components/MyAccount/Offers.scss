@@ -30,7 +30,7 @@
   border-radius: 20px;
   position: relative;
   left: 4%;
-  top: -9.5%;
+  top: -6.5%;
   z-index: 5;
 }
 .mylisting-body-history {
@@ -99,8 +99,17 @@
 }
 
 .listing-text-history {
-  margin-left: 9rem;
+  margin-left: 9%;
   position: relative;
+
+  h1{
+  font-family: "Staatliches", cursive;
+  font-size: 3rem;
+  }
+}
+.myoffers-text{
+  margin-bottom: 1%;
+  font-size: 1.4rem;
 }
 
 .listing-text-second {
@@ -157,10 +166,10 @@
 }
 
 #left{
-  animation: slide 1.5s ease;
+  animation: slide-noop 1.5s ease;
 }
 #right{
-  animation: slide-up 1.5s ease;
+  animation: slide-up-noop 1.5s ease;
 }
 
 

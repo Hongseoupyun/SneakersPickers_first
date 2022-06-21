@@ -2,9 +2,8 @@
   position: relative;
   padding-top: 6rem;
   height: 100vh;
-  background-color: navajowhite;
+  background-color: #151929;
 }
-
 .placeoffers-cards {
   display: flex;
   position: relative;
@@ -20,7 +19,7 @@
   display: flex;
   border-radius: 20px;
   flex-direction: column;
-  animation: slide-up 1.3s ease-out;
+  animation: slide-up-noop 1.3s ease-out;
 }
 .placeoffer-mylisting {
   display: flex;
@@ -37,7 +36,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 30vh;
+  top: 27vh;
   margin: 1.5%;
 }
 .placeoffer-img {
@@ -98,14 +97,14 @@ button .login-button {
 }
 .my-shoes-card {
   display: flex;
-  width: 44vw;
+  width: 40vw;
   height: 27vh;
   background-color: white;
   margin-bottom: 2.5%;
   margin-right: 2vw;
   border-radius: 20px;
   position: relative;
-  animation: slide 1.3s ease-out;
+  animation: slide-noop 1.3s ease-out;
   transform: scale(1);
   transition: 0.7s;
   &:hover {
@@ -160,4 +159,28 @@ button .login-button {
 .my-shoes-pref,.my-shoes-desc,.my-shoes-size{
   font-size: 1.2rem;
   margin-bottom: 3%;
+}
+@keyframes slide-up-noop {
+  from{
+    bottom:-300px;
+    opacity: 1;
+
+  }
+  to{
+    bottom:0px;
+    opacity: 1;
+
+  }
+}
+@keyframes slide-noop {
+  from{
+    top:-300px;
+    opacity: 1;
+
+  }
+  to{
+    top:0px;
+    opacity: 1;
+
+  }
 }
