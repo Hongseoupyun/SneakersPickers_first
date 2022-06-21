@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Login.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 function Login() {
 
@@ -12,6 +14,13 @@ function Login() {
 
   const navigate = useNavigate();
 
+  const successToast = () => {
+    toast("Login successfully!", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
 
 
 
@@ -20,12 +29,12 @@ function Login() {
     console.log("submit fire")
     return (axios.post('/auth/login', { email: email, password: password })
       .then((result) => {
-        console.log(result)
+        successToast()
         setLoginError(false)
         localStorage.setItem('isLoggedIn', true);
       })
       .then(() => {
-        window.open('/', "_self")
+        setTimeout(() => window.open('/', "_self"), 1500)
       })
       .catch((error) => {
         setLoginError(true)
@@ -35,6 +44,9 @@ function Login() {
 
   return (
     <div className="login-body">
+        <ToastContainer 
+        autoClose={1500}
+        />
       <section className="login-form">
         <h1 className="login-heading">Sign in</h1>
         <form method="POST" onSubmit={logUser}>
