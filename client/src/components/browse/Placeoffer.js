@@ -3,11 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Placeoffer.scss";
 import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import tradeImg from "../images/trade-sample.webp";
 import MyItems from "./MyItems";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
 import { MdDescription } from "react-icons/md";
-
+import tradeImg from "../images/trade.png";
+import { TbShoe } from "react-icons/tb";
 function Placeoffer() {
   //**************** */
   // const location = useLocation();
@@ -75,32 +75,28 @@ function Placeoffer() {
         <>
           <article className="placeoffers-cards">
             <div className="placeoffer-other-card">
-              <div>
                 <img
                   className="placeoffer-img"
                   src={listing.image_url}
-                  alt=""
                 />
-              </div>
               <div className="placeoffer-name">{listing.name}</div>
               <div className="placeoffer-texts">
                 <div className="placeoffer-pref">
-                  <BsFillBookmarkHeartFill className="" />
+                  <BsFillBookmarkHeartFill /> 
                   <span>Preference: {listing.preference}</span>
                 </div>
                 <div className="placeoffer-desc">
-                  <MdDescription />
+                  <MdDescription /> 
                   <span>{listing.description}</span>
                 </div>
-                <div className="my-shoes-size">{listing.brand}</div>
-                <div className="my-shoes-size">Size: {listing.size}</div>
+                <div className="placeoffer-brand-size"><TbShoe/> {listing.brand}/Size: {listing.size}</div>
               </div>
             </div>
 
             <div className="placeoffer-tradeimg">
-              <button onClick={handleOffer}>Offer</button>
+              <button className="placeoffer-button" id="button-offer" onClick={handleOffer}>Offer</button>
               <img className="tradeimg" src={tradeImg} />
-              <button>Cancel</button>
+              <a href="/browse"><button className="placeoffer-button" id="button-cancel">Cancel</button></a>
             </div>
 
             <div className="placeoffer-mylisting">{myListed}</div>
