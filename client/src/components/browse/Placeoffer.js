@@ -1,16 +1,17 @@
-import React, { useState, useEffect} from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Placeoffer.scss";
 import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import tradeImg from "../images/trade-sample.webp"
+import tradeImg from "../images/trade-sample.webp";
 import MyItems from "./MyItems";
 import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { BsFillBookmarkHeartFill } from "react-icons/bs";
+import { MdDescription } from "react-icons/md";
 
 function Placeoffer() {
-
-//**************** */
+  //**************** */
   // const location = useLocation();
 
   toast.success("Offer placed successfully!")
@@ -21,42 +22,39 @@ function Placeoffer() {
   const [listing, setListing] = useState([]);
   const [myListings, setMyListings] = useState([]);
 
-  
   //Gets the listing from the selected listing
   function loadListing() {
-    return(axios.get(`/api/listeditem/${id}`)
-    .then((result) => {
+    return axios.get(`/api/listeditem/${id}`).then((result) => {
       // console.log("load listing:", result.data[0])
-      setListing(result.data[0])
-    })
-    )
+      setListing(result.data[0]);
+    });
   }
 
-  //Gets all of user's listing to offer 
+  //Gets all of user's listing to offer
   const loadMyListings = function () {
-    axios.get("/api/mylistings")
-    .then((result) => {
-      // console.log("result.data from mylistings=>",result.data)
-      setMyListings(result.data)
-    })
-  }
-  
-  
-  
+    axios.get("/api/mylistings").then((result) => {
+      console.log("result.data from mylistings=>", result.data);
+      setMyListings(result.data);
+    });
+  };
+
+  console.log("mylisting:", typeof Number(id));
+  console.log(typeof offeredID);
+
   const myListed = myListings.map((e) => {
-   return (
-     <MyItems
-     key={e.id}
-     name={e.name}
-     brand={e.brand}
-     size={e.size}
-     description={e.description}
-     image_url={e.image_url}
-     id={e.id}
-     setOfferedID={setOfferedID}
-     />
-    )
-  })
+    return (
+      <MyItems
+        key={e.id}
+        name={e.name}
+        brand={e.brand}
+        size={e.size}
+        description={e.description}
+        image_url={e.image_url}
+        id={e.id}
+        setOfferedID={setOfferedID}
+      />
+    );
+  });
 
   const successToast = () => {
     toast("Offer placed successfully!", {
@@ -66,10 +64,6 @@ function Placeoffer() {
     });
   };
   
-
-
-
-
   useEffect(() => {
     loadMyListings()
     loadListing()
@@ -82,7 +76,6 @@ function Placeoffer() {
     return(axios.post('/api/makeoffer', {listingID: Number(id), offeredID: offeredID})
       .then((result) => {
         successToast()
-        setTimeout(window.open('/browse', "_self"), 3000)
       })
       .then(() => {
         setTimeout(window.open('/browse', "_self"), 3000)
@@ -92,56 +85,50 @@ function Placeoffer() {
       })
     )
   }
-
-
+  
 
   return (
-    <body className="offers-body">
-      {listing && myListings? (
-        <section className="offers-container">
-         {/* <ToastContainer 
-         draggable={false}
-         transition={Zoom}
-         autoClose={5000}
-         /> */}
-        <div className="from">
-          Place offer for:
-        </div>
-        <article className="offers-cards">
-          <div className="my-shoes-card">
-            <div>
-              <img className="my-shoes-img" src={listing.image_url} alt=""/>
+    <div className="placeoffer-body">
+      {listing && myListings ? (
+        <>
+          <article className="placeoffers-cards">
+            <div className="placeoffer-other-card">
+              <div>
+                <img
+                  className="placeoffer-img"
+                  src={listing.image_url}
+                  alt=""
+                />
+              </div>
+              <div className="placeoffer-name">{listing.name}</div>
+              <div className="placeoffer-texts">
+                <div className="placeoffer-pref">
+                  <BsFillBookmarkHeartFill className="" />
+                  <span>Preference: {listing.preference}</span>
+                </div>
+                <div className="placeoffer-desc">
+                  <MdDescription />
+                  <span>{listing.description}</span>
+                </div>
+                <div className="my-shoes-size">{listing.brand}</div>
+                <div className="my-shoes-size">Size: {listing.size}</div>
+              </div>
             </div>
-            <div className="my-shoes-name">
-              Name: {listing.name}
-            </div>
-            <div className="my-shoes-size">
-              Size: {listing.size}
-            </div>
-            <div className="my-shoes-description">
-              Description: {listing.description}
-            </div>
-          </div>
-          
-          <div className="trade-img">
-            <img src={tradeImg}/>
-          </div>
 
-          {myListed}
+            <div className="placeoffer-tradeimg">
+              <button onClick={handleOffer}>Offer</button>
+              <img className="tradeimg" src={tradeImg} />
+              <button>Cancel</button>
+            </div>
 
-        </article>
-        <div className="accept-decline">
-          <button onClick={handleOffer}>Offer</button>
-          <button>Cancel</button>
-        </div>
-
-      </section> )
-      :
-      (<div>No Data!</div>
+            <div className="placeoffer-mylisting">{myListed}</div>
+          </article>
+        </>
+      ) : (
+        <div>No Data!</div>
       )}
-    </body>
+    </div>
   );
 }
-
 
 export default Placeoffer;

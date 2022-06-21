@@ -21,14 +21,17 @@ function MyItems(props) {
         <div className="others-shoes-name">
           Name: {props.name}
         </div>
-        <div className="others-shoes-size">
-          Size: {props.size}
-        </div>
         <div className="others-shoes-description">
           Description: {props.description}
         </div>
+        <div className="others-shoes-size">
+          {props.brand}
         </div>
-    </div>
+        <div className="others-shoes-size">
+          Size: {props.size}
+        </div>
+        </div>
+      </div>
   )
 }
 

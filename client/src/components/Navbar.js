@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from "react";
-import logo from './images/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
-import { withCookies, Cookies } from 'react-cookie';
 import './Navbar.css'
 import axios from "axios";
 
@@ -36,7 +34,7 @@ function NavBar() {
 
 
   return (
-    <Navbar style={{paddingTop:"1.1rem", paddingBottom:"1.1rem"}} bg="dark blue" variant="dark" fixed="top" expand="lg" >
+    <Navbar className="nav-bar" style={{paddingTop:"1.1rem", paddingBottom:"1.1rem"}} variant="dark" fixed="top">
       <Navbar.Brand className="logoname" href="/">
         SNEAKERSPICKERS
         {/* {LoggedIn !== "false" && (<div className="username">Welcome, {name}</div>)} */}

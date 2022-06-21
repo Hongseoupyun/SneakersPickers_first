@@ -1,5 +1,5 @@
 .browse-body{
-  background-color: #112D4E;
+  background-color:#EDF2EF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +20,7 @@ width: 17rem;
 height: 2.5rem;
 border-radius:7px;
 font-weight: 600;
+border: solid 1.7px #1B1616;
 }
 #size-browse{
 width: 17rem;
@@ -27,18 +28,25 @@ height: 2.5rem;
 border-radius:7px;
 margin-left: 0.7rem;
 font-weight: 600;
+border: solid 1.7px #F7F5FB;
 }
 #reset{
 width: 6rem;
 height: 2.5rem;
+border: none;
+color: white;
 border-radius:7px;
 margin-left: 0.7rem;
 font-weight: 600;
+background-color: #F15025;
 }
 #search{
   width: 6rem;
   height: 2.5rem;
   border-radius:7px;
   margin-left: 0.7rem;
+  color:white;
   font-weight: 600;
+  border: none;
+  background-color: #F15025;
 }

@@ -47,7 +47,7 @@ function Login() {
             <label>Password</label>
           </div>
           {loginError && (
-            <div class="caption">
+            <div class="caption-err">
               Incorrect Email or password. Please try again.
             </div>)
             }
@@ -60,21 +60,6 @@ function Login() {
         </form>
       </section>
     </div>
-
-    // <div className="login-wrapper">
-    //   <h1>Please Log In</h1>
-    //   <form method="POST" onSubmit={logUser}>
-    //     <label>
-    //       <input type="text" name="email" onChange={event => setEmail(event.target.value)} placeholder="Email"/>
-    //     </label>
-    //     <label>
-    //       <input type="password" name="password" onChange={event => setPassword(event.target.value)} placeholder="Password" />
-    //     </label>
-    //     <div>
-    //       <button className="login-button" type="submit">Login</button>
-    //     </div>
-    //   </form>
-    // </div>
   )
 }
 

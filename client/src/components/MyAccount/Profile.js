@@ -40,7 +40,7 @@ export default function Profile() {
         console.log("Error Occured in ",err)
       })
   }
- 
+
   return (
     <div className="profile-body">
       <section className="profile-form">

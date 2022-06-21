@@ -4,59 +4,57 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(33, 37, 41);
+  background-color: #071522;
   height: 100%;
   padding-bottom: 15%;
 }
 .mylisting-container {
   position: relative;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Anek Latin", sans-serif;
   color: black;
   display: flex;
   flex-direction: row;
-  padding-top: 5%;
+  padding-top: 13%;
   border-radius: 25px;
-  background-color: none;
-  margin-top: 8%;
   height: 100%;
   animation: slide 1.3s ease-out;
   margin-left: 10%;
 }
 .mylisting-img {
-  width: 28rem;
-  height: 28rem;
+  width: 17rem;
+  height: 17rem;
   border-radius: 13px;
   position: relative;
-  left: -0.5rem;
-  top: 2rem;
+  left: 1%;
+  top: 2.5rem;
   z-index: 5;
 }
 .mylisting-card-contents {
   position: relative;
-  left: -8rem;
+  left: -15%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  height: 32rem;
+  height: 23rem;
   width: 40rem;
-  border-radius: 10px;
+  border-radius: 22px;
 }
 
 .listing-text {
   margin-left: 9rem;
   position: relative;
   h1 {
-    padding-bottom: 1rem;
-    font-size: 2.8rem;
+    font-family: "Staatliches", cursive;
+    font-size: 2.5rem;
     font-weight: 900;
   }
 }
 
 .view-offers {
   position: relative;
-  left: 4rem;
-  top:-2rem;
+  left: 3.5rem;
+  top: -5.7rem;
 
   button {
     color: white;
@@ -64,38 +62,59 @@
     font-weight: 700;
     height: 4rem;
     width: 11em;
-    top: 7rem;
-    left: 23rem;
-    border-radius: 30px;
-    background-color: rgb(17, 30, 108);
+    font-size: 1.2rem;
+    top: 9rem;
+    left: 22rem;
+    border-radius: 25px;
+    background-color: navy;
     border: none;
     &:hover {
-      background-color :black
+      background-color: #f15025;
     }
   }
+}
+#name {
+  position: relative;
+  top: -1.5rem;
+  left: 1.3rem;
 }
 #brand-size {
   font-size: 1.5rem;
   position: relative;
-  top: 11.5rem;
+  top: 15rem;
+  left: 1.3rem;
   font-weight: 600;
 }
 #description {
   font-size: 1.5rem;
   position: relative;
-  top: -2rem;
-  left: 1rem;
+  top: -17%;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
 }
 #offers {
   position: relative;
-  top: -20.5rem;
-  left: 22.5rem;
+  top: -21.1rem;
+  left: 23.8rem;
+  width: 6rem;
+}
+#my-pref {
+  position: relative;
+  left: 1.6rem;
+  top: -3.5rem;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
 }
 .btn-primary {
-  background-color: #E60023;
-  border-radius: 20px;
+  background-color: #f15025;
+  border-radius: 11.5px;
   font-weight: 700;
   border: none;
+  &:hover {
+    background-color: #f15025;
+  }
 }
 .my-brand {
   font-size: 1.9rem;

@@ -4,6 +4,7 @@
     "cookie-session": "^2.0.0",
     "react-bootstrap": "^2.4.0",
     "react-cookie": "^4.1.1",
+    "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
