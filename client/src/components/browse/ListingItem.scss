@@ -38,7 +38,7 @@
     background-color: navy;
     border: none;
     &:hover {
-      background-color: #f15025;
+      background-color: #E60023;
     }
   }
 }
@@ -66,5 +66,18 @@
   &:hover {
     transform: scale(1.1);
     transition: 0.7s;
+  }
+}
+
+@keyframes slide-up {
+  from{
+    bottom:-300px;
+    opacity: 0;
+
+  }
+  to{
+    bottom:0px;
+    opacity: 1;
+
   }
 }
