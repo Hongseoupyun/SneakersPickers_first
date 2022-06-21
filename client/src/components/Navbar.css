@@ -4,12 +4,16 @@
   
 }
 .username {
-  font-size: small;
-  margin-left: 1em;
+  display: flex;  
+  margin-top: 1%;
+  justify-content: center;
+  font-size: 0.8rem;
+  
 }
 
 .nav-elms{
   display: flex;
+  margin-right: 2rem;
 }
 .logoname{
   margin-left: 1.5rem;
