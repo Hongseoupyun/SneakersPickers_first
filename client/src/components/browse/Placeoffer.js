@@ -6,8 +6,8 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import MyItems from "./MyItems";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
 import { MdDescription } from "react-icons/md";
+import { GiBarefoot } from "react-icons/gi";
 import tradeImg from "../images/trade.png";
-import { TbShoe } from "react-icons/tb";
 function Placeoffer() {
   //**************** */
   // const location = useLocation();
@@ -45,6 +45,7 @@ function Placeoffer() {
         brand={e.brand}
         size={e.size}
         description={e.description}
+        preference={e.preference}
         image_url={e.image_url}
         id={e.id}
         setOfferedID={setOfferedID}
@@ -89,7 +90,7 @@ function Placeoffer() {
                   <MdDescription /> 
                   <span>{listing.description}</span>
                 </div>
-                <div className="placeoffer-brand-size"><TbShoe/> {listing.brand}/Size: {listing.size}</div>
+                <div className="placeoffer-brand-size"><GiBarefoot/> {listing.brand}/Size: {listing.size}</div>
               </div>
             </div>
 
@@ -99,7 +100,7 @@ function Placeoffer() {
               <a href="/browse"><button className="placeoffer-button" id="button-cancel">Cancel</button></a>
             </div>
 
-            <div className="placeoffer-mylisting">{myListed}</div>
+            <div >{myListed}</div>
           </article>
         </>
       ) : (
