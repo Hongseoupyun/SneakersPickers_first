@@ -38,7 +38,7 @@ function AddAListing() {
       successToast();
     })
     .then(() => {
-      setTimeout( () => navigate('/browse'), 3000)
+      setTimeout( () => navigate('/browse'), 1500)
     })
     .catch((err)=>{
       console.log("Error occured in ",err)
@@ -69,7 +69,7 @@ function AddAListing() {
     <div className="add-body">
       <div className="master-container">
         <ToastContainer 
-        autoClose={3000}
+        autoClose={1500}
         />
         <div>
           <img className="add-a-listing-img" name src={addSneakers} />

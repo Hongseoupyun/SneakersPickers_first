@@ -14,7 +14,7 @@ function Placeoffer() {
   //**************** */
   // const location = useLocation();
 
-  toast.success("Offer placed successfully!")
+
 
   const { id } = useParams();
 
@@ -79,7 +79,7 @@ function Placeoffer() {
         successToast()
       })
       .then(() => {
-        setTimeout(window.open('/browse', "_self"), 3000)
+        setTimeout(() => window.open('/browse', "_self"), 2000)
       })
       .catch(() => {
         console.log("error")
@@ -93,6 +93,9 @@ function Placeoffer() {
       {listing && myListings ? (
         <>
           <article className="placeoffers-cards">
+            <ToastContainer 
+            autoClose={2000}
+            />
             <div className="placeoffer-other-card">
                 <img
                   className="placeoffer-img"
