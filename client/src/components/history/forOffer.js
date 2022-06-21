@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import tradeImg from "../images/trade.png";
 import axios from "axios";
 import ByOffer from "./byOffer";
+import { BsFillBookmarkHeartFill } from "react-icons/bs";
+import { MdDescription } from "react-icons/md";
+import { GiBarefoot } from "react-icons/gi";
 
 //Component path: acceptedOffers > forOffer > byOffer
 export default function ForOffers(props) {
@@ -42,20 +45,13 @@ export default function ForOffers(props) {
 
   return (
     <section className="mylisting-container-history-left">
-      <img className="mylisting-img" src={props.image_url} alt="" />
-
-      <div className="mylisting-card-contents-history-left">
-        <div className="listing-text-history" id="name">
+      <div className="myoffers-cards" id="left">
+        <img className="myoffers-img" src={props.image_url} alt="" />
+        <div className="listing-text-history" >
           <h1>{props.name}</h1>
-        </div>
-        <div className="listing-text-history" >
-          <div className="itembrand">{props.brand}</div>
-          <div className="itemsize">Size {props.size}</div>
-        </div>
-        <div className="listing-text-history" >
-          <span>{props.description}</span>
-        </div>
-        <div className="listing-text-history">
+          <div className="myoffers-text"><BsFillBookmarkHeartFill /> {props.preference}</div>
+          <div className="myoffers-text"><MdDescription />{props.description}</div>
+          <div className="myoffers-text"><GiBarefoot/>{props.brand}/Size {props.size}</div>
         </div>
       </div>
       <div className="tradeslot">
