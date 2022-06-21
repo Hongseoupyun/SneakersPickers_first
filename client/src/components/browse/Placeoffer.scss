@@ -8,12 +8,13 @@
   display: flex;
   position: relative;
   justify-content: center;
+  margin-top: 2%;
 }
 
 .placeoffer-other-card {
   background-color: white;
   margin-left: 2%;
-  height: 85vh;
+  height: 79vh;
   width: 200vw;
   position: relative;
   display: flex;
@@ -38,6 +39,7 @@
   position: relative;
   top: 27vh;
   margin: 1.5%;
+  height: 2%;
 }
 .placeoffer-img {
   position: relative;
@@ -109,15 +111,15 @@ button .login-button {
   transition: 0.7s;
   cursor: pointer;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
     transition: 0.6s;
   }
 }
 .shoes-selected {
-  transform: scale(1.083);
+  transform: scale(1.073);
   transition: 0.3s;
   &:hover {
-    transform: scale(1.083);
+    transform: scale(1.073);
     transition: 0.3s;
   }
 }
