@@ -34,14 +34,12 @@ function Placeoffer() {
   const loadMyListings = function () {
     axios.get("/api/mylistings")
     .then((result) => {
-      console.log("result.data from mylistings=>",result.data)
+      // console.log("result.data from mylistings=>",result.data)
       setMyListings(result.data)
     })
   }
   
   
-  console.log("mylisting:", typeof Number(id))
-  console.log(typeof offeredID)
   
   const myListed = myListings.map((e) => {
    return (
@@ -59,7 +57,7 @@ function Placeoffer() {
   })
   
 
-  console.log({myListed})
+
 
 
   useEffect(() => {
