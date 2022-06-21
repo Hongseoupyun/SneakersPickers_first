@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@200;700&display=swap");
-.mylisting-body {
+.mylisting-body-history {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   height: 100%;
 
 }
-.mylisting-container-left {
+.mylisting-container-offers-left {
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
   color: black;
@@ -56,7 +56,7 @@
   z-index: 5;
 }
 
-.mylisting-img-second {
+.offerpic-second {
   width: 17rem;
   height: 17rem;
   border-radius: 13px;
@@ -66,7 +66,7 @@
   z-index: 5;
 }
 
-.mylisting-card-contents-left {
+.mylisting-card-contents-offers-left {
   position: relative;
   left: -8rem;
   display: flex;
@@ -74,14 +74,12 @@
   flex-direction: column;
   background-color: white;
   height: 32rem;
-  width: 32rem;
+  width: 36rem;
   border-radius: 10px;
-
-
 }
 
 
-.listing-text {
+.listing-text-history {
   margin-left: 9rem;
   position: relative;
   h1 {
@@ -105,9 +103,9 @@
 }
 
 .listing-text-second {
-  margin-right: 8rem;
+  margin-right: 3rem;
   position: relative;
-  margin-left: 2rem;
+  margin-left: 1rem;
   h1 {
     padding-bottom: -2rem;
     font-size: 2.8rem;
@@ -118,6 +116,7 @@
 .my-email-second {
   font-size: 1rem;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .acceptofferbutton {
@@ -146,32 +145,7 @@
     }
 }
 
-#brand-size {
-  font-size: 1.5rem;
-  position: relative;
-  top: 11.5rem;
-  font-weight: 600;
-}
-#description {
-  font-size: 1.5rem;
-  position: relative;
-  top: -2rem;
-  left: 1rem;
-}
-#offers {
-  position: relative;
-  top: -20.5rem;
-  left: 22.5rem;
-}
-.btn-primary {
-  background-color: #E60023;
-  border-radius: 20px;
-  font-weight: 700;
-  border: none;
-}
-.my-brand {
-  font-size: 1.9rem;
-}
+
 
 @keyframes slide {
   from {
