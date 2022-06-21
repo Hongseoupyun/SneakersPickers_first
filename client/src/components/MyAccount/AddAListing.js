@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import {ToastContainer, toast, Zoom, Bounce} from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { Toast } from "react-bootstrap";
 
 function AddAListing() {
 
@@ -27,18 +28,17 @@ function AddAListing() {
   const [img, setImg] = useState("")
   const [preference, setPreference] = useState("")
 
-  toast.success("Offer placed successfully!")
+  // toast.success("Offer placed successfully!")
 
   //send data to api
   const uploadListing = function (e) {
     e.preventDefault();
     axios.post("api/listings",{name, size, brand, description, img, preference})
     .then(() => {
-      toast.success("Success!");
-
+      successToast();
     })
     .then(() => {
-      setTimeout(navigate('/browse'), 5000)
+      setTimeout( () => navigate('/browse'), 3000)
     })
     .catch((err)=>{
       console.log("Error occured in ",err)
@@ -68,11 +68,14 @@ function AddAListing() {
   return (
     <div className="add-body">
       <div className="master-container">
+        <ToastContainer 
+        autoClose={3000}
+        />
         <div>
           <img className="add-a-listing-img" name src={addSneakers} />
         </div>
         <form className="form">
-          <h3 className="form-heading">Uploade your shoes to trade</h3>
+          <h3 className="form-heading">Upload your shoes to trade</h3>
           <div className="int-area">
             <input
               type="text"
@@ -144,7 +147,7 @@ function AddAListing() {
             <label>Preference(eg.Nike Dunks Varisty red etc.)</label>
           </div>
           <div className="btn-area">
-            <button type="submit" onClick={(e)=>{uploadListing(e); successToast()}}>Publish</button>
+            <button type="submit" onClick={(e)=>{uploadListing(e)}}>Publish</button>
           </div>
         </form>
         </div>
