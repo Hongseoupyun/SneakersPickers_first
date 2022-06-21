@@ -4,6 +4,7 @@ import "./MyListings.scss"
 import MyListingItem from "./MyListingItem";
 
 
+
 export default function MyListings() {
   const [listings, setListings] = useState([])
 
@@ -42,9 +43,9 @@ export default function MyListings() {
   })
 
   return (
-    <body className="mylisting-body">
+    <div className="mylisting-body">
       {eachListing}
-    </body>
+    </div>
 
 
   );

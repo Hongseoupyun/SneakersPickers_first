@@ -76,9 +76,9 @@ export default function MyOffers(props) {
         </div>
       </div>
       <div className="tradeslot">
-          <button class="acceptofferbutton" onClick={acceptOffer}>Accept</button>
+          <button className="acceptofferbutton" onClick={acceptOffer}>Accept</button>
         <img className="tradepic" src={tradeImg} alt="" />
-          <button class="declineofferbutton" onClick={declineOffer}>Decline</button>
+          <button className="declineofferbutton" onClick={declineOffer}>Decline</button>
       </div>
       {showIndividual}
     </section>
