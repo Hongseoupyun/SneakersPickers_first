@@ -45,17 +45,17 @@ export default function ForOffers(props) {
       <img className="mylisting-img" src={props.image_url} alt="" />
 
       <div className="mylisting-card-contents-history-left">
-        <div className="listing-text" id="name">
+        <div className="listing-text-history" id="name">
           <h1>{props.name}</h1>
         </div>
-        <div className="listing-text" id="brand-size">
-          <div className="my-brand">{props.brand}</div>
-          <div className="my-size">Size {props.size}</div>
+        <div className="listing-text-history" >
+          <div className="itembrand">{props.brand}</div>
+          <div className="itemsize">Size {props.size}</div>
         </div>
-        <div className="listing-text" id="description">
+        <div className="listing-text-history" >
           <span>{props.description}</span>
         </div>
-        <div className="listing-text" id="offers">
+        <div className="listing-text-history">
         </div>
       </div>
       <div className="tradeslot">
