@@ -52,7 +52,7 @@ function AddAListing() {
     setSize(val)
   }
 
-  console.log({name})
+
 
   const successToast = () => {
     toast("Listing added successfully!", {

@@ -8,13 +8,14 @@
   display: flex;
   position: relative;
   justify-content: center;
+  margin-top: 2%;
 }
 
 .placeoffer-other-card {
   background-color: white;
   margin-left: 2%;
-  height: 85vh;
-  width: 200vw;
+  height: 79vh;
+  width: 35vw;
   position: relative;
   display: flex;
   border-radius: 20px;
@@ -38,6 +39,7 @@
   position: relative;
   top: 27vh;
   margin: 1.5%;
+  height: 2%;
 }
 .placeoffer-img {
   position: relative;
@@ -98,7 +100,7 @@ button .login-button {
 .my-shoes-card {
   display: flex;
   width: 40vw;
-  height: 27vh;
+  height: 25.5vh;
   background-color: white;
   margin-bottom: 2.5%;
   margin-right: 2vw;
@@ -109,15 +111,15 @@ button .login-button {
   transition: 0.7s;
   cursor: pointer;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
     transition: 0.6s;
   }
 }
 .shoes-selected {
-  transform: scale(1.083);
+  transform: scale(1.073);
   transition: 0.3s;
   &:hover {
-    transform: scale(1.083);
+    transform: scale(1.073);
     transition: 0.3s;
   }
 }
@@ -163,7 +165,7 @@ button .login-button {
 .my-shoes-name {
   font-family: "Staatliches", cursive;
   font-size: 2rem;
-  margin-bottom: 7%;
+  margin-bottom: 2%;
 }
 .my-shoes-pref,
 .my-shoes-desc,
