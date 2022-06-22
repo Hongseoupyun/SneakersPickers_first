@@ -62,12 +62,12 @@ function NavBar() {
       <Nav className="ms-auto align-text-bottom ">
         <div className="nav-elms">
         {notification && (<a href="/offers"><MdNotificationsActive className="notificationIcon"/></a>)}
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
-          <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
-          <Nav.Link href="/browse">Browse</Nav.Link>
+          <Nav.Link href="/" className="nav-options">Home</Nav.Link>
+          <Nav.Link href="/#scroll-about-us" className="nav-options">About us</Nav.Link>
+          <Nav.Link href="/#scroll-contact-us" className="nav-options">Contact</Nav.Link>
+          <Nav.Link href="/browse" className="nav-options">Browse</Nav.Link>
         {LoggedIn === "true" ? (
-          <NavDropdown title="My Profile">
+          <NavDropdown className="nav-options" title="My Profile">
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
             <NavDropdown.Item href="/offers">My offers</NavDropdown.Item>
             <NavDropdown.Item href="/mylistings">My listings</NavDropdown.Item>
@@ -85,8 +85,8 @@ function NavBar() {
           :
           (
             <>
-              <Nav.Link href="/register">Register</Nav.Link>
-              <Nav.Link href="/login">Login</Nav.Link>
+              <Nav.Link className="nav-options" href="/register">Register</Nav.Link>
+              <Nav.Link className="nav-options" href="/login">Login</Nav.Link>
             </>
           )}
           </div>
