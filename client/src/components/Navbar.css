@@ -1,8 +1,14 @@
 .nav-bar{
   background-color:#071522;
-  
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 1rem;
   
 }
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+
 .username {
   display: flex;  
   margin-top: 1%;

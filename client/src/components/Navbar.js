@@ -56,6 +56,7 @@ function NavBar() {
       <Navbar.Brand className="logoname" href="/">
         SNEAKERSPICKERS
         {LoggedIn !== "false" && (<div className="username">Welcome, {name}</div>)}
+        {LoggedIn === "false" && (<div className="username">Welcome, Guest</div>)}
       </Navbar.Brand>
 
       <Nav className="ms-auto align-text-bottom ">

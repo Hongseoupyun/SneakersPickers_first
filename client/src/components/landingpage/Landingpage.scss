@@ -136,6 +136,22 @@ main {
   width: 25%;
 }
 .contact-us-img{
+  position: relative;
   height: 65vh;
   width: 46vw;
+  top:-21vh;
+  left:4vw;
+  border-radius: 15px;
+}
+.contact-us-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 18%;
+  top:-21vh;
+  gap:5%;
+}
+
+#contact-us-text{
+  margin-left:4%;
 }
