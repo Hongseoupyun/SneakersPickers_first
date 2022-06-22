@@ -139,16 +139,34 @@ button .login-button {
 }
 .placeoffer-button {
   border-radius: 20px;
+  font-family:'Staatliches', cursive;
+  color: white;
 }
 #button-offer {
   margin-bottom: 10%;
-  background-color: green;
+  background-color: navy;
+  border: none;
+  transform: scale(1);
+  transition: 0.7s;
+  &:hover {
+    background-color: green;
+    transform: scale(1.1);
+    transition: 0.7s;
+  }
 }
 #button-cancel {
   margin-top: 10%;
   background-color: red;
   border-radius: 20px;
+  border: none;
   width: 10vw;
+  transform: scale(1);
+  transition: 0.7s;
+  &:hover {
+    background-color: red;
+    transform: scale(1.1);
+    transition: 0.7s;
+  }
 }
 .placeoffer-brand-size {
   position: relative;
