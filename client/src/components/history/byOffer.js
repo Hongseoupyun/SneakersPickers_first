@@ -12,7 +12,6 @@ export default function ByItem(props) {
       <img className="myoffers-img" src={props.image_url} alt="" id="history_id_card"/>
       <div className="listing-text-history" >
           <h1>{props.name}</h1>
-          <div className="myoffers-text"><BsFillBookmarkHeartFill /> {props.preference}</div>
           <div className="myoffers-text"><MdDescription />{props.description}</div>
           <div className="myoffers-text"><GiBarefoot/>{props.brand}/Size {props.size}</div>
           <div className="myoffers-text"><FiMail /> {props.email}</div>
