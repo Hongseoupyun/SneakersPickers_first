@@ -20,6 +20,10 @@
 }
 
 .notificationIcon {
-  width: 30px;
-  height: 30px;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  top: 18%;
+  color: #F80B0B;
+
 }

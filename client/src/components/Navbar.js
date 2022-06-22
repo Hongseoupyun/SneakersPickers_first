@@ -5,6 +5,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import './Navbar.css'
 import axios from "axios";
 import bellicon from "./images/bellicon.png"
+import { MdNotificationsActive } from "react-icons/md";
 
 
 function NavBar() {
@@ -59,7 +60,7 @@ function NavBar() {
 
       <Nav className="ms-auto align-text-bottom ">
         <div className="nav-elms">
-        {notification && (<a href="/offers"><img src={bellicon} className="notificationIcon"/></a>)}
+        {notification && (<a href="/offers"><MdNotificationsActive className="notificationIcon"/></a>)}
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/#scroll-about-us">About us</Nav.Link>
           <Nav.Link href="/#scroll-contact-us">Contact</Nav.Link>
@@ -88,7 +89,6 @@ function NavBar() {
             </>
           )}
           </div>
-
       </Nav>
     </Navbar>
   );
