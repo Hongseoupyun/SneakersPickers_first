@@ -59,14 +59,14 @@ function Login() {
             <label>Password</label>
           </div>
           {loginError && (
-            <div class="caption-err">
+            <div className="caption-err">
               Incorrect Email or password. Please try again.
             </div>)
             }
           <div className="btn-area">
             <button type="submit">Sign in</button>
           </div>
-          <div class="caption">
+          <div className="caption">
             Don't have an account? Register <a href="/register">here</a>
           </div>
         </form>
