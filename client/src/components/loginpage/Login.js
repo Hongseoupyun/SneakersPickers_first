@@ -15,7 +15,7 @@ function Login() {
   const navigate = useNavigate();
 
   const successToast = () => {
-    toast("Login successfully!", {
+    toast("Logged in successfully!", {
       className: "custom-toast",
       draggable: true,
       position: toast.POSITION.TOP_CENTER
