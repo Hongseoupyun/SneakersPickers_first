@@ -5,7 +5,9 @@
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
 }
+
 #browse-desc {
   font-size: 1.5rem;
   position: relative;
@@ -13,6 +15,7 @@
   left: 4%;
   display: flex;
   flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
 }
 #browse-name {
   position: relative;
@@ -26,6 +29,7 @@
   top: -17%;
 
   button {
+    font-family: 'Roboto Condensed', sans-serif;
     color: white;
     position: relative;
     font-weight: 700;
@@ -35,15 +39,16 @@
     top: 57%;
     left: 53%;
     border-radius: 25px;
-    background-color: #011638;
+    background-color: navy;
     border: none;
     &:hover {
-      background-color: #FFC100;
+      background-color: #EA7317;
     }
   }
 }
 
 #brand-size-br {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.5rem;
   position: relative;
   top: 28%;

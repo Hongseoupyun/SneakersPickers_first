@@ -33,6 +33,7 @@ html {
   flex-direction: column;
   margin-top: 13%;
   margin-bottom: 25%;
+  font-family: 'Roboto Condensed', sans-serif;
     h1 {
       font-size: 4.5vw;
       font-weight: bold;
@@ -91,6 +92,7 @@ main {
   flex-direction: column;
   width: 50% ;
   margin-left: 2%;
+  font-family: 'Roboto Condensed', sans-serif;
 
 
   h2 {
@@ -124,6 +126,7 @@ main {
 }
 
 .contact-us-description {
+  font-family: 'Roboto Condensed', sans-serif;
   position: relative;
   background: #011638;
   width: 100%;
@@ -150,8 +153,15 @@ main {
   margin-left: 18%;
   top:-21vh;
   gap:5%;
+  h1{
+    color:#FEC601;
+  }
 }
 
 #contact-us-text{
   margin-left:4%;
+  font-size: 1.4rem;
+}
+.contact-us-icon{
+  margin-bottom: 1%;
 }

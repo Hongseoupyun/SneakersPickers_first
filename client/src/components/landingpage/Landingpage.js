@@ -57,15 +57,31 @@ function Landingpage() {
         >
           <img className="contact-us-img" src={contactUs} />
           <div className="contact-us-container">
-            <div><h1>CONTACT US</h1></div>
-            <div><h2><IoLocationSharp/>Location</h2></div>
-            <div id="contact-us-text">12 Yonge Street</div>
-            <div><h2><IoPhonePortrait/>Phone</h2></div>
-            <div id="contact-us-text">+1647-686-1487</div>
-            <div><h2><IoMail/>E-mail</h2></div>
-            <div id="contact-us-text">simonhongseoupyun02156@gmail.com</div>
-
+            <div>
+              <h1>CONTACT US</h1>
             </div>
+            <div>
+              <h2>
+                <IoLocationSharp className="contact-us-icon" />
+                Location
+              </h2>
+            </div>
+            <div id="contact-us-text">12 Yonge Street</div>
+            <div>
+              <h2>
+                <IoPhonePortrait className="contact-us-icon" />
+                Phone
+              </h2>
+            </div>
+            <div id="contact-us-text">+1647-686-1487</div>
+            <div>
+              <h2>
+                <IoMail className="contact-us-icon" />
+                E-mail
+              </h2>
+            </div>
+            <div id="contact-us-text">simonhongseoupyun02156@gmail.com</div>
+          </div>
         </div>
       </main>
     </div>

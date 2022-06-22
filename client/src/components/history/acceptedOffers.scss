@@ -6,7 +6,6 @@
   justify-content: center;
   background-color: rgb(33, 37, 41);
   height: 100%;
-
 }
 .mylisting-container-history-left {
   position: relative;
@@ -41,13 +40,16 @@
   height: 32rem;
   width: 32rem;
   border-radius: 10px;
-
-
 }
-
-
-
-
+.history-img {
+  width: 92%;
+  height: 55%;
+  border-radius: 20px;
+  position: relative;
+  left: 4%;
+  top: -7.5%;
+  z-index: 5;
+}
 
 .listing-text-second {
   margin-right: 3rem;
@@ -65,7 +67,6 @@
   margin-bottom: 2rem;
   margin-left: 1rem;
 }
-
 
 .my-brand {
   font-size: 1.9rem;

@@ -1,13 +1,16 @@
 .nav-bar{
   background-color:#071522;
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.15rem;
   
 }
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
 
+.nav-options:hover{
+color:#FEC601;
+}
 
 .username {
   display: flex;  
