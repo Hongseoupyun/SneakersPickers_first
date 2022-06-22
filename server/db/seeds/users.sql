@@ -11,27 +11,24 @@ VALUES
 
 INSERT INTO listings (user_id, name, description, brand, size, image_url, preference, active)
 VALUES
-  (1,'Crumb Shoes','Has lots of bread', 'vans', 4 , 'https://nerdist.com/wp-content/uploads/2018/07/shoes1.jpg' , 'some other fancy shoes pls', FALSE),
 
-  (2,'Random Shoes','Honestly I have no idea', 'adidas yeezy', 5 , 'https://i.imgur.com/iqKDft8b.jpg', 'some other fancy shoes pls', FALSE),
+  (5,'Sushi Shoe','Wear it or eat it, Gently used', 'new balance',9, 'https://cdn4.dogonews.com/images/cc492c12-6072-4ed0-a94c-1979b8a654a2/tl-horizontal_main.jpg' , 'Jordans and Dunks', TRUE),
 
-  (2,'Sushi Shoe','Wear it or eat it, Gently used', 'new balance',9, 'https://cdn4.dogonews.com/images/cc492c12-6072-4ed0-a94c-1979b8a654a2/tl-horizontal_main.jpg' , 'Jordans and Dunks', TRUE),
+  (6,'4 Dunks','New and shiny wore once', 'Air Jordan',9, 'https://i.pinimg.com/originals/b4/ca/da/b4cada00cf84eb64d24da8391b8507e2.jpg' , 'Yeezy', TRUE),
 
-  (2,'Salmon Vans','Unwore and uncooked', 'new balance',9, 'https://www.geo.tv/assets/uploads/updates/2017-05-13/l_141642_024301_updates.JPG' , 'Jordans and Dunks', TRUE),
+  (5,'Salmon Vans','Unwore and uncooked', 'new balance',9, 'https://www.geo.tv/assets/uploads/updates/2017-05-13/l_141642_024301_updates.JPG' , 'Some other sushiShoes', TRUE),
 
-  (3,'Adirice','Brand new, never digested ', 'new balance',9, 'https://www.thisiscolossal.com/wp-content/uploads/2017/05/YujiaHu_08.jpg' , 'Jordans and Dunks', TRUE),
+  (6,'Adirice','Brand new, never digested ', 'new balance',9, 'https://www.thisiscolossal.com/wp-content/uploads/2017/05/YujiaHu_08.jpg' , 'It better be delicious', TRUE),
 
-  (3,'Half and Half','Freshly made, ready to use', 'new balance',9, 'http://www.booooooom.com/wp-content/uploads/2017/05/Hu8.jpg' , 'Jordans and Dunks', TRUE),
+  (2,'Boost 350','blue and clean', 'Adidas Yeezy',9, 'https://www.highsnobiety.com/static-assets/thumbor/896vVGfPtU7VjRV9Tyrp1acozsI=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2022/03/02144524/11.jpg', 'Vans preferred', TRUE),
 
-  (4,'Starry boots','Look at my tiny star', 'new balance',9, 'https://www.ellaslist.com.au/ckeditor_assets/pictures/486/content_converse.jpg', 'Jordans and Dunks', TRUE),
+  (2,'Air Force Blue', 'Air Force', 11 , 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkUu02u2qc0KxAmgoUS_0iCZdf3va313nYzeg-LDoJlR0vmb4_VQ0EfxA0jN67akKMVE&usqp=CAU', 'Another Air Force', TRUE);
 
-  (4,'Who has time for this', 'Who even made this', 'others', 11 , 'https://www.ellaslist.com.au/ckeditor_assets/pictures/489/content_writing_sushi.jpg', 'some other fancy shoes pls', TRUE);
-
-INSERT INTO offers (listing_offer_made_to_id, listing_being_offered_id, complete, pending)
-VALUES
-  (1,2, TRUE, FALSE),
-  (3,4, FALSE, TRUE),
-  (3,6, FALSE, TRUE);
+-- INSERT INTO offers (listing_offer_made_to_id, listing_being_offered_id, complete, pending)
+-- VALUES
+--   (1,2, TRUE, FALSE),
+--   (3,4, FALSE, TRUE),
+--   (3,6, FALSE, TRUE);
 
 
 
