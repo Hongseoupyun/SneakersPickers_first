@@ -17,7 +17,7 @@ function Landingpage() {
       </video>
 
       <header className="viewport-header">
-        <h1>Stop reselling and buying new pairs </h1>
+        <h1>Stop reselling and buying sneakers</h1>
         <h2 className="landing-h2">Sign up for trading</h2>
         <div className="mb-2 pt-5">
           <Button
