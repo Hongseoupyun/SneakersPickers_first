@@ -12,17 +12,17 @@ VALUES
 INSERT INTO listings (user_id, name, description, brand, size, image_url, preference, active)
 VALUES
 
-  (5,'4 Dunks','New and shiny wore once', 'Air Jordan',9, 'https://i.pinimg.com/originals/b4/ca/da/b4cada00cf84eb64d24da8391b8507e2.jpg' , 'Yeezy', TRUE),
+  -- (5,'4 Dunks','New and shiny wore once', 'Air Jordan',9, 'https://i.pinimg.com/originals/b4/ca/da/b4cada00cf84eb64d24da8391b8507e2.jpg' , 'Yeezy', TRUE),
 
-  (5,'Sushi Shoe','Wear it or eat it, Gently used', 'New Balance',9, 'https://cdn4.dogonews.com/images/cc492c12-6072-4ed0-a94c-1979b8a654a2/tl-horizontal_main.jpg' , 'Jordans and Dunks', TRUE),
+  (2,'Sushi Shoe','Wear it or eat it, Gently used', 'New Balance',9, 'https://cdn4.dogonews.com/images/cc492c12-6072-4ed0-a94c-1979b8a654a2/tl-horizontal_main.jpg' , 'Jordans and Dunks', TRUE);
 
-  (5,'Salmon Vans','Unwore and uncooked', 'New Balance',9, 'https://www.geo.tv/assets/uploads/updates/2017-05-13/l_141642_024301_updates.JPG' , 'Some other sushiShoes', TRUE),
+  -- (5,'Salmon Vans','Unwore and uncooked', 'New Balance',9, 'https://www.geo.tv/assets/uploads/updates/2017-05-13/l_141642_024301_updates.JPG' , 'Some other sushiShoes', TRUE),
 
-  (5,'Adirice','Brand new, never digested ', 'New Balance',9, 'https://www.thisiscolossal.com/wp-content/uploads/2017/05/YujiaHu_08.jpg' , 'It better be delicious', TRUE),
+  -- (5,'Adirice','Brand new, never digested ', 'New Balance',9, 'https://www.thisiscolossal.com/wp-content/uploads/2017/05/YujiaHu_08.jpg' , 'It better be delicious', TRUE),
 
-  (2,'Boost 350','blue and clean', 'Adidas Yeezy',9, 'https://www.highsnobiety.com/static-assets/thumbor/896vVGfPtU7VjRV9Tyrp1acozsI=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2022/03/02144524/11.jpg', 'Vans preferred', TRUE),
+  -- (2,'Boost 350','blue and clean', 'Adidas Yeezy',9, 'https://www.highsnobiety.com/static-assets/thumbor/896vVGfPtU7VjRV9Tyrp1acozsI=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2022/03/02144524/11.jpg', 'Vans preferred', TRUE),
 
-  (2, 'Air Force Blue', 'Oldish but clean' ,'Air Force', 11 , 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkUu02u2qc0KxAmgoUS_0iCZdf3va313nYzeg-LDoJlR0vmb4_VQ0EfxA0jN67akKMVE&usqp=CAU', 'Another Air Force', TRUE);
+  -- (2, 'Air Force Blue', 'Oldish but clean' ,'Air Force', 11 , 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkUu02u2qc0KxAmgoUS_0iCZdf3va313nYzeg-LDoJlR0vmb4_VQ0EfxA0jN67akKMVE&usqp=CAU', 'Another Air Force', TRUE);
 
 -- INSERT INTO offers (listing_offer_made_to_id, listing_being_offered_id, complete, pending)
 -- VALUES
